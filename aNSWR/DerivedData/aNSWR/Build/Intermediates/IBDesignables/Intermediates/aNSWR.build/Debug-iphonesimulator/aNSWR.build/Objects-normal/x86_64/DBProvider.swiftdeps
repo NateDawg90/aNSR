@@ -7,19 +7,18 @@ provides-member:
 - ["C5aNSWR10DBProvider", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "StringLiteralType"
 - "String"
-- !private "FIRDatabase"
 - "DBProvider"
 - "FIRDatabaseReference"
 - !private "Dictionary"
+- "StringLiteralType"
+- !private "FIRDatabase"
 depends-member:
 - !private ["Ps9AnyObject", "DATA"]
 - ["Ps9AnyObject", "DBProvider"]
 - !private ["Ps9AnyObject", "EMAIL"]
 - !private ["Ps9AnyObject", "FIRDatabase"]
 - !private ["Ps9AnyObject", "PASSWORD"]
-- !private ["Ps9AnyObject", "USERNAME"]
 - !private ["Ps9AnyObject", "USERS"]
 - !private ["Ps9AnyObject", "_instance"]
 - !private ["Ps9AnyObject", "child"]
@@ -60,13 +59,13 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "setValue"]
 - !private ["C5aNSWR10DBProvider", "DATA"]
 - ["C5aNSWR10DBProvider", "DBProvider"]
+- !private ["C5aNSWR10DBProvider", "DISPLAY_NAME"]
 - !private ["C5aNSWR10DBProvider", "Dictionary"]
 - !private ["C5aNSWR10DBProvider", "EMAIL"]
 - !private ["C5aNSWR10DBProvider", "FIRDatabase"]
 - ["C5aNSWR10DBProvider", "FIRDatabaseReference"]
 - !private ["C5aNSWR10DBProvider", "PASSWORD"]
 - ["C5aNSWR10DBProvider", "String"]
-- !private ["C5aNSWR10DBProvider", "USERNAME"]
 - !private ["C5aNSWR10DBProvider", "USERS"]
 - !private ["C5aNSWR10DBProvider", "_instance"]
 - ["C5aNSWR10DBProvider", "dbRef"]
@@ -251,4 +250,4 @@ depends-external:
 - "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
 - "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
 - "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/Pods/Firebase/Core/Sources/Firebase.h"
-interface-hash: "d9a1b8b288b58f793aedfdafd357fc65"
+interface-hash: "c883410218d106c8d34175b84a922c5d"

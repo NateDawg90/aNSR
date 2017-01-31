@@ -14,7 +14,7 @@ class DBProvider {
     private static let _instance = DBProvider();
     
     private let USERS = "users"
-    private let USERNAME = "username"
+    private let DISPLAY_NAME = "displayName"
     private let EMAIL = "email"
     private let PASSWORD = "password"
     private let DATA = "data"
@@ -31,8 +31,8 @@ class DBProvider {
         return dbRef.child(USERS)
     }
     
-    func saveUser(withID: String, email: String, username: String, password: String) {
-        let data: Dictionary<String, String> = [EMAIL: email, USERNAME: username, PASSWORD: password];
+    func saveUser(withID: String, email: String, password: String) {
+        let data: Dictionary<String, String> = [EMAIL: email, PASSWORD: password];
         usersRef.child(withID).child(DATA).setValue(data)
     }
     

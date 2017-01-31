@@ -306,6 +306,9 @@
                         <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                     </view>
                     <connections>
+                        <outlet property="EmailText" destination="Wd2-4n-q23" id="K2G-3h-6bw"/>
+                        <outlet property="PasswordText" destination="tlZ-WZ-XQc" id="odS-xQ-X64"/>
+                        <outlet property="UsernameText" destination="AT1-WY-kQW" id="b8g-ph-qU2"/>
                         <segue destination="w6d-pN-y5C" kind="show" identifier="NewsFeedVC" id="rWZ-Xp-GAf"/>
                     </connections>
                 </viewController>
