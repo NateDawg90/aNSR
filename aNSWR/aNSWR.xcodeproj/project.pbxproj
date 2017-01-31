@@ -10,7 +10,7 @@
 		1BCBAE5B79CD64E56347546B /* Pods_aNSWRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25858D29F4F88C829BA52FD1 /* Pods_aNSWRTests.framework */; };
 		63BBAE4D87737ACA668A6E70 /* Pods_aNSWR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1289E96C57B648EE8ED67C6 /* Pods_aNSWR.framework */; };
 		7ADE20121E40897B00047956 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE20111E40897B00047956 /* AppDelegate.swift */; };
-		7ADE20141E40897B00047956 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE20131E40897B00047956 /* LoginVC.swift */; };
+		7ADE20141E40897B00047956 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE20131E40897B00047956 /* SplashVC.swift */; };
 		7ADE20171E40897B00047956 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ADE20151E40897B00047956 /* Main.storyboard */; };
 		7ADE20191E40897B00047956 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ADE20181E40897B00047956 /* Assets.xcassets */; };
 		7ADE201C1E40897B00047956 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ADE201A1E40897B00047956 /* LaunchScreen.storyboard */; };
@@ -19,6 +19,9 @@
 		7ADE20431E408F5E00047956 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE20421E408F5E00047956 /* CustomTextField.swift */; };
 		7ADE20451E40915B00047956 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE20441E40915B00047956 /* CustomButton.swift */; };
 		7ADE20471E4096BF00047956 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7ADE20461E4096BF00047956 /* GoogleService-Info.plist */; };
+		7ADE20491E409ADD00047956 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE20481E409ADD00047956 /* SignUpVC.swift */; };
+		7ADE204B1E409B1A00047956 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE204A1E409B1A00047956 /* LogInVC.swift */; };
+		7ADE204D1E40A52400047956 /* NewsFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE204C1E40A52400047956 /* NewsFeedVC.swift */; };
 		82558C6304ED2BDF48880FC4 /* Pods_aNSWRUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09DA156FA56BD726157BF7B7 /* Pods_aNSWRUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +50,7 @@
 		45D46D5DDD7024D9B037DC72 /* Pods-aNSWR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWR/Pods-aNSWR.debug.xcconfig"; sourceTree = "<group>"; };
 		7ADE200E1E40897B00047956 /* aNSWR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aNSWR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ADE20111E40897B00047956 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7ADE20131E40897B00047956 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		7ADE20131E40897B00047956 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		7ADE20161E40897B00047956 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7ADE20181E40897B00047956 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ADE201B1E40897B00047956 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,6 +64,9 @@
 		7ADE20421E408F5E00047956 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		7ADE20441E40915B00047956 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		7ADE20461E4096BF00047956 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7ADE20481E409ADD00047956 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		7ADE204A1E409B1A00047956 /* LogInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
+		7ADE204C1E40A52400047956 /* NewsFeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedVC.swift; sourceTree = "<group>"; };
 		800F8B8791912C5B502492D9 /* Pods-aNSWRUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWRUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWRUITests/Pods-aNSWRUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A1289E96C57B648EE8ED67C6 /* Pods_aNSWR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aNSWR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D164EEF377C6B3570076BE /* Pods-aNSWRTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWRTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWRTests/Pods-aNSWRTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,7 +177,10 @@
 		7ADE20401E408AA600047956 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7ADE20131E40897B00047956 /* LoginVC.swift */,
+				7ADE20131E40897B00047956 /* SplashVC.swift */,
+				7ADE20481E409ADD00047956 /* SignUpVC.swift */,
+				7ADE204A1E409B1A00047956 /* LogInVC.swift */,
+				7ADE204C1E40A52400047956 /* NewsFeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -481,8 +490,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ADE20451E40915B00047956 /* CustomButton.swift in Sources */,
-				7ADE20141E40897B00047956 /* LoginVC.swift in Sources */,
+				7ADE204D1E40A52400047956 /* NewsFeedVC.swift in Sources */,
+				7ADE20141E40897B00047956 /* SplashVC.swift in Sources */,
+				7ADE204B1E409B1A00047956 /* LogInVC.swift in Sources */,
 				7ADE20121E40897B00047956 /* AppDelegate.swift in Sources */,
+				7ADE20491E409ADD00047956 /* SignUpVC.swift in Sources */,
 				7ADE20431E408F5E00047956 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -732,6 +744,7 @@
 				7ADE20381E40897C00047956 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7ADE20391E40897C00047956 /* Build configuration list for PBXNativeTarget "aNSWRTests" */ = {
 			isa = XCConfigurationList;
@@ -740,6 +753,7 @@
 				7ADE203B1E40897C00047956 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7ADE203C1E40897C00047956 /* Build configuration list for PBXNativeTarget "aNSWRUITests" */ = {
 			isa = XCConfigurationList;
@@ -748,6 +762,7 @@
 				7ADE203E1E40897C00047956 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

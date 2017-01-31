@@ -11,11 +11,11 @@ provides-dynamic-lookup:
 - "borderWidth"
 depends-top-level:
 - "UIColor"
+- "UIButton"
+- "AssignmentPrecedence"
+- "CGFloat"
 - "CustomButton"
 - !private ">"
-- "AssignmentPrecedence"
-- "UIButton"
-- "CGFloat"
 depends-member:
 - ["Ps9AnyObject", "borderColor"]
 - ["Ps9AnyObject", "borderWidth"]

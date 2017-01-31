@@ -6,22 +6,22 @@ provides-nominal:
 provides-member:
 - ["C5aNSWR15CustomTextField", ""]
 provides-dynamic-lookup:
-- "borderColor"
 - "bgColor"
-- "cornerRadius"
+- "borderColor"
 - "borderWidth"
+- "cornerRadius"
 - "placeholderColor"
 depends-top-level:
+- !private "NSAttributedString"
+- "UITextField"
+- !private ">"
 - "AssignmentPrecedence"
 - !private "NSForegroundColorAttributeName"
 - "CGFloat"
-- !private ">"
-- !private "!="
 - "TernaryPrecedence"
-- !private "NSAttributedString"
 - !private "Dictionary"
-- "UITextField"
 - "UIColor"
+- !private "!="
 - !private "StringLiteralType"
 - "CustomTextField"
 depends-member:

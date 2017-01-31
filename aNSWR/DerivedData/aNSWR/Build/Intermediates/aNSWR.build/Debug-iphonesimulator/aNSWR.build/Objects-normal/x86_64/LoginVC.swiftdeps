@@ -1,85 +1,155 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
-- "LoginVC"
+- "LogInVC"
 provides-nominal:
-- "C5aNSWR7LoginVC"
+- "C5aNSWR7LogInVC"
 provides-member:
-- ["C5aNSWR7LoginVC", ""]
+- ["C5aNSWR7LogInVC", ""]
 provides-dynamic-lookup:
+- "didReceiveMemoryWarning"
 - "viewDidLoad"
+- "BackButton"
 depends-top-level:
+- "LogInVC"
+- "AnyObject"
 - "UIViewController"
-- "LoginVC"
+- !private "BooleanLiteralType"
 depends-member:
+- ["Ps9AnyObject", "BackButton"]
+- ["Ps9AnyObject", "didReceiveMemoryWarning"]
+- !private ["Ps9AnyObject", "dismiss"]
 - !private ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", "viewDidLoad"]
 - ["Ps9AnyObject", ""]
+- ["Sb", "deinit"]
+- ["Ps7CVarArg", "BackButton"]
+- ["Ps7CVarArg", "didReceiveMemoryWarning"]
+- !private ["Ps7CVarArg", "dismiss"]
 - !private ["Ps7CVarArg", "init"]
 - ["Ps7CVarArg", "viewDidLoad"]
 - ["Ps7CVarArg", ""]
+- ["Ps28CustomDebugStringConvertible", "BackButton"]
+- ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
+- !private ["Ps28CustomDebugStringConvertible", "dismiss"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "BackButton"]
+- ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
+- !private ["Ps23CustomStringConvertible", "dismiss"]
 - !private ["Ps23CustomStringConvertible", "init"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "BackButton"]
+- ["Ps9Equatable", "didReceiveMemoryWarning"]
+- !private ["Ps9Equatable", "dismiss"]
 - !private ["Ps9Equatable", "init"]
 - ["Ps9Equatable", "viewDidLoad"]
 - ["Ps9Equatable", ""]
+- ["Ps8Hashable", "BackButton"]
+- ["Ps8Hashable", "didReceiveMemoryWarning"]
+- !private ["Ps8Hashable", "dismiss"]
 - !private ["Ps8Hashable", "init"]
 - ["Ps8Hashable", "viewDidLoad"]
 - ["Ps8Hashable", ""]
-- ["C5aNSWR7LoginVC", "deinit"]
-- ["C5aNSWR7LoginVC", "init"]
-- ["C5aNSWR7LoginVC", "viewDidLoad"]
+- ["C5aNSWR7LogInVC", "AnyObject"]
+- ["C5aNSWR7LogInVC", "BackButton"]
+- ["C5aNSWR7LogInVC", "deinit"]
+- ["C5aNSWR7LogInVC", "didReceiveMemoryWarning"]
+- !private ["C5aNSWR7LogInVC", "dismiss"]
+- ["C5aNSWR7LogInVC", "init"]
+- ["C5aNSWR7LogInVC", "viewDidLoad"]
 - ["CSo7NSCoder", "deinit"]
+- ["PSo8NSCoding", "BackButton"]
+- ["PSo8NSCoding", "didReceiveMemoryWarning"]
+- !private ["PSo8NSCoding", "dismiss"]
 - !private ["PSo8NSCoding", "init"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", ""]
+- ["PSo26NSExtensionRequestHandling", "BackButton"]
+- ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
+- !private ["PSo26NSExtensionRequestHandling", "dismiss"]
 - !private ["PSo26NSExtensionRequestHandling", "init"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", ""]
+- ["CSo8NSObject", "AnyObject"]
+- ["CSo8NSObject", "BackButton"]
+- ["CSo8NSObject", "didReceiveMemoryWarning"]
+- !private ["CSo8NSObject", "dismiss"]
 - ["CSo8NSObject", "init"]
 - ["CSo8NSObject", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", "BackButton"]
+- ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
+- !private ["PSo16NSObjectProtocol", "dismiss"]
 - !private ["PSo16NSObjectProtocol", "init"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", ""]
 - ["Sq", "deinit"]
+- ["PSo21UIAppearanceContainer", "BackButton"]
+- ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
+- !private ["PSo21UIAppearanceContainer", "dismiss"]
 - !private ["PSo21UIAppearanceContainer", "init"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", ""]
+- ["PSo18UIContentContainer", "BackButton"]
+- ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
+- !private ["PSo18UIContentContainer", "dismiss"]
 - !private ["PSo18UIContentContainer", "init"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", ""]
+- ["PSo18UIFocusEnvironment", "BackButton"]
+- ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
+- !private ["PSo18UIFocusEnvironment", "dismiss"]
 - !private ["PSo18UIFocusEnvironment", "init"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", ""]
+- ["CSo11UIResponder", "AnyObject"]
+- ["CSo11UIResponder", "BackButton"]
+- ["CSo11UIResponder", "didReceiveMemoryWarning"]
+- !private ["CSo11UIResponder", "dismiss"]
 - ["CSo11UIResponder", "init"]
 - ["CSo11UIResponder", "viewDidLoad"]
+- ["PSo30UIResponderStandardEditActions", "BackButton"]
+- ["PSo30UIResponderStandardEditActions", "didReceiveMemoryWarning"]
+- !private ["PSo30UIResponderStandardEditActions", "dismiss"]
 - !private ["PSo30UIResponderStandardEditActions", "init"]
 - ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
 - ["PSo30UIResponderStandardEditActions", ""]
+- ["PSo16UIStateRestoring", "BackButton"]
+- ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
+- !private ["PSo16UIStateRestoring", "dismiss"]
 - !private ["PSo16UIStateRestoring", "init"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", ""]
+- ["PSo18UITraitEnvironment", "BackButton"]
+- ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
+- !private ["PSo18UITraitEnvironment", "dismiss"]
 - !private ["PSo18UITraitEnvironment", "init"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", ""]
+- ["CSo16UIViewController", "AnyObject"]
+- ["CSo16UIViewController", "BackButton"]
 - ["CSo16UIViewController", "deinit"]
+- ["CSo16UIViewController", "didReceiveMemoryWarning"]
+- !private ["CSo16UIViewController", "dismiss"]
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", ""]
+- ["Ps9_Hashable", "BackButton"]
+- ["Ps9_Hashable", "didReceiveMemoryWarning"]
+- !private ["Ps9_Hashable", "dismiss"]
 - !private ["Ps9_Hashable", "init"]
 - ["Ps9_Hashable", "viewDidLoad"]
 - ["Ps9_Hashable", ""]
 depends-nominal:
 - "Ps9AnyObject"
+- "Sb"
 - "Ps7CVarArg"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
 - "Ps9Equatable"
 - "Ps8Hashable"
-- "C5aNSWR7LoginVC"
+- "C5aNSWR7LogInVC"
 - "CSo7NSCoder"
 - "PSo8NSCoding"
 - "PSo26NSExtensionRequestHandling"
@@ -161,4 +231,4 @@ depends-external:
 - "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/Pods/FirebaseStorage/Frameworks/frameworks/FirebaseStorage.framework/Headers/FirebaseStorage.h"
 - "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/Pods/FirebaseStorage/Frameworks/frameworks/FirebaseStorage.framework/Modules/module.modulemap"
 - "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/Pods/Firebase/Core/Sources/Firebase.h"
-interface-hash: "509a903068b6709f28c089f389153434"
+interface-hash: "7c2f06b24488614c0123a36756da2911"
