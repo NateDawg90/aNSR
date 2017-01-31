@@ -35,7 +35,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7pRMmffofdzHewrUpSrttdFsE98=
+			t/Otzj0HL1/l20AdGBFU9FGXS1I=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -53,11 +53,23 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1hhfeb2bjeHXoAg0w7RGRxCY3fI=
+			i6+4T5gfunvOt/qBcPwZ/BWb8TM=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>Frameworks/GoogleToolboxForMac.framework/GoogleToolboxForMac</key>
+		<data>
+		yn6mpxHyGxCml4Z8rpaEM5yi8t8=
+		</data>
+		<key>Frameworks/GoogleToolboxForMac.framework/Info.plist</key>
+		<data>
+		3QayM4Yq5E/ERMta9Ry976GqEfA=
+		</data>
+		<key>Frameworks/GoogleToolboxForMac.framework/_CodeSignature/CodeResources</key>
+		<data>
+		Asd2pbLFaZOQPrIKI0vYkyrwIoI=
+		</data>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<data>
 		LF41Uh0Sp4L1Z3yICK12sjRbUjs=
@@ -102,9 +114,13 @@
 		<data>
 		3pGIqKcGBe5aYb7UlzMBucLGukM=
 		</data>
+		<key>GoogleService-Info.plist</key>
+		<data>
+		JQEH7H62H6a5q3r7ioPZtfODFIo=
+		</data>
 		<key>Info.plist</key>
 		<data>
-		HHQAuxSKfsnvBiAOMOcpbtSD14c=
+		QXeyJWXS0lrC9tDbubL5QmWpcOw=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -160,11 +176,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7pRMmffofdzHewrUpSrttdFsE98=
+			t/Otzj0HL1/l20AdGBFU9FGXS1I=
 			</data>
 			<key>hash2</key>
 			<data>
-			uxditd3eCRmW4QE7FtOFW/jZDlFNPMCWZw4GbOSHPZE=
+			TEYr/Iipvows01O4m5Lu10EhDrD6Jc0BuhR55u924n0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -186,14 +202,47 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1hhfeb2bjeHXoAg0w7RGRxCY3fI=
+			i6+4T5gfunvOt/qBcPwZ/BWb8TM=
 			</data>
 			<key>hash2</key>
 			<data>
-			vWgsx53k0b62bhUsr+jeItVpJI+0ay5KN06tNfW/Dsc=
+			9r85uUFZ003+m4izvgGqFGcMPnmj43rgUQ4gC7CQKu8=
 			</data>
 			<key>optional</key>
 			<true/>
+		</dict>
+		<key>Frameworks/GoogleToolboxForMac.framework/GoogleToolboxForMac</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			yn6mpxHyGxCml4Z8rpaEM5yi8t8=
+			</data>
+			<key>hash2</key>
+			<data>
+			EG6w9txQYpjA/UMWpbQngFHbyLq0IyCvfu8c5P3vuVY=
+			</data>
+		</dict>
+		<key>Frameworks/GoogleToolboxForMac.framework/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			3QayM4Yq5E/ERMta9Ry976GqEfA=
+			</data>
+			<key>hash2</key>
+			<data>
+			Ni21WPmhOr87I2yKonTQtHKCeQyKmMb4C6CKuW1mER4=
+			</data>
+		</dict>
+		<key>Frameworks/GoogleToolboxForMac.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Asd2pbLFaZOQPrIKI0vYkyrwIoI=
+			</data>
+			<key>hash2</key>
+			<data>
+			fkQ8v4gr15ZL/rBiZ47Rrohi1T61fqIp0YnHC6hbXR8=
+			</data>
 		</dict>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<dict>
@@ -314,6 +363,17 @@
 			<key>hash2</key>
 			<data>
 			LtcKRthlwopiSpRsPPza7t7nRkfzLry8PHNzyeHDJX8=
+			</data>
+		</dict>
+		<key>GoogleService-Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			JQEH7H62H6a5q3r7ioPZtfODFIo=
+			</data>
+			<key>hash2</key>
+			<data>
+			0zF6+mh3cqfhIfxwiHRr36G9SliCib5XzcVJrJaD0SU=
 			</data>
 		</dict>
 		<key>libswiftRemoteMirror.dylib</key>
