@@ -48,8 +48,7 @@ class AuthProvider {
     }
     
     func login(withEmail: String, password: String, loginHandler: LoginHandler?) {
-        
-        FIRAuth.auth()?.signIn(withEmail: withEmail, password: password, completion: { (user, error) in
+            FIRAuth.auth()?.signIn(withEmail: withEmail, password: password, completion: { (user, error) in
             
             if error != nil {
                 // user not signed in we have a problem
@@ -63,7 +62,7 @@ class AuthProvider {
         });
     }
     
-    func signUp(withEmail: String, username: String, password: String, loginHandler: LoginHandler?) {
+    func signUp(withEmail: String, password: String, loginHandler: LoginHandler?) {
         
         FIRAuth.auth()?.createUser(withEmail: withEmail, password: password, completion: { (user, error) in
             
@@ -74,7 +73,7 @@ class AuthProvider {
                 if user?.uid != nil {
                     
                     // save to database
-                    DBProvider.instance.saveUser(withID: user!.uid, email: withEmail, username: username, password: password);
+                    DBProvider.instance.saveUser(withID: user!.uid, email: withEmail, password: password);
                     
                     // sign in the user
                     FIRAuth.auth()?.signIn(withEmail: withEmail, password: password, completion: { (user, error) in

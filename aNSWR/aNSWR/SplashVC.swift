@@ -15,7 +15,12 @@ class SplashVC: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    
+//    override func viewDidAppear(_ animated: Bool) {
+//        if AuthProvider.instance.isLoggedIn() {
+//            performSegue(withIdentifier: NEWS_FEED_SEGUE_ID, sender: nil);
+//        }
+//    }
+
 
 }
 

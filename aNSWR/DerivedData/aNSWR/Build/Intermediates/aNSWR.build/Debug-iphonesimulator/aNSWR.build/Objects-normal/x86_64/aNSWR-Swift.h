@@ -159,9 +159,12 @@ SWIFT_CLASS("_TtC5aNSWR15CustomTextField")
 
 SWIFT_CLASS("_TtC5aNSWR7LogInVC")
 @interface LogInVC : UIViewController
+@property (nonatomic, weak) IBOutlet CustomTextField * _Null_unspecified EmailText;
+@property (nonatomic, weak) IBOutlet CustomTextField * _Null_unspecified PasswordText;
 - (void)viewDidLoad;
-- (void)didReceiveMemoryWarning;
+- (void)viewDidAppear:(BOOL)animated;
 - (IBAction)BackButton:(id _Nonnull)sender;
+- (IBAction)SignInButton:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -179,8 +182,11 @@ SWIFT_CLASS("_TtC5aNSWR10NewsFeedVC")
 
 SWIFT_CLASS("_TtC5aNSWR8SignUpVC")
 @interface SignUpVC : UIViewController
+@property (nonatomic, weak) IBOutlet CustomTextField * _Null_unspecified EmailText;
+@property (nonatomic, weak) IBOutlet CustomTextField * _Null_unspecified UsernameText;
+@property (nonatomic, weak) IBOutlet CustomTextField * _Null_unspecified PasswordText;
 - (void)viewDidLoad;
-- (void)didReceiveMemoryWarning;
+- (void)viewDidAppear:(BOOL)animated;
 - (IBAction)BackButton:(id _Nonnull)sender;
 - (IBAction)SignUpButton:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;

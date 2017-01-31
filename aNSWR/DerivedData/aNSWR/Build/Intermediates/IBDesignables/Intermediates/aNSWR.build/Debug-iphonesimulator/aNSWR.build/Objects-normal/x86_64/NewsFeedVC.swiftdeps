@@ -6,19 +6,19 @@ provides-nominal:
 provides-member:
 - ["C5aNSWR10NewsFeedVC", ""]
 provides-dynamic-lookup:
+- "LogOutButton"
 - "viewDidLoad"
 - "didReceiveMemoryWarning"
-- "LogOutButton"
 depends-top-level:
-- "AnyObject"
-- "NewsFeedVC"
+- !private "StringLiteralType"
 - "UIViewController"
 - !private "UIAlertAction"
-- !private "UIAlertController"
-- !private "String"
-- !private "StringLiteralType"
 - !private "BooleanLiteralType"
 - !private "AuthProvider"
+- "NewsFeedVC"
+- !private "UIAlertController"
+- "AnyObject"
+- !private "String"
 depends-member:
 - !private ["Ps9AnyObject", "AuthProvider"]
 - ["Ps9AnyObject", "LogOutButton"]
@@ -445,4 +445,4 @@ depends-external:
 - "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
 - "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
 - "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/Pods/Firebase/Core/Sources/Firebase.h"
-interface-hash: "7e74a30fa5b48e64446ea94cff73c997"
+interface-hash: "c100e510c948b1c278e00d37490d8f46"

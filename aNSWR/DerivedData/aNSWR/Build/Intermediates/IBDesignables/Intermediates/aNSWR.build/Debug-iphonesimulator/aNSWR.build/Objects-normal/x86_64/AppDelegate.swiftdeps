@@ -6,23 +6,23 @@ provides-nominal:
 provides-member:
 - ["C5aNSWR11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationDidBecomeActive"
-- "application"
-- "applicationWillTerminate"
-- "applicationWillResignActive"
 - "applicationDidEnterBackground"
+- "applicationWillResignActive"
 - "window"
+- "applicationDidBecomeActive"
+- "applicationWillTerminate"
+- "application"
 - "applicationWillEnterForeground"
 depends-top-level:
 - "UIResponder"
-- !private "FIRApp"
-- "UIWindow"
 - "AppDelegate"
+- !private "BooleanLiteralType"
 - "UIApplicationLaunchOptionsKey"
+- "UIWindow"
+- "UIApplicationDelegate"
 - "Bool"
 - "UIApplication"
-- "UIApplicationDelegate"
-- !private "BooleanLiteralType"
+- !private "FIRApp"
 depends-member:
 - !private ["Ps9AnyObject", "FIRApp"]
 - ["Ps9AnyObject", "application"]

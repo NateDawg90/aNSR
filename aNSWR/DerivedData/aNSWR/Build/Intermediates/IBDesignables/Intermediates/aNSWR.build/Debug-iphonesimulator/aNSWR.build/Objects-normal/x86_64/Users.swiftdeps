@@ -7,8 +7,8 @@ provides-member:
 - ["V5aNSWR4User", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "AssignmentPrecedence"
 - "String"
+- "AssignmentPrecedence"
 - "User"
 depends-member:
 - ["Ps7CVarArg", "init"]
