@@ -1,0 +1,6 @@
+framework module Pods_aNSWR {
+  umbrella header "Pods-aNSWR-umbrella.h"
+
+  export *
+  module * { export * }
+}
