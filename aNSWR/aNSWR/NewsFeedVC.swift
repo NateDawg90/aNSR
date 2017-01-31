@@ -23,7 +23,20 @@ class NewsFeedVC: UIViewController {
     
 
     @IBAction func LogOutButton(_ sender: AnyObject) {
+        if AuthProvider.instance.logOut() {
+            dismiss(animated: true, completion: nil);
+        } else {
+            showAlertMessage(title: "Could Not Log Out", message: "We Have A Problem With Connecting To Database To Log Out, Please Try Again");
+        }
     }
+    
+    private func showAlertMessage(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert);
+        let ok = UIAlertAction(title: "Ok", style: .cancel, handler: nil);
+        alert.addAction(ok);
+        self.present(alert, animated: true, completion: nil);
+    }
+
     /*
     // MARK: - Navigation
 
