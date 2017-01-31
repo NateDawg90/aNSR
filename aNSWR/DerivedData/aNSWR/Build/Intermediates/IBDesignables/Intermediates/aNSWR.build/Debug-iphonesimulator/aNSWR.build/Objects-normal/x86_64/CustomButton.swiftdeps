@@ -1,0 +1,274 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "CustomButton"
+provides-nominal:
+- "C5aNSWR12CustomButton"
+provides-member:
+- ["C5aNSWR12CustomButton", ""]
+provides-dynamic-lookup:
+- "borderColor"
+- "borderWidth"
+- "cornerRadius"
+depends-top-level:
+- "CustomButton"
+- "AssignmentPrecedence"
+- !private ">"
+- "CGFloat"
+- "UIButton"
+- "UIColor"
+depends-member:
+- ["Ps9AnyObject", "borderColor"]
+- ["Ps9AnyObject", "borderWidth"]
+- !private ["Ps9AnyObject", "cgColor"]
+- ["Ps9AnyObject", "cornerRadius"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "layer"]
+- !private ["Ps9AnyObject", "masksToBounds"]
+- ["Ps9AnyObject", ""]
+- ["Sb", "deinit"]
+- !private ["CSo7CALayer", "borderColor"]
+- !private ["CSo7CALayer", "borderWidth"]
+- !private ["CSo7CALayer", "cornerRadius"]
+- ["CSo7CALayer", "deinit"]
+- !private ["CSo7CALayer", "masksToBounds"]
+- ["PSo15CALayerDelegate", "borderColor"]
+- ["PSo15CALayerDelegate", "borderWidth"]
+- ["PSo15CALayerDelegate", "cornerRadius"]
+- !private ["PSo15CALayerDelegate", "init"]
+- !private ["PSo15CALayerDelegate", "layer"]
+- ["PSo15CALayerDelegate", ""]
+- !private ["PSo13CAMediaTiming", "borderColor"]
+- !private ["PSo13CAMediaTiming", "borderWidth"]
+- !private ["PSo13CAMediaTiming", "cornerRadius"]
+- !private ["PSo13CAMediaTiming", "masksToBounds"]
+- ["CSo7CGColor", "deinit"]
+- ["V12CoreGraphics7CGFloat", "deinit"]
+- ["VSC6CGRect", "deinit"]
+- ["Ps7CVarArg", "borderColor"]
+- ["Ps7CVarArg", "borderWidth"]
+- !private ["Ps7CVarArg", "cgColor"]
+- ["Ps7CVarArg", "cornerRadius"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "layer"]
+- !private ["Ps7CVarArg", "masksToBounds"]
+- ["Ps7CVarArg", ""]
+- ["C5aNSWR12CustomButton", "CGFloat"]
+- ["C5aNSWR12CustomButton", "UIColor"]
+- ["C5aNSWR12CustomButton", "borderColor"]
+- ["C5aNSWR12CustomButton", "borderWidth"]
+- ["C5aNSWR12CustomButton", "cornerRadius"]
+- ["C5aNSWR12CustomButton", "deinit"]
+- ["C5aNSWR12CustomButton", "init"]
+- !private ["C5aNSWR12CustomButton", "layer"]
+- ["Ps28CustomDebugStringConvertible", "borderColor"]
+- ["Ps28CustomDebugStringConvertible", "borderWidth"]
+- !private ["Ps28CustomDebugStringConvertible", "cgColor"]
+- ["Ps28CustomDebugStringConvertible", "cornerRadius"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "layer"]
+- !private ["Ps28CustomDebugStringConvertible", "masksToBounds"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "borderColor"]
+- ["Ps23CustomStringConvertible", "borderWidth"]
+- !private ["Ps23CustomStringConvertible", "cgColor"]
+- ["Ps23CustomStringConvertible", "cornerRadius"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "layer"]
+- !private ["Ps23CustomStringConvertible", "masksToBounds"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "borderColor"]
+- ["Ps9Equatable", "borderWidth"]
+- !private ["Ps9Equatable", "cgColor"]
+- ["Ps9Equatable", "cornerRadius"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "layer"]
+- !private ["Ps9Equatable", "masksToBounds"]
+- ["Ps9Equatable", ""]
+- ["Ps8Hashable", "borderColor"]
+- ["Ps8Hashable", "borderWidth"]
+- !private ["Ps8Hashable", "cgColor"]
+- ["Ps8Hashable", "cornerRadius"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "layer"]
+- !private ["Ps8Hashable", "masksToBounds"]
+- ["Ps8Hashable", ""]
+- ["CSo7NSCoder", "deinit"]
+- ["PSo8NSCoding", "borderColor"]
+- ["PSo8NSCoding", "borderWidth"]
+- !private ["PSo8NSCoding", "cgColor"]
+- ["PSo8NSCoding", "cornerRadius"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "layer"]
+- !private ["PSo8NSCoding", "masksToBounds"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "cgColor"]
+- ["CSo8NSObject", "CGFloat"]
+- ["CSo8NSObject", "UIColor"]
+- ["CSo8NSObject", "borderColor"]
+- ["CSo8NSObject", "borderWidth"]
+- !private ["CSo8NSObject", "cgColor"]
+- ["CSo8NSObject", "cornerRadius"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "layer"]
+- !private ["CSo8NSObject", "masksToBounds"]
+- ["PSo16NSObjectProtocol", "borderColor"]
+- ["PSo16NSObjectProtocol", "borderWidth"]
+- !private ["PSo16NSObjectProtocol", "cgColor"]
+- ["PSo16NSObjectProtocol", "cornerRadius"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "layer"]
+- !private ["PSo16NSObjectProtocol", "masksToBounds"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "cgColor"]
+- ["Sq", "deinit"]
+- ["PSo29UIAccessibilityIdentification", "borderColor"]
+- ["PSo29UIAccessibilityIdentification", "borderWidth"]
+- ["PSo29UIAccessibilityIdentification", "cornerRadius"]
+- !private ["PSo29UIAccessibilityIdentification", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "layer"]
+- ["PSo29UIAccessibilityIdentification", ""]
+- ["PSo12UIAppearance", "borderColor"]
+- ["PSo12UIAppearance", "borderWidth"]
+- ["PSo12UIAppearance", "cornerRadius"]
+- !private ["PSo12UIAppearance", "init"]
+- !private ["PSo12UIAppearance", "layer"]
+- ["PSo12UIAppearance", ""]
+- ["PSo21UIAppearanceContainer", "borderColor"]
+- ["PSo21UIAppearanceContainer", "borderWidth"]
+- ["PSo21UIAppearanceContainer", "cornerRadius"]
+- !private ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "layer"]
+- ["PSo21UIAppearanceContainer", ""]
+- ["CSo8UIButton", "CGFloat"]
+- ["CSo8UIButton", "UIColor"]
+- ["CSo8UIButton", "borderColor"]
+- ["CSo8UIButton", "borderWidth"]
+- ["CSo8UIButton", "cornerRadius"]
+- ["CSo8UIButton", "deinit"]
+- ["CSo8UIButton", "init"]
+- !private ["CSo8UIButton", "layer"]
+- ["CSo8UIButton", ""]
+- !private ["CSo7UIColor", "cgColor"]
+- ["CSo9UIControl", "CGFloat"]
+- ["CSo9UIControl", "UIColor"]
+- ["CSo9UIControl", "borderColor"]
+- ["CSo9UIControl", "borderWidth"]
+- ["CSo9UIControl", "cornerRadius"]
+- ["CSo9UIControl", "init"]
+- !private ["CSo9UIControl", "layer"]
+- ["PSo17UICoordinateSpace", "borderColor"]
+- ["PSo17UICoordinateSpace", "borderWidth"]
+- ["PSo17UICoordinateSpace", "cornerRadius"]
+- !private ["PSo17UICoordinateSpace", "init"]
+- !private ["PSo17UICoordinateSpace", "layer"]
+- ["PSo17UICoordinateSpace", ""]
+- ["PSo13UIDynamicItem", "borderColor"]
+- ["PSo13UIDynamicItem", "borderWidth"]
+- ["PSo13UIDynamicItem", "cornerRadius"]
+- !private ["PSo13UIDynamicItem", "init"]
+- !private ["PSo13UIDynamicItem", "layer"]
+- ["PSo13UIDynamicItem", ""]
+- ["PSo18UIFocusEnvironment", "borderColor"]
+- ["PSo18UIFocusEnvironment", "borderWidth"]
+- ["PSo18UIFocusEnvironment", "cornerRadius"]
+- !private ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "layer"]
+- ["PSo18UIFocusEnvironment", ""]
+- ["PSo11UIFocusItem", "borderColor"]
+- ["PSo11UIFocusItem", "borderWidth"]
+- ["PSo11UIFocusItem", "cornerRadius"]
+- !private ["PSo11UIFocusItem", "init"]
+- !private ["PSo11UIFocusItem", "layer"]
+- ["PSo11UIFocusItem", ""]
+- ["CSo11UIResponder", "CGFloat"]
+- ["CSo11UIResponder", "UIColor"]
+- ["CSo11UIResponder", "borderColor"]
+- ["CSo11UIResponder", "borderWidth"]
+- ["CSo11UIResponder", "cornerRadius"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "layer"]
+- ["PSo30UIResponderStandardEditActions", "borderColor"]
+- ["PSo30UIResponderStandardEditActions", "borderWidth"]
+- ["PSo30UIResponderStandardEditActions", "cornerRadius"]
+- !private ["PSo30UIResponderStandardEditActions", "init"]
+- !private ["PSo30UIResponderStandardEditActions", "layer"]
+- ["PSo30UIResponderStandardEditActions", ""]
+- ["PSo18UITraitEnvironment", "borderColor"]
+- ["PSo18UITraitEnvironment", "borderWidth"]
+- ["PSo18UITraitEnvironment", "cornerRadius"]
+- !private ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "layer"]
+- ["PSo18UITraitEnvironment", ""]
+- ["CSo6UIView", "CGFloat"]
+- ["CSo6UIView", "UIColor"]
+- ["CSo6UIView", "borderColor"]
+- ["CSo6UIView", "borderWidth"]
+- ["CSo6UIView", "cornerRadius"]
+- ["CSo6UIView", "init"]
+- !private ["CSo6UIView", "layer"]
+- ["Ps37_DefaultCustomPlaygroundQuickLookable", "borderColor"]
+- ["Ps37_DefaultCustomPlaygroundQuickLookable", "borderWidth"]
+- ["Ps37_DefaultCustomPlaygroundQuickLookable", "cornerRadius"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "init"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "layer"]
+- ["Ps37_DefaultCustomPlaygroundQuickLookable", ""]
+- !private ["Ps26_ExpressibleByColorLiteral", "cgColor"]
+- ["Ps9_Hashable", "borderColor"]
+- ["Ps9_Hashable", "borderWidth"]
+- !private ["Ps9_Hashable", "cgColor"]
+- ["Ps9_Hashable", "cornerRadius"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "layer"]
+- !private ["Ps9_Hashable", "masksToBounds"]
+- ["Ps9_Hashable", ""]
+depends-nominal:
+- "Ps9AnyObject"
+- "Sb"
+- "CSo7CALayer"
+- "PSo15CALayerDelegate"
+- !private "PSo13CAMediaTiming"
+- "CSo7CGColor"
+- "V12CoreGraphics7CGFloat"
+- "VSC6CGRect"
+- "Ps7CVarArg"
+- "C5aNSWR12CustomButton"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
+- "CSo7NSCoder"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- "Sq"
+- "PSo29UIAccessibilityIdentification"
+- "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "CSo8UIButton"
+- !private "CSo7UIColor"
+- "CSo9UIControl"
+- "PSo17UICoordinateSpace"
+- "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- "PSo11UIFocusItem"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- "PSo18UITraitEnvironment"
+- "CSo6UIView"
+- "Ps37_DefaultCustomPlaygroundQuickLookable"
+- !private "Ps26_ExpressibleByColorLiteral"
+- "Ps9_Hashable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+interface-hash: "6a6401134cb425882bdd70d4fa3edf1d"
