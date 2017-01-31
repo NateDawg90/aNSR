@@ -167,6 +167,16 @@ SWIFT_CLASS("_TtC5aNSWR7LogInVC")
 @end
 
 
+SWIFT_CLASS("_TtC5aNSWR10NewsFeedVC")
+@interface NewsFeedVC : UIViewController
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (IBAction)LogOutButton:(id _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC5aNSWR8SignUpVC")
 @interface SignUpVC : UIViewController
 - (void)viewDidLoad;

@@ -22,6 +22,7 @@
 		7ADE20491E409ADD00047956 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE20481E409ADD00047956 /* SignUpVC.swift */; };
 		7ADE204B1E409B1A00047956 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE204A1E409B1A00047956 /* LogInVC.swift */; };
 		7ADE204D1E40A52400047956 /* NewsFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE204C1E40A52400047956 /* NewsFeedVC.swift */; };
+		7AF117721E40AB1800C1845F /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF117711E40AB1800C1845F /* Users.swift */; };
 		82558C6304ED2BDF48880FC4 /* Pods_aNSWRUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09DA156FA56BD726157BF7B7 /* Pods_aNSWRUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		7ADE20481E409ADD00047956 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		7ADE204A1E409B1A00047956 /* LogInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		7ADE204C1E40A52400047956 /* NewsFeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedVC.swift; sourceTree = "<group>"; };
+		7AF117711E40AB1800C1845F /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		800F8B8791912C5B502492D9 /* Pods-aNSWRUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWRUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWRUITests/Pods-aNSWRUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A1289E96C57B648EE8ED67C6 /* Pods_aNSWR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aNSWR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D164EEF377C6B3570076BE /* Pods-aNSWRTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWRTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWRTests/Pods-aNSWRTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 		7ADE203F1E408A9A00047956 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7AF117711E40AB1800C1845F /* Users.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AF117721E40AB1800C1845F /* Users.swift in Sources */,
 				7ADE20451E40915B00047956 /* CustomButton.swift in Sources */,
 				7ADE204D1E40A52400047956 /* NewsFeedVC.swift in Sources */,
 				7ADE20141E40897B00047956 /* SplashVC.swift in Sources */,

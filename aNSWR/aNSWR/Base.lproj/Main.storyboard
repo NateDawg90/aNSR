@@ -155,7 +155,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="BackButton:" destination="Fc8-RD-q4i" eventType="touchUpInside" id="VSQ-YU-LaM"/>
+                                    <action selector="BackButton:" destination="Fc8-RD-q4i" eventType="touchUpInside" id="Bmf-UK-Fdz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuK-AM-aRW" customClass="CustomButton" customModule="aNSWR" customModuleProvider="target">
@@ -177,6 +177,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.15487178539999999" green="1" blue="0.79322621429999995" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <segue destination="w6d-pN-y5C" kind="show" identifier="NewsFeedVC" id="pf8-ha-VC3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g2c-PN-LKw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -287,22 +290,25 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="BackButton:" destination="B2O-VH-R5A" eventType="touchUpInside" id="gOr-c5-d1f"/>
+                                    <action selector="BackButton:" destination="B2O-VH-R5A" eventType="touchUpInside" id="MOh-DA-XWO"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.15487178539999999" green="1" blue="0.79322621429999995" alpha="1" colorSpace="calibratedRGB"/>
                         <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                     </view>
+                    <connections>
+                        <segue destination="w6d-pN-y5C" kind="show" identifier="NewsFeedVc" id="rWZ-Xp-GAf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cwr-yX-om1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1021.6" y="-235.23238380809596"/>
         </scene>
-        <!--View Controller-->
+        <!--News FeedVC-->
         <scene sceneID="ECR-Hn-tVN">
             <objects>
-                <viewController id="w6d-pN-y5C" sceneMemberID="viewController">
+                <viewController id="w6d-pN-y5C" customClass="NewsFeedVC" customModule="aNSWR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TjM-Es-6fr"/>
                         <viewControllerLayoutGuide type="bottom" id="II6-Lu-L0G"/>
@@ -310,6 +316,29 @@
                     <view key="view" contentMode="scaleToFill" id="ok8-Gf-89W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OVR-RF-dmA">
+                                <frame key="frameInset" minY="20" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="aNSWR" id="aeY-V2-8lU">
+                                        <barButtonItem key="leftBarButtonItem" title="Log Out " id="6qd-Br-Zez">
+                                            <connections>
+                                                <action selector="LogOutButton:" destination="w6d-pN-y5C" id="nrN-Cl-Op1"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="+" id="RS7-1L-1bR"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cbu-B0-fVM">
+                                <frame key="frameInset" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Item" id="T5Q-dZ-cB8"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -318,4 +347,7 @@
             <point key="canvasLocation" x="1903" y="126"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="pf8-ha-VC3"/>
+    </inferredMetricsTieBreakers>
 </document>

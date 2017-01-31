@@ -22,6 +22,8 @@ class NewsFeedVC: UIViewController {
     }
     
 
+    @IBAction func LogOutButton(_ sender: AnyObject) {
+    }
     /*
     // MARK: - Navigation
 
