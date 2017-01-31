@@ -1,6 +1,6 @@
 version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
 options: "1fdc1c1310806eea79ed330313699945"
-build_time: [539199482, 129227000]
+build_time: [539201990, 993869000]
 inputs:
   "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/Users.swift": [539198579, 0]
   "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/CustomButton.swift": [539198579, 0]
@@ -9,6 +9,6 @@ inputs:
   "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/SplashVC.swift": [539198579, 0]
   "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/LogInVC.swift": [539198579, 0]
   "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/AppDelegate.swift": [539198579, 0]
-  "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/AuthProvider.swift": [539198579, 0]
-  "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/SignUpVC.swift": [539198579, 0]
+  "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/AuthProvider.swift": [539201990, 0]
+  "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/SignUpVC.swift": [539201820, 0]
   "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/CustomTextField.swift": [539198579, 0]
