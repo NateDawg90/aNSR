@@ -1,0 +1,8 @@
+version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
+options: "6569f9eb0add395cb2d8dd1b5692de84"
+build_time: [539170665, 696182000]
+inputs:
+  "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/CustomButton.swift": [539170442, 0]
+  "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/LoginVC.swift": [539168763, 0]
+  "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/AppDelegate.swift": [539168379, 0]
+  "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/CustomTextField.swift": [539170121, 0]
