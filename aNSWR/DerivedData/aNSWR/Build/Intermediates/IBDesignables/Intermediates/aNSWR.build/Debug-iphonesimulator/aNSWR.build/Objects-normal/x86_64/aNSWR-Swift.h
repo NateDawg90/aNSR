@@ -160,8 +160,11 @@ SWIFT_CLASS("_TtC5aNSWR15CustomTextField")
 SWIFT_CLASS("_TtC5aNSWR7LogInVC")
 @interface LogInVC : UIViewController
 - (void)viewDidLoad;
-- (void)didReceiveMemoryWarning;
+- (void)viewDidAppear:(BOOL)animated;
 - (IBAction)BackButton:(id _Nonnull)sender;
+@property (nonatomic, weak) IBOutlet CustomTextField * _Null_unspecified EmailText;
+@property (nonatomic, weak) IBOutlet CustomTextField * _Null_unspecified PasswordText;
+- (IBAction)SignInButton:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

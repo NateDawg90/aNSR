@@ -173,11 +173,16 @@
                                         <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="SignInButton:" destination="Fc8-RD-q4i" eventType="touchUpInside" id="GL3-fs-uCZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.15487178539999999" green="1" blue="0.79322621429999995" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="EmailText" destination="e7G-m4-Yc1" id="0mh-jR-mOP"/>
+                        <outlet property="PasswordText" destination="Q0x-y0-HQe" id="4cS-hP-0b1"/>
                         <segue destination="w6d-pN-y5C" kind="show" identifier="NewsFeedVC" id="pf8-ha-VC3"/>
                     </connections>
                 </viewController>
@@ -351,6 +356,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rWZ-Xp-GAf"/>
+        <segue reference="pf8-ha-VC3"/>
     </inferredMetricsTieBreakers>
 </document>
