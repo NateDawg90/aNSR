@@ -35,10 +35,9 @@ class SignUpVC: UIViewController {
     }
 
     @IBAction func SignUpButton(_ sender: AnyObject) {
-        if EmailText.text != "" && PasswordText.text != "" && UsernameText.text != "" {
+        if EmailText.text != "" && isValidEmail(testStr: EmailText.text!) && PasswordText.text != "" && UsernameText.text != "" {
             
-            AuthProvider.instance.signUp(withEmail: EmailText.text!, password: PasswordText.text!, loginHandler: { (message) in
-                print(message)
+            AuthProvider.instance.signUp(withEmail: EmailText.text!, username: UsernameText.text!, password: PasswordText.text!, loginHandler: { (message) in
                 if message != nil {
                     self.showAlertMessage(title: "Problem With Signing Up", message: message!);
                 } else {
