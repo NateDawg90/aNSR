@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LogInVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        performSegue(withIdentifier: "NewsFeedVC", sender: nil)
 
         // Do any additional setup after loading the view.
     }

@@ -7,13 +7,13 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SignUpVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+                // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,6 +25,10 @@ class SignUpVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func SignUpButton(_ sender: AnyObject) {
+        performSegue(withIdentifier: "NewsFeedVC", sender: nil)
+
+    }
     /*
     // MARK: - Navigation
 

@@ -23,6 +23,8 @@
 		7ADE204B1E409B1A00047956 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE204A1E409B1A00047956 /* LogInVC.swift */; };
 		7ADE204D1E40A52400047956 /* NewsFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE204C1E40A52400047956 /* NewsFeedVC.swift */; };
 		7AF117721E40AB1800C1845F /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF117711E40AB1800C1845F /* Users.swift */; };
+		7AF117751E40AFF100C1845F /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF117741E40AFF100C1845F /* AuthProvider.swift */; };
+		7AF117771E40B37100C1845F /* DBProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF117761E40B37100C1845F /* DBProvider.swift */; };
 		82558C6304ED2BDF48880FC4 /* Pods_aNSWRUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09DA156FA56BD726157BF7B7 /* Pods_aNSWRUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +71,8 @@
 		7ADE204A1E409B1A00047956 /* LogInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		7ADE204C1E40A52400047956 /* NewsFeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedVC.swift; sourceTree = "<group>"; };
 		7AF117711E40AB1800C1845F /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		7AF117741E40AFF100C1845F /* AuthProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
+		7AF117761E40B37100C1845F /* DBProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBProvider.swift; sourceTree = "<group>"; };
 		800F8B8791912C5B502492D9 /* Pods-aNSWRUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWRUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWRUITests/Pods-aNSWRUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A1289E96C57B648EE8ED67C6 /* Pods_aNSWR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aNSWR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D164EEF377C6B3570076BE /* Pods-aNSWRTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWRTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWRTests/Pods-aNSWRTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 		7ADE20101E40897B00047956 /* aNSWR */ = {
 			isa = PBXGroup;
 			children = (
+				7AF117731E40AFD500C1845F /* PlugIns */,
 				7ADE20411E408AAE00047956 /* View */,
 				7ADE20401E408AA600047956 /* Controller */,
 				7ADE203F1E408A9A00047956 /* Model */,
@@ -195,6 +200,15 @@
 				7ADE20441E40915B00047956 /* CustomButton.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		7AF117731E40AFD500C1845F /* PlugIns */ = {
+			isa = PBXGroup;
+			children = (
+				7AF117741E40AFF100C1845F /* AuthProvider.swift */,
+				7AF117761E40B37100C1845F /* DBProvider.swift */,
+			);
+			name = PlugIns;
 			sourceTree = "<group>";
 		};
 		811A012261D408A22E0D2763 /* Pods */ = {
@@ -494,10 +508,12 @@
 			files = (
 				7AF117721E40AB1800C1845F /* Users.swift in Sources */,
 				7ADE20451E40915B00047956 /* CustomButton.swift in Sources */,
+				7AF117771E40B37100C1845F /* DBProvider.swift in Sources */,
 				7ADE204D1E40A52400047956 /* NewsFeedVC.swift in Sources */,
 				7ADE20141E40897B00047956 /* SplashVC.swift in Sources */,
 				7ADE204B1E409B1A00047956 /* LogInVC.swift in Sources */,
 				7ADE20121E40897B00047956 /* AppDelegate.swift in Sources */,
+				7AF117751E40AFF100C1845F /* AuthProvider.swift in Sources */,
 				7ADE20491E409ADD00047956 /* SignUpVC.swift in Sources */,
 				7ADE20431E408F5E00047956 /* CustomTextField.swift in Sources */,
 			);
@@ -572,6 +588,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -621,6 +638,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
