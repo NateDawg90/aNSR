@@ -11,20 +11,21 @@ provides-member:
 - ["C5aNSWR12AuthProvider", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "String"
-- !private "BooleanLiteralType"
-- "Bool"
-- "LoginHandler"
-- "StringLiteralType"
 - "Void"
-- !private "FIRAuthErrorCode"
-- !private "FIRAuth"
 - "AuthProvider"
-- !private "NSError"
-- "LoginErrorCode"
-- !private "CastingPrecedence"
-- !private "DBProvider"
 - !private "!="
+- !private "BooleanLiteralType"
+- !private "DBProvider"
+- "StringLiteralType"
+- "LoginHandler"
+- "String"
+- !private "print"
+- !private "NSError"
+- !private "CastingPrecedence"
+- !private "FIRAuth"
+- !private "FIRAuthErrorCode"
+- "Bool"
+- "LoginErrorCode"
 depends-member:
 - ["Ps9AnyObject", "AuthProvider"]
 - !private ["Ps9AnyObject", "DBProvider"]
@@ -39,6 +40,7 @@ depends-member:
 - !private ["Ps9AnyObject", "handleErrors"]
 - ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "instance"]
+- !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "saveUser"]
 - !private ["Ps9AnyObject", "signIn"]
 - !private ["Ps9AnyObject", "signOut"]
@@ -61,6 +63,7 @@ depends-member:
 - ["C5aNSWR12AuthProvider", "isLoggedIn"]
 - ["C5aNSWR12AuthProvider", "logOut"]
 - ["C5aNSWR12AuthProvider", "login"]
+- !private ["C5aNSWR12AuthProvider", "print"]
 - ["C5aNSWR12AuthProvider", "signUp"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - ["Sb", "deinit"]
