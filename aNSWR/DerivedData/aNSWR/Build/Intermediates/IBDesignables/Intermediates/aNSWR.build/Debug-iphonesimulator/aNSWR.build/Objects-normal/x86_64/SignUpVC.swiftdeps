@@ -6,29 +6,29 @@ provides-nominal:
 provides-member:
 - ["C5aNSWR8SignUpVC", ""]
 provides-dynamic-lookup:
-- "PasswordText"
-- "BackButton"
-- "viewDidLoad"
+- "viewDidAppear"
 - "EmailText"
 - "UsernameText"
 - "SignUpButton"
-- "viewDidAppear"
+- "PasswordText"
+- "viewDidLoad"
+- "BackButton"
 depends-top-level:
-- !private "AuthProvider"
+- "Bool"
 - !private "String"
-- !private "NSPredicate"
-- "SignUpVC"
+- !private "AuthProvider"
 - "StringLiteralType"
-- "AnyObject"
 - !private "BooleanLiteralType"
-- !private "UIAlertAction"
-- !private "!="
 - "CustomTextField"
-- !private "&&"
+- !private "UIAlertAction"
+- "AnyObject"
+- "SignUpVC"
+- !private "NSPredicate"
 - !private "UIAlertController"
 - "UIViewController"
-- "Bool"
+- !private "!="
 - !private "AssignmentPrecedence"
+- !private "&&"
 depends-member:
 - !private ["Ps9AnyObject", "AuthProvider"]
 - ["Ps9AnyObject", "BackButton"]

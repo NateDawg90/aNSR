@@ -11,20 +11,20 @@ provides-member:
 - ["C5aNSWR12AuthProvider", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "AuthProvider"
-- !private "NSError"
-- !private "DBProvider"
-- !private "!="
-- !private "FIRAuth"
 - "String"
-- !private "CastingPrecedence"
-- "LoginErrorCode"
-- !private "FIRAuthErrorCode"
-- "Void"
-- "StringLiteralType"
+- !private "BooleanLiteralType"
 - "Bool"
 - "LoginHandler"
-- !private "BooleanLiteralType"
+- "StringLiteralType"
+- "Void"
+- !private "FIRAuthErrorCode"
+- !private "FIRAuth"
+- "AuthProvider"
+- !private "NSError"
+- "LoginErrorCode"
+- !private "CastingPrecedence"
+- !private "DBProvider"
+- !private "!="
 depends-member:
 - ["Ps9AnyObject", "AuthProvider"]
 - !private ["Ps9AnyObject", "DBProvider"]
