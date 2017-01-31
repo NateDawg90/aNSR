@@ -11,21 +11,20 @@ provides-member:
 - ["C5aNSWR12AuthProvider", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "DBProvider"
+- "LoginHandler"
 - !private "CastingPrecedence"
+- !private "DBProvider"
 - "String"
-- "LoginErrorCode"
 - !private "!="
 - "Void"
-- !private "BooleanLiteralType"
 - "AuthProvider"
-- !private "FIRAuthErrorCode"
 - !private "FIRAuth"
+- "LoginErrorCode"
+- !private "BooleanLiteralType"
+- !private "FIRAuthErrorCode"
 - "StringLiteralType"
-- "Bool"
-- !private "print"
-- "LoginHandler"
 - !private "NSError"
+- "Bool"
 depends-member:
 - ["Ps9AnyObject", "AuthProvider"]
 - !private ["Ps9AnyObject", "DBProvider"]
@@ -40,7 +39,6 @@ depends-member:
 - !private ["Ps9AnyObject", "handleErrors"]
 - ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "instance"]
-- !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "saveUser"]
 - !private ["Ps9AnyObject", "signIn"]
 - !private ["Ps9AnyObject", "signOut"]
@@ -63,7 +61,6 @@ depends-member:
 - ["C5aNSWR12AuthProvider", "isLoggedIn"]
 - ["C5aNSWR12AuthProvider", "logOut"]
 - ["C5aNSWR12AuthProvider", "login"]
-- !private ["C5aNSWR12AuthProvider", "print"]
 - ["C5aNSWR12AuthProvider", "signUp"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - ["Sb", "deinit"]
@@ -342,4 +339,4 @@ depends-external:
 - "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
 - "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
 - "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/Pods/Firebase/Core/Sources/Firebase.h"
-interface-hash: "765561e203de29711c48b7b8b1cb89f9"
+interface-hash: "d1beb70932431967b73367f77f062075"
