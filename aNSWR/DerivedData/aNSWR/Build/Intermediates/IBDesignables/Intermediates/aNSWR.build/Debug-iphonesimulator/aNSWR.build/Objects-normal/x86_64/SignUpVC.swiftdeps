@@ -7,13 +7,13 @@ provides-member:
 - ["C5aNSWR8SignUpVC", ""]
 provides-dynamic-lookup:
 - "viewDidLoad"
-- "BackButton"
 - "didReceiveMemoryWarning"
+- "BackButton"
 depends-top-level:
-- !private "BooleanLiteralType"
 - "AnyObject"
-- "UIViewController"
 - "SignUpVC"
+- !private "BooleanLiteralType"
+- "UIViewController"
 depends-member:
 - ["Ps9AnyObject", "BackButton"]
 - ["Ps9AnyObject", "didReceiveMemoryWarning"]
