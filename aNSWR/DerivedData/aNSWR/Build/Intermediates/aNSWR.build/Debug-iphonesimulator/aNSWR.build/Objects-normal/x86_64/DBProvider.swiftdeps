@@ -7,12 +7,12 @@ provides-member:
 - ["C5aNSWR10DBProvider", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "DBProvider"
 - !private "FIRDatabase"
-- "StringLiteralType"
 - !private "Dictionary"
 - "String"
+- "StringLiteralType"
 - "FIRDatabaseReference"
+- "DBProvider"
 depends-member:
 - !private ["Ps9AnyObject", "DATA"]
 - ["Ps9AnyObject", "DBProvider"]

@@ -6,29 +6,30 @@ provides-nominal:
 provides-member:
 - ["C5aNSWR8SignUpVC", ""]
 provides-dynamic-lookup:
-- "EmailText"
-- "viewDidAppear"
 - "UsernameText"
-- "SignUpButton"
-- "viewDidLoad"
+- "viewDidAppear"
+- "EmailText"
 - "PasswordText"
 - "BackButton"
+- "viewDidLoad"
+- "SignUpButton"
 depends-top-level:
-- "StringLiteralType"
-- "CustomTextField"
-- !private "AuthProvider"
-- "Bool"
-- !private "BooleanLiteralType"
-- !private "NSPredicate"
-- !private "UIAlertController"
-- !private "String"
-- "AnyObject"
-- !private "UIAlertAction"
-- "SignUpVC"
 - !private "AssignmentPrecedence"
+- "SignUpVC"
+- "Bool"
+- "AnyObject"
+- !private "UIAlertController"
+- "CustomTextField"
 - !private "&&"
-- "UIViewController"
+- !private "AuthProvider"
+- !private "print"
+- !private "BooleanLiteralType"
 - !private "!="
+- !private "NSPredicate"
+- !private "String"
+- "StringLiteralType"
+- "UIViewController"
+- !private "UIAlertAction"
 depends-member:
 - !private ["Ps9AnyObject", "AuthProvider"]
 - ["Ps9AnyObject", "BackButton"]
@@ -49,6 +50,7 @@ depends-member:
 - ["Ps9AnyObject", "isValidEmail"]
 - !private ["Ps9AnyObject", "performSegue"]
 - !private ["Ps9AnyObject", "present"]
+- !private ["Ps9AnyObject", "print"]
 - ["Ps9AnyObject", "showAlertMessage"]
 - !private ["Ps9AnyObject", "signUp"]
 - !private ["Ps9AnyObject", "text"]
@@ -79,6 +81,7 @@ depends-member:
 - ["Ps7CVarArg", "isValidEmail"]
 - !private ["Ps7CVarArg", "performSegue"]
 - !private ["Ps7CVarArg", "present"]
+- !private ["Ps7CVarArg", "print"]
 - ["Ps7CVarArg", "showAlertMessage"]
 - !private ["Ps7CVarArg", "text"]
 - ["Ps7CVarArg", "viewDidAppear"]
@@ -102,6 +105,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "isValidEmail"]
 - !private ["Ps28CustomDebugStringConvertible", "performSegue"]
 - !private ["Ps28CustomDebugStringConvertible", "present"]
+- !private ["Ps28CustomDebugStringConvertible", "print"]
 - ["Ps28CustomDebugStringConvertible", "showAlertMessage"]
 - !private ["Ps28CustomDebugStringConvertible", "text"]
 - ["Ps28CustomDebugStringConvertible", "viewDidAppear"]
@@ -129,6 +133,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "isValidEmail"]
 - !private ["Ps23CustomStringConvertible", "performSegue"]
 - !private ["Ps23CustomStringConvertible", "present"]
+- !private ["Ps23CustomStringConvertible", "print"]
 - ["Ps23CustomStringConvertible", "showAlertMessage"]
 - !private ["Ps23CustomStringConvertible", "text"]
 - ["Ps23CustomStringConvertible", "viewDidAppear"]
@@ -156,6 +161,7 @@ depends-member:
 - ["Ps9Equatable", "isValidEmail"]
 - !private ["Ps9Equatable", "performSegue"]
 - !private ["Ps9Equatable", "present"]
+- !private ["Ps9Equatable", "print"]
 - ["Ps9Equatable", "showAlertMessage"]
 - !private ["Ps9Equatable", "text"]
 - ["Ps9Equatable", "viewDidAppear"]
@@ -186,6 +192,7 @@ depends-member:
 - ["Ps8Hashable", "isValidEmail"]
 - !private ["Ps8Hashable", "performSegue"]
 - !private ["Ps8Hashable", "present"]
+- !private ["Ps8Hashable", "print"]
 - ["Ps8Hashable", "showAlertMessage"]
 - !private ["Ps8Hashable", "text"]
 - ["Ps8Hashable", "viewDidAppear"]
@@ -213,6 +220,7 @@ depends-member:
 - ["PSo8NSCoding", "isValidEmail"]
 - !private ["PSo8NSCoding", "performSegue"]
 - !private ["PSo8NSCoding", "present"]
+- !private ["PSo8NSCoding", "print"]
 - ["PSo8NSCoding", "showAlertMessage"]
 - !private ["PSo8NSCoding", "text"]
 - ["PSo8NSCoding", "viewDidAppear"]
@@ -236,6 +244,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "isValidEmail"]
 - !private ["PSo26NSExtensionRequestHandling", "performSegue"]
 - !private ["PSo26NSExtensionRequestHandling", "present"]
+- !private ["PSo26NSExtensionRequestHandling", "print"]
 - ["PSo26NSExtensionRequestHandling", "showAlertMessage"]
 - ["PSo26NSExtensionRequestHandling", "viewDidAppear"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
@@ -262,6 +271,7 @@ depends-member:
 - ["CSo8NSObject", "isValidEmail"]
 - !private ["CSo8NSObject", "performSegue"]
 - !private ["CSo8NSObject", "present"]
+- !private ["CSo8NSObject", "print"]
 - ["CSo8NSObject", "showAlertMessage"]
 - !private ["CSo8NSObject", "text"]
 - ["CSo8NSObject", "viewDidAppear"]
@@ -283,6 +293,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "isValidEmail"]
 - !private ["PSo16NSObjectProtocol", "performSegue"]
 - !private ["PSo16NSObjectProtocol", "present"]
+- !private ["PSo16NSObjectProtocol", "print"]
 - ["PSo16NSObjectProtocol", "showAlertMessage"]
 - !private ["PSo16NSObjectProtocol", "text"]
 - ["PSo16NSObjectProtocol", "viewDidAppear"]
@@ -317,6 +328,7 @@ depends-member:
 - !private ["C5aNSWR8SignUpVC", "isValidEmail"]
 - !private ["C5aNSWR8SignUpVC", "performSegue"]
 - !private ["C5aNSWR8SignUpVC", "present"]
+- !private ["C5aNSWR8SignUpVC", "print"]
 - !private ["C5aNSWR8SignUpVC", "showAlertMessage"]
 - ["C5aNSWR8SignUpVC", "viewDidAppear"]
 - ["C5aNSWR8SignUpVC", "viewDidLoad"]
@@ -351,6 +363,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "isValidEmail"]
 - !private ["PSo21UIAppearanceContainer", "performSegue"]
 - !private ["PSo21UIAppearanceContainer", "present"]
+- !private ["PSo21UIAppearanceContainer", "print"]
 - ["PSo21UIAppearanceContainer", "showAlertMessage"]
 - !private ["PSo21UIAppearanceContainer", "text"]
 - ["PSo21UIAppearanceContainer", "viewDidAppear"]
@@ -372,6 +385,7 @@ depends-member:
 - ["PSo18UIContentContainer", "isValidEmail"]
 - !private ["PSo18UIContentContainer", "performSegue"]
 - !private ["PSo18UIContentContainer", "present"]
+- !private ["PSo18UIContentContainer", "print"]
 - ["PSo18UIContentContainer", "showAlertMessage"]
 - ["PSo18UIContentContainer", "viewDidAppear"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
@@ -396,6 +410,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "isValidEmail"]
 - !private ["PSo18UIFocusEnvironment", "performSegue"]
 - !private ["PSo18UIFocusEnvironment", "present"]
+- !private ["PSo18UIFocusEnvironment", "print"]
 - ["PSo18UIFocusEnvironment", "showAlertMessage"]
 - !private ["PSo18UIFocusEnvironment", "text"]
 - ["PSo18UIFocusEnvironment", "viewDidAppear"]
@@ -423,6 +438,7 @@ depends-member:
 - ["CSo11UIResponder", "isValidEmail"]
 - !private ["CSo11UIResponder", "performSegue"]
 - !private ["CSo11UIResponder", "present"]
+- !private ["CSo11UIResponder", "print"]
 - ["CSo11UIResponder", "showAlertMessage"]
 - !private ["CSo11UIResponder", "text"]
 - ["CSo11UIResponder", "viewDidAppear"]
@@ -443,6 +459,7 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "isValidEmail"]
 - !private ["PSo30UIResponderStandardEditActions", "performSegue"]
 - !private ["PSo30UIResponderStandardEditActions", "present"]
+- !private ["PSo30UIResponderStandardEditActions", "print"]
 - ["PSo30UIResponderStandardEditActions", "showAlertMessage"]
 - !private ["PSo30UIResponderStandardEditActions", "text"]
 - ["PSo30UIResponderStandardEditActions", "viewDidAppear"]
@@ -464,6 +481,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "isValidEmail"]
 - !private ["PSo16UIStateRestoring", "performSegue"]
 - !private ["PSo16UIStateRestoring", "present"]
+- !private ["PSo16UIStateRestoring", "print"]
 - ["PSo16UIStateRestoring", "showAlertMessage"]
 - ["PSo16UIStateRestoring", "viewDidAppear"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
@@ -487,6 +505,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "isValidEmail"]
 - !private ["PSo18UITraitEnvironment", "performSegue"]
 - !private ["PSo18UITraitEnvironment", "present"]
+- !private ["PSo18UITraitEnvironment", "print"]
 - ["PSo18UITraitEnvironment", "showAlertMessage"]
 - !private ["PSo18UITraitEnvironment", "text"]
 - ["PSo18UITraitEnvironment", "viewDidAppear"]
@@ -514,6 +533,7 @@ depends-member:
 - ["CSo16UIViewController", "isValidEmail"]
 - !private ["CSo16UIViewController", "performSegue"]
 - !private ["CSo16UIViewController", "present"]
+- !private ["CSo16UIViewController", "print"]
 - ["CSo16UIViewController", "showAlertMessage"]
 - ["CSo16UIViewController", "viewDidAppear"]
 - ["CSo16UIViewController", "viewDidLoad"]
@@ -545,6 +565,7 @@ depends-member:
 - ["Ps9_Hashable", "isValidEmail"]
 - !private ["Ps9_Hashable", "performSegue"]
 - !private ["Ps9_Hashable", "present"]
+- !private ["Ps9_Hashable", "print"]
 - ["Ps9_Hashable", "showAlertMessage"]
 - !private ["Ps9_Hashable", "text"]
 - ["Ps9_Hashable", "viewDidAppear"]

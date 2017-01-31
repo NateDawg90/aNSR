@@ -38,7 +38,7 @@ class SignUpVC: UIViewController {
         if EmailText.text != "" && PasswordText.text != "" && UsernameText.text != "" {
             
             AuthProvider.instance.signUp(withEmail: EmailText.text!, password: PasswordText.text!, loginHandler: { (message) in
-                
+                print(message)
                 if message != nil {
                     self.showAlertMessage(title: "Problem With Signing Up", message: message!);
                 } else {

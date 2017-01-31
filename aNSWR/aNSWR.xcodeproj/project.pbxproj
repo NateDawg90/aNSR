@@ -18,10 +18,10 @@
 		7ADE20321E40897C00047956 /* aNSWRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE20311E40897C00047956 /* aNSWRUITests.swift */; };
 		7ADE20431E408F5E00047956 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE20421E408F5E00047956 /* CustomTextField.swift */; };
 		7ADE20451E40915B00047956 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE20441E40915B00047956 /* CustomButton.swift */; };
-		7ADE20471E4096BF00047956 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7ADE20461E4096BF00047956 /* GoogleService-Info.plist */; };
 		7ADE20491E409ADD00047956 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE20481E409ADD00047956 /* SignUpVC.swift */; };
 		7ADE204B1E409B1A00047956 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE204A1E409B1A00047956 /* LogInVC.swift */; };
 		7ADE204D1E40A52400047956 /* NewsFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE204C1E40A52400047956 /* NewsFeedVC.swift */; };
+		7AEA3A0E1E410EC200480627 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AEA3A0D1E410EC200480627 /* GoogleService-Info.plist */; };
 		7AF117721E40AB1800C1845F /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF117711E40AB1800C1845F /* Users.swift */; };
 		7AF117751E40AFF100C1845F /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF117741E40AFF100C1845F /* AuthProvider.swift */; };
 		7AF117771E40B37100C1845F /* DBProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF117761E40B37100C1845F /* DBProvider.swift */; };
@@ -66,10 +66,10 @@
 		7ADE20331E40897C00047956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7ADE20421E408F5E00047956 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		7ADE20441E40915B00047956 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		7ADE20461E4096BF00047956 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7ADE20481E409ADD00047956 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		7ADE204A1E409B1A00047956 /* LogInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		7ADE204C1E40A52400047956 /* NewsFeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedVC.swift; sourceTree = "<group>"; };
+		7AEA3A0D1E410EC200480627 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7AF117711E40AB1800C1845F /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		7AF117741E40AFF100C1845F /* AuthProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
 		7AF117761E40B37100C1845F /* DBProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBProvider.swift; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 				7ADE20151E40897B00047956 /* Main.storyboard */,
 				7ADE20181E40897B00047956 /* Assets.xcassets */,
 				7ADE201A1E40897B00047956 /* LaunchScreen.storyboard */,
-				7ADE20461E4096BF00047956 /* GoogleService-Info.plist */,
+				7AEA3A0D1E410EC200480627 /* GoogleService-Info.plist */,
 				7ADE201D1E40897B00047956 /* Info.plist */,
 			);
 			path = aNSWR;
@@ -341,7 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ADE201C1E40897B00047956 /* LaunchScreen.storyboard in Resources */,
-				7ADE20471E4096BF00047956 /* GoogleService-Info.plist in Resources */,
+				7AEA3A0E1E410EC200480627 /* GoogleService-Info.plist in Resources */,
 				7ADE20191E40897B00047956 /* Assets.xcassets in Resources */,
 				7ADE20171E40897B00047956 /* Main.storyboard in Resources */,
 			);
