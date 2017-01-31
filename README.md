@@ -32,7 +32,7 @@ Users will be able to:
   * [user profile](wireframes/user_profile.png)
 
 ## Technologies & Technical Challenges
-This app will be implemented using Swift and Rails on an iOS platform.
+This app will be implemented using Swift and Firebase on an iOS platform.
 
 ### Group Members & Work Breakdown
 Our group consists of three members, Hui, Nathan and Andrew.
@@ -57,19 +57,24 @@ Hui's primary responsibilities will be:
 - Give comprehensive view of the graph on the app
 
 ## Implementation Timeline
-**Day 1**: Rails user auth and start front end auth
-**Day 2**: Rails models/controllers
+
+**Day 1**: Firebase/Swift user auth and start front end auth
+
+**Day 2**: Swift models/views/controllers
             - Questions(Andrew)
             - Answers(Nathan)
             - Votes(Hui)
+
 **Day 3**: Begin frontend
             - Questions(Andrew
             - Answers(Nathan)
             - Votes(Hui)
+
 **Day 4**: Polish frontend
             - Questions(Andrew
             - Answers(Nathan)
             - Votes(Hui)
+
 **Day 5**: Last touches/deploy
 
 ### Future Implementations
