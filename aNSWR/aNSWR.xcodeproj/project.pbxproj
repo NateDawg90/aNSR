@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BCBAE5B79CD64E56347546B /* Pods_aNSWRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25858D29F4F88C829BA52FD1 /* Pods_aNSWRTests.framework */; };
+		63BBAE4D87737ACA668A6E70 /* Pods_aNSWR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1289E96C57B648EE8ED67C6 /* Pods_aNSWR.framework */; };
 		7ADE20121E40897B00047956 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE20111E40897B00047956 /* AppDelegate.swift */; };
 		7ADE20141E40897B00047956 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE20131E40897B00047956 /* LoginVC.swift */; };
 		7ADE20171E40897B00047956 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ADE20151E40897B00047956 /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 		7ADE20321E40897C00047956 /* aNSWRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE20311E40897C00047956 /* aNSWRUITests.swift */; };
 		7ADE20431E408F5E00047956 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE20421E408F5E00047956 /* CustomTextField.swift */; };
 		7ADE20451E40915B00047956 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE20441E40915B00047956 /* CustomButton.swift */; };
+		7ADE20471E4096BF00047956 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7ADE20461E4096BF00047956 /* GoogleService-Info.plist */; };
+		82558C6304ED2BDF48880FC4 /* Pods_aNSWRUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09DA156FA56BD726157BF7B7 /* Pods_aNSWRUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09DA156FA56BD726157BF7B7 /* Pods_aNSWRUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aNSWRUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25858D29F4F88C829BA52FD1 /* Pods_aNSWRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aNSWRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		287DC3DD8569160F1FD4EA79 /* Pods-aNSWRTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWRTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWRTests/Pods-aNSWRTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2EC07C1DB0052B872288E466 /* Pods-aNSWRUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWRUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWRUITests/Pods-aNSWRUITests.release.xcconfig"; sourceTree = "<group>"; };
+		45D46D5DDD7024D9B037DC72 /* Pods-aNSWR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWR/Pods-aNSWR.debug.xcconfig"; sourceTree = "<group>"; };
 		7ADE200E1E40897B00047956 /* aNSWR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aNSWR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ADE20111E40897B00047956 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7ADE20131E40897B00047956 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -51,6 +60,11 @@
 		7ADE20331E40897C00047956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7ADE20421E408F5E00047956 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		7ADE20441E40915B00047956 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		7ADE20461E4096BF00047956 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		800F8B8791912C5B502492D9 /* Pods-aNSWRUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWRUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWRUITests/Pods-aNSWRUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A1289E96C57B648EE8ED67C6 /* Pods_aNSWR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aNSWR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1D164EEF377C6B3570076BE /* Pods-aNSWRTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWRTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWRTests/Pods-aNSWRTests.release.xcconfig"; sourceTree = "<group>"; };
+		EB2DF6BAA061314E7B667A61 /* Pods-aNSWR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWR.release.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWR/Pods-aNSWR.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63BBAE4D87737ACA668A6E70 /* Pods_aNSWR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BCBAE5B79CD64E56347546B /* Pods_aNSWRTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +88,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82558C6304ED2BDF48880FC4 /* Pods_aNSWRUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E70B5317144A5C2054D7EDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1289E96C57B648EE8ED67C6 /* Pods_aNSWR.framework */,
+				25858D29F4F88C829BA52FD1 /* Pods_aNSWRTests.framework */,
+				09DA156FA56BD726157BF7B7 /* Pods_aNSWRUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7ADE20051E40897B00047956 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +112,8 @@
 				7ADE20251E40897C00047956 /* aNSWRTests */,
 				7ADE20301E40897C00047956 /* aNSWRUITests */,
 				7ADE200F1E40897B00047956 /* Products */,
+				811A012261D408A22E0D2763 /* Pods */,
+				0E70B5317144A5C2054D7EDD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +137,7 @@
 				7ADE20151E40897B00047956 /* Main.storyboard */,
 				7ADE20181E40897B00047956 /* Assets.xcassets */,
 				7ADE201A1E40897B00047956 /* LaunchScreen.storyboard */,
+				7ADE20461E4096BF00047956 /* GoogleService-Info.plist */,
 				7ADE201D1E40897B00047956 /* Info.plist */,
 			);
 			path = aNSWR;
@@ -155,6 +185,19 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		811A012261D408A22E0D2763 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45D46D5DDD7024D9B037DC72 /* Pods-aNSWR.debug.xcconfig */,
+				EB2DF6BAA061314E7B667A61 /* Pods-aNSWR.release.xcconfig */,
+				287DC3DD8569160F1FD4EA79 /* Pods-aNSWRTests.debug.xcconfig */,
+				C1D164EEF377C6B3570076BE /* Pods-aNSWRTests.release.xcconfig */,
+				800F8B8791912C5B502492D9 /* Pods-aNSWRUITests.debug.xcconfig */,
+				2EC07C1DB0052B872288E466 /* Pods-aNSWRUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,9 +205,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7ADE20361E40897C00047956 /* Build configuration list for PBXNativeTarget "aNSWR" */;
 			buildPhases = (
+				774A8B8E86BC7C7984AB767D /* [CP] Check Pods Manifest.lock */,
 				7ADE200A1E40897B00047956 /* Sources */,
 				7ADE200B1E40897B00047956 /* Frameworks */,
 				7ADE200C1E40897B00047956 /* Resources */,
+				C2A465C6D2D07EDD4E6BDCC7 /* [CP] Embed Pods Frameworks */,
+				40530B315480C8A9EBD50720 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,9 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7ADE20391E40897C00047956 /* Build configuration list for PBXNativeTarget "aNSWRTests" */;
 			buildPhases = (
+				D4E3D403AA1933EA98879917 /* [CP] Check Pods Manifest.lock */,
 				7ADE201E1E40897B00047956 /* Sources */,
 				7ADE201F1E40897B00047956 /* Frameworks */,
 				7ADE20201E40897B00047956 /* Resources */,
+				51D52614C47EAEAF0F7076A1 /* [CP] Embed Pods Frameworks */,
+				3A2DCEED1D17169A337BA523 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,9 +246,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7ADE203C1E40897C00047956 /* Build configuration list for PBXNativeTarget "aNSWRUITests" */;
 			buildPhases = (
+				C239A9836DC4DB779732CB0D /* [CP] Check Pods Manifest.lock */,
 				7ADE20291E40897C00047956 /* Sources */,
 				7ADE202A1E40897C00047956 /* Frameworks */,
 				7ADE202B1E40897C00047956 /* Resources */,
+				C372BAD8F301B52C7F02E482 /* [CP] Embed Pods Frameworks */,
+				5532278BEE301CB41B1F3B80 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -263,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ADE201C1E40897B00047956 /* LaunchScreen.storyboard in Resources */,
+				7ADE20471E4096BF00047956 /* GoogleService-Info.plist in Resources */,
 				7ADE20191E40897B00047956 /* Assets.xcassets in Resources */,
 				7ADE20171E40897B00047956 /* Main.storyboard in Resources */,
 			);
@@ -283,6 +336,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A2DCEED1D17169A337BA523 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-aNSWRTests/Pods-aNSWRTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		40530B315480C8A9EBD50720 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-aNSWR/Pods-aNSWR-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51D52614C47EAEAF0F7076A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-aNSWRTests/Pods-aNSWRTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5532278BEE301CB41B1F3B80 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-aNSWRUITests/Pods-aNSWRUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		774A8B8E86BC7C7984AB767D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C239A9836DC4DB779732CB0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C2A465C6D2D07EDD4E6BDCC7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-aNSWR/Pods-aNSWR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C372BAD8F301B52C7F02E482 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-aNSWRUITests/Pods-aNSWRUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4E3D403AA1933EA98879917 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7ADE200A1E40897B00047956 /* Sources */ = {
@@ -440,6 +631,7 @@
 		};
 		7ADE20371E40897C00047956 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45D46D5DDD7024D9B037DC72 /* Pods-aNSWR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = aNSWR/Info.plist;
@@ -452,6 +644,7 @@
 		};
 		7ADE20381E40897C00047956 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB2DF6BAA061314E7B667A61 /* Pods-aNSWR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = aNSWR/Info.plist;
@@ -464,6 +657,7 @@
 		};
 		7ADE203A1E40897C00047956 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 287DC3DD8569160F1FD4EA79 /* Pods-aNSWRTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -478,6 +672,7 @@
 		};
 		7ADE203B1E40897C00047956 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1D164EEF377C6B3570076BE /* Pods-aNSWRTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -492,6 +687,7 @@
 		};
 		7ADE203D1E40897C00047956 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 800F8B8791912C5B502492D9 /* Pods-aNSWRUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = aNSWRUITests/Info.plist;
@@ -505,6 +701,7 @@
 		};
 		7ADE203E1E40897C00047956 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EC07C1DB0052B872288E466 /* Pods-aNSWRUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = aNSWRUITests/Info.plist;
