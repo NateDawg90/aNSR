@@ -362,7 +362,7 @@
                                     <constraint firstAttribute="width" constant="375" id="sul-Uo-4yp"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellID" rowHeight="170" id="1U2-fQ-Eza" customClass="QuestionCustomCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellID" rowHeight="170" id="1U2-fQ-Eza" customClass="QuestionCustomCell" customModule="_Questions">
                                         <rect key="frame" x="0.0" y="28" width="375" height="170"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1U2-fQ-Eza" id="bOo-w4-n4n">
@@ -410,10 +410,10 @@
             </objects>
             <point key="canvasLocation" x="1901.5999999999999" y="125.4872563718141"/>
         </scene>
-        <!--View Controller-->
+        <!--DetailsVC-->
         <scene sceneID="ES1-Ak-8UI">
             <objects>
-                <viewController id="KyK-HF-GQh" sceneMemberID="viewController">
+                <viewController id="KyK-HF-GQh" customClass="DetailsVC" customModule="_Questions" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GUI-WS-efw"/>
                         <viewControllerLayoutGuide type="bottom" id="6xe-l3-wWS"/>
