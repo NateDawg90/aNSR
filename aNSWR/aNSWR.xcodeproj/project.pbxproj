@@ -26,6 +26,8 @@
 		7AF117751E40AFF100C1845F /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF117741E40AFF100C1845F /* AuthProvider.swift */; };
 		7AF117771E40B37100C1845F /* DBProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF117761E40B37100C1845F /* DBProvider.swift */; };
 		82558C6304ED2BDF48880FC4 /* Pods_aNSWRUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09DA156FA56BD726157BF7B7 /* Pods_aNSWRUITests.framework */; };
+		843AA03B1E411DC0002B6EBE /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843AA03A1E411DC0002B6EBE /* Questions.swift */; };
+		843AA03D1E418765002B6EBE /* CreateQuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843AA03C1E418765002B6EBE /* CreateQuestionVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		7AF117741E40AFF100C1845F /* AuthProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
 		7AF117761E40B37100C1845F /* DBProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBProvider.swift; sourceTree = "<group>"; };
 		800F8B8791912C5B502492D9 /* Pods-aNSWRUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWRUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWRUITests/Pods-aNSWRUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		843AA03A1E411DC0002B6EBE /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		843AA03C1E418765002B6EBE /* CreateQuestionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateQuestionVC.swift; sourceTree = "<group>"; };
 		A1289E96C57B648EE8ED67C6 /* Pods_aNSWR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aNSWR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D164EEF377C6B3570076BE /* Pods-aNSWRTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWRTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWRTests/Pods-aNSWRTests.release.xcconfig"; sourceTree = "<group>"; };
 		EB2DF6BAA061314E7B667A61 /* Pods-aNSWR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWR.release.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWR/Pods-aNSWR.release.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				7AF117711E40AB1800C1845F /* Users.swift */,
+				843AA03A1E411DC0002B6EBE /* Questions.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 				7ADE20481E409ADD00047956 /* SignUpVC.swift */,
 				7ADE204A1E409B1A00047956 /* LogInVC.swift */,
 				7ADE204C1E40A52400047956 /* NewsFeedVC.swift */,
+				843AA03C1E418765002B6EBE /* CreateQuestionVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -512,9 +518,11 @@
 				7ADE204D1E40A52400047956 /* NewsFeedVC.swift in Sources */,
 				7ADE20141E40897B00047956 /* SplashVC.swift in Sources */,
 				7ADE204B1E409B1A00047956 /* LogInVC.swift in Sources */,
+				843AA03B1E411DC0002B6EBE /* Questions.swift in Sources */,
 				7ADE20121E40897B00047956 /* AppDelegate.swift in Sources */,
 				7AF117751E40AFF100C1845F /* AuthProvider.swift in Sources */,
 				7ADE20491E409ADD00047956 /* SignUpVC.swift in Sources */,
+				843AA03D1E418765002B6EBE /* CreateQuestionVC.swift in Sources */,
 				7ADE20431E408F5E00047956 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
