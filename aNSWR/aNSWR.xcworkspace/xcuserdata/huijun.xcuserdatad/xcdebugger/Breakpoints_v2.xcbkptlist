@@ -26,28 +26,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "aNSWR/AuthProvider.swift"
-            timestampString = "507572984.222354"
+            timestampString = "507579601.463459"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "signUp(withEmail:password:)"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "signUp(withEmail:username:password:loginHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "aNSWR/AuthProvider.swift"
-            timestampString = "507572882.998385"
+            timestampString = "507583067.808051"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "70"
             endingLineNumber = "70"
-            landmarkName = "signUp(withEmail:password:)"
+            landmarkName = "signUp(withEmail:username:password:loginHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

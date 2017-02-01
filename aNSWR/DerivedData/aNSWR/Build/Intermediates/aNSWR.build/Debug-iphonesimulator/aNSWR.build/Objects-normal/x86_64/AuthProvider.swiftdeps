@@ -11,20 +11,20 @@ provides-member:
 - ["C5aNSWR12AuthProvider", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "StringLiteralType"
+- "LoginHandler"
+- !private "CastingPrecedence"
 - !private "DBProvider"
-- "AuthProvider"
-- "LoginErrorCode"
-- !private "BooleanLiteralType"
 - "String"
 - !private "!="
-- !private "FIRAuthErrorCode"
 - "Void"
-- "Bool"
-- !private "NSError"
+- "AuthProvider"
 - !private "FIRAuth"
-- !private "CastingPrecedence"
-- "LoginHandler"
+- "LoginErrorCode"
+- !private "BooleanLiteralType"
+- !private "FIRAuthErrorCode"
+- "StringLiteralType"
+- !private "NSError"
+- "Bool"
 depends-member:
 - ["Ps9AnyObject", "AuthProvider"]
 - !private ["Ps9AnyObject", "DBProvider"]
@@ -339,4 +339,4 @@ depends-external:
 - "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
 - "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
 - "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/Pods/Firebase/Core/Sources/Firebase.h"
-interface-hash: "765561e203de29711c48b7b8b1cb89f9"
+interface-hash: "d1beb70932431967b73367f77f062075"

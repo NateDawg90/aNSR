@@ -8,11 +8,11 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "String"
-- "DBProvider"
+- !private "FIRDatabase"
 - "FIRDatabaseReference"
 - !private "Dictionary"
 - "StringLiteralType"
-- !private "FIRDatabase"
+- "DBProvider"
 depends-member:
 - !private ["Ps9AnyObject", "DATA"]
 - ["Ps9AnyObject", "DBProvider"]

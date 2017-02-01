@@ -6,24 +6,24 @@ provides-nominal:
 provides-member:
 - ["C5aNSWR15CustomTextField", ""]
 provides-dynamic-lookup:
-- "borderColor"
-- "placeholderColor"
 - "cornerRadius"
+- "placeholderColor"
+- "borderColor"
 - "borderWidth"
 - "bgColor"
 depends-top-level:
-- !private ">"
-- !private "NSAttributedString"
-- "UIColor"
-- !private "!="
-- "UITextField"
 - !private "StringLiteralType"
+- !private "NSForegroundColorAttributeName"
+- !private "!="
+- !private ">"
 - !private "Dictionary"
+- "CustomTextField"
 - "CGFloat"
 - "TernaryPrecedence"
-- "CustomTextField"
+- "UITextField"
+- !private "NSAttributedString"
+- "UIColor"
 - "AssignmentPrecedence"
-- !private "NSForegroundColorAttributeName"
 depends-member:
 - !private ["Ps9AnyObject", "NSAttributedString"]
 - !private ["Ps9AnyObject", "NSForegroundColorAttributeName"]
