@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		1BCBAE5B79CD64E56347546B /* Pods_aNSWRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25858D29F4F88C829BA52FD1 /* Pods_aNSWRTests.framework */; };
 		63BBAE4D87737ACA668A6E70 /* Pods_aNSWR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1289E96C57B648EE8ED67C6 /* Pods_aNSWR.framework */; };
+		7AB50E2C1E4281E2005AD2F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AB50E2A1E4281E2005AD2F9 /* Main.storyboard */; };
 		7ADE20121E40897B00047956 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE20111E40897B00047956 /* AppDelegate.swift */; };
 		7ADE20141E40897B00047956 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE20131E40897B00047956 /* SplashVC.swift */; };
-		7ADE20171E40897B00047956 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ADE20151E40897B00047956 /* Main.storyboard */; };
 		7ADE20191E40897B00047956 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ADE20181E40897B00047956 /* Assets.xcassets */; };
 		7ADE201C1E40897B00047956 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ADE201A1E40897B00047956 /* LaunchScreen.storyboard */; };
 		7ADE20271E40897C00047956 /* aNSWRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE20261E40897C00047956 /* aNSWRTests.swift */; };
@@ -53,10 +53,10 @@
 		287DC3DD8569160F1FD4EA79 /* Pods-aNSWRTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWRTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWRTests/Pods-aNSWRTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2EC07C1DB0052B872288E466 /* Pods-aNSWRUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWRUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWRUITests/Pods-aNSWRUITests.release.xcconfig"; sourceTree = "<group>"; };
 		45D46D5DDD7024D9B037DC72 /* Pods-aNSWR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWR/Pods-aNSWR.debug.xcconfig"; sourceTree = "<group>"; };
+		7AB50E2B1E4281E2005AD2F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7ADE200E1E40897B00047956 /* aNSWR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aNSWR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ADE20111E40897B00047956 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7ADE20131E40897B00047956 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
-		7ADE20161E40897B00047956 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7ADE20181E40897B00047956 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ADE201B1E40897B00047956 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7ADE201D1E40897B00047956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -151,8 +151,8 @@
 				7ADE20401E408AA600047956 /* Controller */,
 				7ADE203F1E408A9A00047956 /* Model */,
 				7ADE20111E40897B00047956 /* AppDelegate.swift */,
-				7ADE20151E40897B00047956 /* Main.storyboard */,
 				7ADE20181E40897B00047956 /* Assets.xcassets */,
+				7AB50E2A1E4281E2005AD2F9 /* Main.storyboard */,
 				7ADE201A1E40897B00047956 /* LaunchScreen.storyboard */,
 				7AEA3A0D1E410EC200480627 /* GoogleService-Info.plist */,
 				7ADE201D1E40897B00047956 /* Info.plist */,
@@ -349,7 +349,7 @@
 				7ADE201C1E40897B00047956 /* LaunchScreen.storyboard in Resources */,
 				7AEA3A0E1E410EC200480627 /* GoogleService-Info.plist in Resources */,
 				7ADE20191E40897B00047956 /* Assets.xcassets in Resources */,
-				7ADE20171E40897B00047956 /* Main.storyboard in Resources */,
+				7AB50E2C1E4281E2005AD2F9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,10 +559,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7ADE20151E40897B00047956 /* Main.storyboard */ = {
+		7AB50E2A1E4281E2005AD2F9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7ADE20161E40897B00047956 /* Base */,
+				7AB50E2B1E4281E2005AD2F9 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

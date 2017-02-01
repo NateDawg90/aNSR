@@ -10,6 +10,8 @@ import UIKit
 
 class SplashVC: UIViewController {
 
+//    private let NEWS_FEED_SEGUE_ID = "NewsFeedVC"
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
