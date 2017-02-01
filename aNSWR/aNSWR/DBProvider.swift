@@ -31,6 +31,8 @@ class DBProvider {
         return dbRef.child(USERS)
     }
     
+    
+    
     func saveUser(withID: String, email: String, password: String) {
         let data: Dictionary<String, String> = [EMAIL: email, PASSWORD: password];
         usersRef.child(withID).child(DATA).setValue(data)
