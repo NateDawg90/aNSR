@@ -1,14 +1,16 @@
 version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
-options: "1fdc1c1310806eea79ed330313699945"
-build_time: [539205621, 277829000]
+options: "b1bd0d25c35875b897171d686c56d6a0"
+build_time: [539289902, 12963000]
 inputs:
-  "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/Users.swift": [539198579, 0]
-  "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/CustomButton.swift": [539198579, 0]
-  "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/DBProvider.swift": [539205612, 0]
-  "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/NewsFeedVC.swift": [539198579, 0]
-  "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/SplashVC.swift": [539198579, 0]
-  "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/LogInVC.swift": [539198579, 0]
-  "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/AppDelegate.swift": [539198579, 0]
-  "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/AuthProvider.swift": [539205209, 0]
-  "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/SignUpVC.swift": [539205038, 0]
-  "/Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/CustomTextField.swift": [539198579, 0]
+  "/Users/huijun/Desktop/bootcamp/aNSWR/aNSWR/aNSWR/Users.swift": !dirty [539287523, 0]
+  "/Users/huijun/Desktop/bootcamp/aNSWR/aNSWR/aNSWR/CustomButton.swift": !dirty [539287523, 0]
+  "/Users/huijun/Desktop/bootcamp/aNSWR/aNSWR/aNSWR/DBProvider.swift": !dirty [539287523, 0]
+  "/Users/huijun/Desktop/bootcamp/aNSWR/aNSWR/aNSWR/NewsFeedVC.swift": !dirty [539287523, 0]
+  "/Users/huijun/Desktop/bootcamp/aNSWR/aNSWR/aNSWR/SplashVC.swift": !dirty [539287523, 0]
+  "/Users/huijun/Desktop/bootcamp/aNSWR/aNSWR/aNSWR/LogInVC.swift": !dirty [539287523, 0]
+  "/Users/huijun/Desktop/bootcamp/aNSWR/aNSWR/aNSWR/Questions.swift": !dirty [539287523, 0]
+  "/Users/huijun/Desktop/bootcamp/aNSWR/aNSWR/aNSWR/AppDelegate.swift": !dirty [539287523, 0]
+  "/Users/huijun/Desktop/bootcamp/aNSWR/aNSWR/aNSWR/AuthProvider.swift": !dirty [539287523, 0]
+  "/Users/huijun/Desktop/bootcamp/aNSWR/aNSWR/aNSWR/SignUpVC.swift": !dirty [539287523, 0]
+  "/Users/huijun/Desktop/bootcamp/aNSWR/aNSWR/aNSWR/CreateQuestionVC.swift": !dirty [539287523, 0]
+  "/Users/huijun/Desktop/bootcamp/aNSWR/aNSWR/aNSWR/CustomTextField.swift": !dirty [539287523, 0]
