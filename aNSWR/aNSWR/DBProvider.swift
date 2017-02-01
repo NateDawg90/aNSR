@@ -47,6 +47,7 @@ class DBProvider {
         let data: Dictionary<String, String> = [QUESTIONTEXT: questionText, USERID: userID]
         questionRef.setValue(data)
     }
+    
 }
 
 
