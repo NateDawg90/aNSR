@@ -10,8 +10,9 @@ import UIKit
 import FirebaseAuth
 
 class CreateQuestionVC: UIViewController {
-
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -22,7 +23,8 @@ class CreateQuestionVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var QuestionText: CustomTextField!
+
+    @IBOutlet weak var QuestionText: UITextField!
     
     @IBAction func CreateQuestionButton(_ sender: AnyObject) {
         if QuestionText.text != "" {
