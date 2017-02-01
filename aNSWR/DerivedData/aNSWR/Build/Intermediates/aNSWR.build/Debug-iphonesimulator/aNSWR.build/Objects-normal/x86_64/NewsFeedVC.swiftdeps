@@ -6,18 +6,18 @@ provides-nominal:
 provides-member:
 - ["C5aNSWR10NewsFeedVC", ""]
 provides-dynamic-lookup:
-- "viewDidLoad"
 - "didReceiveMemoryWarning"
+- "viewDidLoad"
 - "LogOutButton"
 depends-top-level:
 - "AnyObject"
 - !private "String"
-- !private "UIAlertController"
-- "UIViewController"
-- "NewsFeedVC"
-- !private "UIAlertAction"
 - !private "StringLiteralType"
+- "UIViewController"
+- !private "UIAlertAction"
+- "NewsFeedVC"
 - !private "BooleanLiteralType"
+- !private "UIAlertController"
 - !private "AuthProvider"
 depends-member:
 - !private ["Ps9AnyObject", "AuthProvider"]

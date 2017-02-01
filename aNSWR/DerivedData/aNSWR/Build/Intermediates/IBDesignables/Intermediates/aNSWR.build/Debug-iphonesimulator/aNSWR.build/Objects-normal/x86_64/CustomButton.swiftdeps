@@ -7,15 +7,15 @@ provides-member:
 - ["C5aNSWR12CustomButton", ""]
 provides-dynamic-lookup:
 - "borderColor"
-- "borderWidth"
 - "cornerRadius"
+- "borderWidth"
 depends-top-level:
-- !private ">"
-- "UIColor"
 - "AssignmentPrecedence"
-- "CGFloat"
-- "CustomButton"
 - "UIButton"
+- "UIColor"
+- "CustomButton"
+- "CGFloat"
+- !private ">"
 depends-member:
 - ["Ps9AnyObject", "borderColor"]
 - ["Ps9AnyObject", "borderWidth"]

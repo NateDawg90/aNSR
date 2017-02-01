@@ -6,6 +6,7 @@
 //  Copyright © 2017 aNSWR. All rights reserved.
 //
 
+
 import Foundation
 import FirebaseAuth
 
@@ -62,10 +63,9 @@ class AuthProvider {
         });
     }
     
-    func signUp(withEmail: String, password: String, loginHandler: LoginHandler?) {
+    func signUp(withEmail: String, username: String, password: String, loginHandler: LoginHandler?) {
         
         FIRAuth.auth()?.createUser(withEmail: withEmail, password: password, completion: { (user, error) in
-            
             if error != nil {
                 self.handleErrors(err: error as! NSError, loginHandler: loginHandler);
             } else {
@@ -73,7 +73,7 @@ class AuthProvider {
                 if user?.uid != nil {
                     
                     // save to database
-                    DBProvider.instance.saveUser(withID: user!.uid, email: withEmail, password: password);
+                    DBProvider.instance.saveUser(withID: user!.uid, email: withEmail, username: username, password: password);
                     
                     // sign in the user
                     FIRAuth.auth()?.signIn(withEmail: withEmail, password: password, completion: { (user, error) in

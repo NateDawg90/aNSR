@@ -37,7 +37,7 @@ class DBProvider {
     var questionRef: FIRDatabaseReference {
         return dbRef.child(QUESTIONS).childByAutoId()
     }
-    
+  
     func saveUser(withID: String, email: String, username: String, password: String) {
         let data: Dictionary<String, String> = [EMAIL: email, USERNAME: username, PASSWORD: password]
         usersRef.child(withID).setValue(data)
