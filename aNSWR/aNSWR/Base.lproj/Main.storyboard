@@ -370,7 +370,7 @@
             </objects>
             <point key="canvasLocation" x="1903" y="126"/>
         </scene>
-        <!--Create QuestionVC-->
+        <!--Title-->
         <scene sceneID="Q36-Rv-pmT">
             <objects>
                 <viewController id="Vfb-dg-Hg5" customClass="CreateQuestionVC" customModule="aNSWR" customModuleProvider="target" sceneMemberID="viewController">
@@ -395,6 +395,7 @@
                                 <state key="normal" title="Create"/>
                                 <connections>
                                     <action selector="CreateQuestionButton:" destination="Vfb-dg-Hg5" eventType="touchUpInside" id="EUd-ts-OYM"/>
+                                    <segue destination="w6d-pN-y5C" kind="show" id="sdJ-iQ-FJH"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer #1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HWG-Sy-Z5a">
@@ -437,35 +438,65 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="AddAnswer3:" destination="Vfb-dg-Hg5" eventType="touchUpInside" id="RPv-98-BL9"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPw-wE-s4K">
                                 <rect key="frame" x="269" y="327" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="AddAnswer4:" destination="Vfb-dg-Hg5" eventType="touchUpInside" id="jEJ-hO-Tl9"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdm-n5-1gv">
                                 <rect key="frame" x="269" y="396" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="+"/>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVU-56-Mne">
-                                <rect key="frame" x="269" y="476" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="AddAnswer5:" destination="Vfb-dg-Hg5" eventType="touchUpInside" id="rUp-st-9kD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bT-bs-b9C">
                                 <rect key="frame" x="269" y="195" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="AddAnswer2:" destination="Vfb-dg-Hg5" eventType="touchUpInside" id="T8V-V2-myM"/>
+                                </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="avU-31-WFn">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="W48-Hh-OdA">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="beI-RO-fdA">
+                                            <connections>
+                                                <action selector="CancelQuestionButton:" destination="Vfb-dg-Hg5" id="oJz-V5-GJN"/>
+                                                <segue destination="w6d-pN-y5C" kind="show" id="Pvf-kY-ueM"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="Kcu-ZT-pdF"/>
                     <connections>
+                        <outlet property="AnswerButton1" destination="4bT-bs-b9C" id="zRc-Br-lA4"/>
+                        <outlet property="AnswerButton2" destination="30q-BJ-Tmv" id="ZvK-S3-Lzi"/>
+                        <outlet property="AnswerButton3" destination="SPw-wE-s4K" id="BNU-p5-CTN"/>
+                        <outlet property="AnswerButton4" destination="Pdm-n5-1gv" id="j2y-8p-Fag"/>
+                        <outlet property="AnswerText1" destination="HWG-Sy-Z5a" id="7tA-l8-jub"/>
+                        <outlet property="AnswerText2" destination="ZXW-5l-mZt" id="69E-cl-iRC"/>
+                        <outlet property="AnswerText3" destination="cmH-Fa-xlv" id="JVy-cc-COf"/>
+                        <outlet property="AnswerText4" destination="PyO-ix-wJz" id="ufp-6m-Ghv"/>
+                        <outlet property="AnswerText5" destination="0ND-rF-x0q" id="RR8-DW-Jdi"/>
                         <outlet property="QuestionText" destination="U62-QA-6Te" id="q7J-Lt-rdG"/>
                     </connections>
                 </viewController>
@@ -475,6 +506,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rWZ-Xp-GAf"/>
+        <segue reference="sdJ-iQ-FJH"/>
     </inferredMetricsTieBreakers>
 </document>

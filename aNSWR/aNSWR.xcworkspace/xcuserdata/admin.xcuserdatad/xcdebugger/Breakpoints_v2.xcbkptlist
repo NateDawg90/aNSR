@@ -31,7 +31,23 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "76"
             endingLineNumber = "76"
-            landmarkName = "signUp(withEmail:password:loginHandler:)"
+            landmarkName = "signUp(withEmail:username:password:loginHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "aNSWR/CreateQuestionVC.swift"
+            timestampString = "507665506.64453"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "AddAnswer2(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
