@@ -118,6 +118,7 @@ class CreateQuestionVC: UIViewController {
     @IBAction func CreateQuestionButton(_ sender: AnyObject) {
         if QuestionText.text != "" {
             DBProvider.instance.saveQuestion(questionText: QuestionText.text!, userID: (FIRAuth.auth()?.currentUser?.uid)!)
+            dismiss(animated: true, completion: nil)
         }
     }
 }

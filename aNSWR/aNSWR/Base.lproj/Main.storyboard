@@ -395,7 +395,6 @@
                                 <state key="normal" title="Create"/>
                                 <connections>
                                     <action selector="CreateQuestionButton:" destination="Vfb-dg-Hg5" eventType="touchUpInside" id="EUd-ts-OYM"/>
-                                    <segue destination="w6d-pN-y5C" kind="show" id="sdJ-iQ-FJH"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer #1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HWG-Sy-Z5a">
@@ -477,7 +476,6 @@
                                         <barButtonItem key="leftBarButtonItem" title="&lt;" id="beI-RO-fdA">
                                             <connections>
                                                 <action selector="CancelQuestionButton:" destination="Vfb-dg-Hg5" id="oJz-V5-GJN"/>
-                                                <segue destination="w6d-pN-y5C" kind="show" id="Pvf-kY-ueM"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -506,6 +504,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sdJ-iQ-FJH"/>
+        <segue reference="rWZ-Xp-GAf"/>
     </inferredMetricsTieBreakers>
 </document>
