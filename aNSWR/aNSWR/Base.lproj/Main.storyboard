@@ -392,6 +392,10 @@
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="AnswerText" destination="ayy-pM-bvv" id="tc5-GG-FZr"/>
+                                            <outlet property="questionText" destination="tbf-Ac-ufX" id="C2G-bm-SYe"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

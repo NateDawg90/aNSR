@@ -15,6 +15,9 @@ class QuestionCustomCell: UITableViewCell {
         // Initialization code
     }
 
+    @IBOutlet weak var questionText: UILabel!
+    @IBOutlet weak var AnswerText: UILabel!
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
