@@ -16,14 +16,17 @@ struct Question {
     
     static let QuestionTextKey = "questionText"
     static let QuestionUserKey = "userID"
+    static let QuestionAnswersKey = "answers"
     
     let questionText: String
+    let answers: Array<String>
     let userID: String
     let firebaseReference: FIRDatabaseReference?
 
     
-    init(questionText: String, userID: String, id: String = "") {
+    init(questionText: String, answers: Array<String>, userID: String, id: String = "") {
         self.questionText = questionText
+        self.answers = answers
         self.userID = userID
         self.firebaseReference = nil
     }
@@ -31,6 +34,7 @@ struct Question {
     init(snapshot: FIRDataSnapshot) {
         let snapshotValue = snapshot.value as! [String: Any]
         self.questionText = snapshotValue[Question.QuestionTextKey] as! String
+        self.answers = snapshotValue[Question.QuestionAnswersKey] as! Array<String>
         self.userID = snapshotValue[Question.QuestionUserKey] as! String
         self.firebaseReference = snapshot.ref
     }
@@ -38,6 +42,7 @@ struct Question {
     func toDictionary() -> Any {
         return [
             Question.QuestionTextKey: self.questionText,
+            Question.QuestionTextKey: self.answers,
             Question.QuestionUserKey: self.userID
         ]
     }
