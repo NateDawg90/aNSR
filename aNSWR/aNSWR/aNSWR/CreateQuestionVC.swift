@@ -116,9 +116,20 @@ class CreateQuestionVC: UIViewController {
     }
     
     @IBAction func CreateQuestionButton(_ sender: AnyObject) {
-        if QuestionText.text != "" {
-            DBProvider.instance.saveQuestion(questionText: QuestionText.text!, userID: (FIRAuth.auth()?.currentUser?.uid)!)
+        if QuestionText.text != "" && AnswerText1.text != "" && AnswerText2.text != "" {
+            DBProvider.instance.saveQuestion(questionText: QuestionText.text!, userID: (FIRAuth.auth()?.currentUser?.uid)!);
+            
+//            DBProvider.instance.saveAnswer(answerText: AnswerText1.text, userID: <#T##String#>, questionID: <#T##String#>)
+        } else {
+            showAlertMessage(title: "Answers Required", message: "Please fill out at least 2 answers");
         }
+    }
+    
+    private func showAlertMessage(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert);
+        let ok = UIAlertAction(title: "Ok", style: .cancel, handler: nil);
+        alert.addAction(ok);
+        self.present(alert, animated: true, completion: nil);
     }
     
     
