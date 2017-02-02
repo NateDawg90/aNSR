@@ -17,6 +17,10 @@ class QuestionCustomCell: UITableViewCell {
 
     @IBOutlet weak var questionText: UILabel!
     @IBOutlet weak var AnswerText: UILabel!
+    @IBOutlet weak var AnswerText2: UILabel!
+    @IBOutlet weak var AnswerText3: UILabel!
+    @IBOutlet weak var AnswerText4: UILabel!
+    @IBOutlet weak var AnswerText5: UILabel!
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
