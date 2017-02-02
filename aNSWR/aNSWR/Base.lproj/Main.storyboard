@@ -398,6 +398,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="w6d-pN-y5C" id="sGM-53-7c8"/>
+                                    <outlet property="delegate" destination="w6d-pN-y5C" id="8JI-eS-ASS"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -407,6 +411,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="TableView" destination="yKJ-Cn-a22" id="whG-es-Edv"/>
                         <segue destination="KyK-HF-GQh" kind="show" identifier="ShowDetails" id="d4z-79-0dt"/>
                     </connections>
                 </viewController>
@@ -442,6 +447,9 @@
                             <constraint firstItem="NgB-FI-a4G" firstAttribute="leading" secondItem="7ML-8T-i9L" secondAttribute="leading" id="Frg-7d-peJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="TableView" destination="NgB-FI-a4G" id="1oq-4b-FFu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s4X-tL-apA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

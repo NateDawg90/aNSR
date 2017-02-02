@@ -67,5 +67,98 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "aNSWR/NewsFeedVC.swift"
+            timestampString = "507688743.900155"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "NewsFeedVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "aNSWR.NewsFeedVC.__deallocating_deinit"
+                  moduleName = "aNSWR"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/aNSWR/NewsFeedVC.swift"
+                  timestampString = "507688744.512378"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "aNSWR.NewsFeedVC.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; aNSWR.NewsFeedVC"
+                  moduleName = "aNSWR"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/aNSWR/NewsFeedVC.swift"
+                  timestampString = "507688744.514836"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "107">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "aNSWR.NewsFeedVC.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; aNSWR.NewsFeedVC"
+                  moduleName = "aNSWR"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/aNSWR/NewsFeedVC.swift"
+                  timestampString = "507688744.516849"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "aNSWR.NewsFeedVC.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;aNSWR.NewsFeedVC&gt;"
+                  moduleName = "aNSWR"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/aNSWR/NewsFeedVC.swift"
+                  timestampString = "507688744.51869"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "aNSWR.NewsFeedVC.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;aNSWR.NewsFeedVC&gt;"
+                  moduleName = "aNSWR"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huijun/Desktop/bootcamp/ios_project/ios-project/aNSWR/aNSWR/aNSWR/NewsFeedVC.swift"
+                  timestampString = "507688744.520466"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "105">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

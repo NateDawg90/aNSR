@@ -21,6 +21,7 @@ class DetailsVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var TableView: UITableView!
 
     /*
     // MARK: - Navigation
