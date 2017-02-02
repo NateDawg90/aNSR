@@ -8,12 +8,31 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
 
 class NewsFeedVC: UIViewController {
+    
+    var questions = [NSDictionary]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        var ref: FIRDatabaseReference!
+        ref = FIRDatabase.database().reference()
+        ref.child("questions").observeSingleEvent(of: .value, with: { (snapshot) in
+            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                
+                
+                for snap in snapshots {
+                    let value = snap.value as? NSDictionary
+//                    print(value ?? "")
+                    self.questions.append(value!)
+//                    print(value?["questionText"] as? String ?? "")
+                }
+                
+            }
+        })
+        
         // Do any additional setup after loading the view.
     }
 

@@ -11,6 +11,8 @@ import FirebaseAuth
 
 class CreateQuestionVC: UIViewController {
     
+    var ansArr = [String]()
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -116,8 +118,24 @@ class CreateQuestionVC: UIViewController {
     }
     
     @IBAction func CreateQuestionButton(_ sender: AnyObject) {
+        if !AnswerText1.text! .isEqual("") {
+            ansArr.append(AnswerText1.text!)
+        }
+        if !AnswerText2.text! .isEqual("") {
+            ansArr.append(AnswerText2.text!)
+        }
+        if !AnswerText3.text! .isEqual("") {
+            ansArr.append(AnswerText3.text!)
+        }
+        if !AnswerText4.text! .isEqual("") {
+            ansArr.append(AnswerText4.text!)
+        }
+        if !AnswerText5.text! .isEqual("") {
+            ansArr.append(AnswerText5.text!)
+        }
+        
         if QuestionText.text != "" {
-            DBProvider.instance.saveQuestion(questionText: QuestionText.text!, userID: (FIRAuth.auth()?.currentUser?.uid)!)
+            DBProvider.instance.saveQuestion(questionText: QuestionText.text!, answers: ansArr, userID: (FIRAuth.auth()?.currentUser?.uid)!)
             dismiss(animated: true, completion: nil)
         }
     }
