@@ -21,6 +21,9 @@ class DBProvider {
     private let QUESTIONS = "questions"
     private let QUESTIONTEXT = "questionText"
     private let USERID = "userID"
+    private let ANSWERS = "answers"
+    private let ANSWERTEXT = "answerText"
+    private let QUESTIONID = "questionID"
     
     static var instance: DBProvider {
         return _instance
@@ -37,6 +40,10 @@ class DBProvider {
     var questionRef: FIRDatabaseReference {
         return dbRef.child(QUESTIONS).childByAutoId()
     }
+    
+    var answerRef: FIRDatabaseReference {
+        return dbRef.child(ANSWERS).childByAutoId()
+    }
   
     func saveUser(withID: String, email: String, username: String, password: String) {
         let data: Dictionary<String, String> = [EMAIL: email, USERNAME: username, PASSWORD: password]
@@ -46,6 +53,17 @@ class DBProvider {
     func saveQuestion(questionText: String, userID: String) {
         let data: Dictionary<String, String> = [QUESTIONTEXT: questionText, USERID: userID]
         questionRef.setValue(data)
+        
+        
+        let q = questionRef.queryOrderedByKey().queryLimited(toLast: 1).observeSingleEvent(of: .value, with: { snapshot in
+            
+            
+    }
+    
+    func saveAnswer(answerText: String, userID: String, questionID: String) {
+        let data: Dictionary<String, String> = [ANSWERTEXT: answerText, USERID: userID, QUESTIONID: questionID]
+        answerRef.setValue(data)
+        
     }
 }
 
