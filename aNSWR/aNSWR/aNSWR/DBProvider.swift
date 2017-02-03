@@ -24,6 +24,8 @@ class DBProvider {
     private let ANSWERS = "answers"
     private let ANSWERTEXT = "answerText"
     private let QUESTIONID = "questionID"
+    private let VOTES = "votes"
+    private let ANSWERVOTERS = "answerVoters"
     
     static var instance: DBProvider {
         return _instance
@@ -53,15 +55,10 @@ class DBProvider {
     func saveQuestion(questionText: String, userID: String) {
         let data: Dictionary<String, String> = [QUESTIONTEXT: questionText, USERID: userID]
         questionRef.setValue(data)
-        
-        
-        let q = questionRef.queryOrderedByKey().queryLimited(toLast: 1).observeSingleEvent(of: .value, with: { snapshot in
-            
-            
     }
     
-    func saveAnswer(answerText: String, userID: String, questionID: String) {
-        let data: Dictionary<String, String> = [ANSWERTEXT: answerText, USERID: userID, QUESTIONID: questionID]
+    func saveAnswer(answerText: String, userID: String, questionID: String, votes: Int, answerVoters: [String]) {
+        let data: Dictionary<String, AnyObject> = [ANSWERTEXT: answerText as AnyObject, USERID: userID as AnyObject, QUESTIONID: questionID as AnyObject, VOTES: votes as AnyObject, ANSWERVOTERS: answerVoters as AnyObject]
         answerRef.setValue(data)
         
     }

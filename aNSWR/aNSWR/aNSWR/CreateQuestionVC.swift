@@ -8,8 +8,11 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class CreateQuestionVC: UIViewController {
+    
+    var lastQuestionId = String()
     
     override func viewDidLoad() {
         
@@ -22,6 +25,8 @@ class CreateQuestionVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
 
     @IBOutlet weak var QuestionText: UITextField!
@@ -116,13 +121,52 @@ class CreateQuestionVC: UIViewController {
     }
     
     @IBAction func CreateQuestionButton(_ sender: AnyObject) {
+        
+        let answers = [AnswerText1, AnswerText2, AnswerText3, AnswerText4, AnswerText5]
+       
         if QuestionText.text != "" && AnswerText1.text != "" && AnswerText2.text != "" {
             DBProvider.instance.saveQuestion(questionText: QuestionText.text!, userID: (FIRAuth.auth()?.currentUser?.uid)!);
             
-//            DBProvider.instance.saveAnswer(answerText: AnswerText1.text, userID: <#T##String#>, questionID: <#T##String#>)
+            var ref: FIRDatabaseReference!
+            ref = FIRDatabase.database().reference()
+            ref.child("questions").queryLimited(toLast: 1).observeSingleEvent(of: .value, with: { (snapshot) in
+                
+                for singleSnap in snapshot.children.allObjects {
+                    
+                    let question = singleSnap as! FIRDataSnapshot
+                    for answer in answers {
+                        if !(answer?.text?.isEmpty)! {
+                            DBProvider.instance.saveAnswer(answerText: (answer?.text)!, userID: (FIRAuth.auth()?.currentUser?.uid)!, questionID: question.key, votes: 0, answerVoters: [""])
+                        }
+                    }
+
+                
+                }
+                
+            })
+        
+           
+            
         } else {
             showAlertMessage(title: "Answers Required", message: "Please fill out at least 2 answers");
         }
+    }
+    
+    func getLastQuestionId() {
+        
+        var ref: FIRDatabaseReference!
+        ref = FIRDatabase.database().reference()
+        ref.child("questions").queryLimited(toLast: 1).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            for singleSnap in snapshot.children.allObjects {
+                
+                let question = singleSnap as! FIRDataSnapshot
+                self.lastQuestionId = question.key
+        
+               
+            }
+           
+        })
     }
     
     private func showAlertMessage(title: String, message: String) {
