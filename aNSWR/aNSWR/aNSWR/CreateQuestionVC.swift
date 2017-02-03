@@ -12,13 +12,16 @@ import FirebaseDatabase
 
 class CreateQuestionVC: UIViewController {
     
-
+    var amountOfLinesToBeShown:CGFloat = 6
+    var maxHeight:CGFloat = 17*6
     var ansArr = [String]()
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
+        let totalLines:CGFloat = 5
+        let maxHeight:CGFloat = (QuestionText.font!.lineHeight * totalLines)
+        QuestionText.sizeThatFits(CGSize(width: QuestionText.frame.size.width, height: maxHeight))
         // Do any additional setup after loading the view.
     }
 
