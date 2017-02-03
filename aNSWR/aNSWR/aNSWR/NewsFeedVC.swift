@@ -87,9 +87,12 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let detailsVC = segue.destination as! DetailsVC
-        detailsVC.questionText = self.selectedQuestionText
-        detailsVC.answers = self.selectedAnswers
+        if segue.identifier == "ShowDetails" {
+            let detailsVC = segue.destination as! DetailsVC
+            detailsVC.questionText = self.selectedQuestionText
+            detailsVC.answers = self.selectedAnswers
+        }
+
     }
 
 
