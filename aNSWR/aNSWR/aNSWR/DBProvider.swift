@@ -24,6 +24,7 @@ class DBProvider {
     private let ANSWERS = "answers"
     private let ANSWERTEXT = "answerText"
     private let QUESTIONID = "questionID"
+    private let QUESTIONVOTERS = "questionVoters"
     private let VOTES = "votes"
     private let ANSWERVOTERS = "answerVoters"
     
@@ -52,8 +53,8 @@ class DBProvider {
         usersRef.child(withID).setValue(data)
     }
     
-    func saveQuestion(questionText: String, answers: Array<String>, userID: String) {
-        let data: Dictionary<String, AnyObject> = [QUESTIONTEXT: questionText as AnyObject, USERID: userID as AnyObject, ANSWERS: answers as AnyObject]
+    func saveQuestion(questionText: String, answers: Array<String>, userID: String, questionVoters: Array<String>) {
+        let data: Dictionary<String, AnyObject> = [QUESTIONTEXT: questionText as AnyObject, USERID: userID as AnyObject, ANSWERS: answers as AnyObject, QUESTIONVOTERS: questionVoters as AnyObject]
         questionRef.setValue(data)
     }
     
