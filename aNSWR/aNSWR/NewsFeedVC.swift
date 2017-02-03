@@ -26,11 +26,11 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         indexOfCellToExpand = -1
         TableView.dataSource = self
         TableView.delegate = self
-        self.questions = ["hey, you", "pepsi or coke"]
+        self.questions = ["hey, you", "pepsi or coke", "ssssssssssssssshjkhlhliugivuiviuviuviuviuviuvugvgjcycyjcuycuchgv"]
         self.answers = ["ans1", "ans2", "ans3", "ans4", "ans5"]
-        DispatchQueue.main.async(execute: {
-            self.TableView.reloadData()
-        })
+//        DispatchQueue.main.async(execute: {
+//            self.TableView.reloadData()
+//        })
 
     }
 
@@ -82,13 +82,13 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         return self.questions.count
     }
 
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == indexOfCellToExpand
-        {
-            return 170 + expandedLabel.frame.height - 38
-        }
-        return 170
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        if indexPath.row == indexOfCellToExpand
+//        {
+//            return 170 + expandedLabel.frame.height - 38
+//        }
+//        return 170
+//    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        selectedQuestion = questions[indexPath.row]
