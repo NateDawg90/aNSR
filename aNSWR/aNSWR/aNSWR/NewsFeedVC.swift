@@ -23,15 +23,14 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var selectedQuestionID = String()
     
     override func viewDidAppear(_ animated: Bool) {
-        print("reload")
-        self.questions.removeAll()
-        self.questionsText.removeAll()
-        self.questionsID.removeAll()
-        self.answers.removeAll()
         createData()
     }
     
     func createData(){
+        self.questions.removeAll()
+        self.questionsText.removeAll()
+        self.questionsID.removeAll()
+        self.answers.removeAll()
         
         var ref: FIRDatabaseReference!
         ref = FIRDatabase.database().reference()
@@ -68,7 +67,6 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 //        self.questionsText = ["hey, you", "pepsi or coke", "ssssssssssssssshjkhlhliugivuiviuviuviuviuviuvugvgjcycyjcuycuchgv"]
 //        self.answers = [["ans1" as AnyObject, "ans2" as AnyObject], ["ans3" as AnyObject, "ans4" as AnyObject, "ans5" as AnyObject]]
 
-        createData()
         
     }
     
