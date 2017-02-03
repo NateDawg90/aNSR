@@ -14,8 +14,6 @@ class DetailsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("..................\(questionText)")
-        print(answers)
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,4 +22,8 @@ class DetailsVC: UIViewController {
     }
 
 
+    @IBAction func backButton(_ sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
