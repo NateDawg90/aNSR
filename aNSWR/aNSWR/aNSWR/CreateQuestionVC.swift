@@ -143,7 +143,6 @@ class CreateQuestionVC: UIViewController {
        
         if QuestionText.text != "" && AnswerText1.text != "" && AnswerText2.text != "" {
             DBProvider.instance.saveQuestion(questionText: QuestionText.text!, answers: ansArr, userID: (FIRAuth.auth()?.currentUser?.uid)!, questionVoters: [""])
-            dismiss(animated: true, completion: nil)
         
             var ref: FIRDatabaseReference!
             ref = FIRDatabase.database().reference()
@@ -157,13 +156,10 @@ class CreateQuestionVC: UIViewController {
                             DBProvider.instance.saveAnswer(answerText: (answer?.text)!, userID: (FIRAuth.auth()?.currentUser?.uid)!, questionID: question.key, votes: 0, answerVoters: [""])
                         }
                     }
-
-                
                 }
-                
+                self.dismiss(animated: true, completion: nil)
             })
-        
-           
+            
             
         } else {
             showAlertMessage(title: "Answers Required", message: "Please fill out at least 2 answers");
