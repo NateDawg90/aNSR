@@ -52,8 +52,8 @@ class DBProvider {
         usersRef.child(withID).setValue(data)
     }
     
-    func saveQuestion(questionText: String, userID: String) {
-        let data: Dictionary<String, String> = [QUESTIONTEXT: questionText, USERID: userID]
+    func saveQuestion(questionText: String, answers: Array<String>, userID: String) {
+        let data: Dictionary<String, AnyObject> = [QUESTIONTEXT: questionText as AnyObject, USERID: userID as AnyObject, ANSWERS: answers as AnyObject]
         questionRef.setValue(data)
     }
     

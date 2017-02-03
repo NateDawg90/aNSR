@@ -58,6 +58,7 @@ class AuthProvider {
             } else {
                 // user is signed in
                 loginHandler?(nil);
+                print("success")
             }
             
         });
