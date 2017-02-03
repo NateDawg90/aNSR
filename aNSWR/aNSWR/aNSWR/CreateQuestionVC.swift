@@ -142,7 +142,7 @@ class CreateQuestionVC: UIViewController {
         let answers = [AnswerText1, AnswerText2, AnswerText3, AnswerText4, AnswerText5]
        
         if QuestionText.text != "" && AnswerText1.text != "" && AnswerText2.text != "" {
-            DBProvider.instance.saveQuestion(questionText: QuestionText.text!, answers: ansArr, userID: (FIRAuth.auth()?.currentUser?.uid)!)
+            DBProvider.instance.saveQuestion(questionText: QuestionText.text!, answers: ansArr, userID: (FIRAuth.auth()?.currentUser?.uid)!, questionVoters: [""])
             dismiss(animated: true, completion: nil)
         
             var ref: FIRDatabaseReference!

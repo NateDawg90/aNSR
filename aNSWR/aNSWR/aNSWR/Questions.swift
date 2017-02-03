@@ -17,17 +17,20 @@ struct Question {
     static let QuestionTextKey = "questionText"
     static let QuestionUserKey = "userID"
     static let QuestionAnswersKey = "answers"
+    static let QuestionVotersKey = "questionVoters"
     
     let questionText: String
     let answers: Array<String>
     let userID: String
+    let questionVoters: Array<String>
     let firebaseReference: FIRDatabaseReference?
 
     
-    init(questionText: String, answers: Array<String>, userID: String, id: String = "") {
+    init(questionText: String, answers: Array<String>, userID: String, id: String = "", questionVoters: Array<String>) {
         self.questionText = questionText
         self.answers = answers
         self.userID = userID
+        self.questionVoters = questionVoters
         self.firebaseReference = nil
     }
     
@@ -36,6 +39,7 @@ struct Question {
         self.questionText = snapshotValue[Question.QuestionTextKey] as! String
         self.answers = snapshotValue[Question.QuestionAnswersKey] as! Array<String>
         self.userID = snapshotValue[Question.QuestionUserKey] as! String
+        self.questionVoters = snapshotValue[Question.QuestionVotersKey] as! Array<String>
         self.firebaseReference = snapshot.ref
     }
     
@@ -43,63 +47,9 @@ struct Question {
         return [
             Question.QuestionTextKey: self.questionText,
             Question.QuestionTextKey: self.answers,
-            Question.QuestionUserKey: self.userID
+            Question.QuestionUserKey: self.userID,
+            Question.QuestionVotersKey: self.questionVoters
         ]
     }
-    
-//    var questionId: String {
-//        return _questionId;
-//    }
-//    
-//    var username: String {
-//        get {
-//            return _username;
-//        }
-//    }
-//    
-//    var userId: String {
-//        get {
-//            return _userId;
-//        }
-//    }
-//    
-//    var questionText: String {
-//        get {
-//            return _questionText;
-//        }
-//    }
-//    
-//    var questionDate: TimeInterval {
-//        get {
-//            return _questionDate;
-//        }
-//    }
-//    
-//    
-    
-    //    init(snapshot: FIRDatabaseReference){
-    //
-    //        self.ref = snapshot.ref
-    //        self.key = snapshot.key
-    //        self.username = (snapshot.value! as! NSDictionary)["username"] as! String
-    //        self.userId = (snapshot.value! as! NSDictionary)["userId"] as! String
-    //        self.questionId = (snapshot.value! as! NSDictionary)["questionId"] as! String
-    //        self.questionText = (snapshot.value! as! NSDictionary)["questionText"] as! String
-    //        self.questionDate = (snapshot.value! as! NSDictionary)["questionDate"] as! String
-    //        self.username = (snapshot.value! as! NSDictionary)["username"] as! String
-    //
-    //    }
-    //    init(username: String, userId: String, questionId: String, questionText: String, questionDate: TimeInterval){
-    //
-    //        self.username = username
-    //        self.userId = userId
-    //        self.questionId = questionId
-    //        self.questionText = questionText
-    //        self.questionDate = questionDate
-    //    }
-    //
-    //    func toAnyObject() -> [String: Any] {
-    //        return ["username": username, "userId": userId, "questionId": questionId, "questionText": questionText, "questionDate": questionDate]
-    //    }
-    
+        
 }
