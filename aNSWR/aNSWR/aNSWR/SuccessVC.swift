@@ -22,7 +22,7 @@ class SuccessVC: UIViewController {
     }
     
     @IBAction func SuccessButton(_ sender: AnyObject) {
-//        dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 
     /*
