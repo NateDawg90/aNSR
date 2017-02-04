@@ -17,6 +17,9 @@ class DetailsVC: UIViewController {
     var votes = [Int]()
     var didVoteAns = [Bool]()
     var loginUserID = String()
+    var answersID = [String]()
+    var voters = [[String]]()
+    var answerKey = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,27 +27,39 @@ class DetailsVC: UIViewController {
         var ref: FIRDatabaseReference!
         ref = FIRDatabase.database().reference()
         ref.child("answers").observeSingleEvent(of: .value, with: { (snapshot) in
-            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
-                for answer in self.answers {
-                    for snap in snapshots {
-                        let value = snap.value as? NSDictionary
-                        if ((value?["answerText"] as? String == answer) &&
-                            (value?["questionID"] as? String == self.questionID)) {
-                            self.votes.append((value?["votes"] as? Int)!)
-                            let voters = value?["answerVoters"] as? Array<String>
-                            if (voters?.contains(self.loginUserID))! {
-                                self.didVoteAns.append(true)
-                            } else {
-                                self.didVoteAns.append(false)
-                            }
-                        }
+            //get answer key
+            for singleSnap in snapshot.children.allObjects {
+                let answer = singleSnap as! FIRDataSnapshot
+                self.answerKey = answer.key
+                
+                let answerSnap = singleSnap as? FIRDataSnapshot
+                let value = answerSnap?.value as? NSDictionary
+                if (value?["questionID"] as? String == self.questionID) {
+                    self.answersID.append(self.answerKey)
+                    self.votes.append((value?["votes"] as? Int)!)
+                    self.voters.append((value?["answerVoters"] as! [String]))
+                    let voters = value?["answerVoters"] as? Array<String>
+                    if (voters?.contains(self.loginUserID))! {
+                        self.didVoteAns.append(true)
+                    } else {
+                        self.didVoteAns.append(false)
                     }
                 }
-
             }
+  
             self.changeButtonSign()
+            print("....................................")
+            print(self.didVoteAns)
         })
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+//        DispatchQueue.main.async(execute: {
+//            self.updateData(questionID: self.questionID)
+//        })
+//        self.DetailsVC.setNeedsDisplay()
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -74,12 +89,58 @@ class DetailsVC: UIViewController {
         } else {
             showAlertMessage(title: "Answers Required", message: "Please fill in the answer text field");
         }
-        
     }
     
+//    func updateData(questionID: String) {
+//        self.questionText.removeAll()
+//        self.answers.removeAll()
+//        self.votes.removeAll()
+//        self.didVoteAns.removeAll()
+//        
+//        var ref: FIRDatabaseReference!
+//        ref = FIRDatabase.database().reference()
+//        ref.child("questions").child(questionID).observeSingleEvent(of: .value, with: { (snapshot) in
+//        
+//            let value = snapshot.value as? NSDictionary
+//            self.questionText = value?["questionText"] as? String ?? ""
+//            self.answers = value?["answers"] as? Array<AnyObject> as! [String]? ?? [("" as AnyObject) as! String]
+//        })
+//        
+//        for answer in self.answers {
+//            ref.child("answers").observeSingleEvent(of: .value, with: { (snapshot) in
+//                if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+//                    for snap in snapshots {
+//                        for singleSnap in snapshot.children.allObjects {
+//                            let answer = singleSnap as! FIRDataSnapshot
+//                            self.answerKey = answer.key
+//                        }
+//                        let value = snap.value as? NSDictionary
+//                        if ((value?["answerText"] as? String == answer) &&
+//                            (value?["questionID"] as? String == self.questionID)) {
+//                            self.answersID.append(self.answerKey)
+//                            self.votes.append((value?["votes"] as? Int)!)
+//                            let voters = value?["answerVoters"] as? Array<String>
+//                            if (voters?.contains(self.loginUserID))! {
+//                                self.didVoteAns.append(true)
+//                            } else {
+//                                self.didVoteAns.append(false)
+//                            }
+//                        }
+//                    }
+//                }
+                print(".....................\(self.answersID)")
+    self.changeButtonSign()
+
+//            })
+//
+//        }
+//    }
+//    
     func changeButtonSign() {
         for i in 0..<didVoteAns.count {
             if (didVoteAns[i] == true) {
+                print("..............................")
+                print(didVoteAns[i])
                 answer1Button.setTitle("-", for: .normal)
             } else {
                 answer1Button.setTitle("+", for: .normal)
@@ -143,6 +204,18 @@ class DetailsVC: UIViewController {
     }
     
     @IBAction func answer1Button(_ sender: AnyObject) {
+        if (answer1Button.titleLabel?.text == "+") {
+            answer1Button.setTitle("-", for: .normal)
+            self.voters[0].append(self.loginUserID)
+            DBProvider.instance.answerRef.child(self.answersID[0]).updateChildValues(["votes": (self.votes[0] + 1)])
+            DBProvider.instance.answerRef.child(self.answersID[0]).updateChildValues(["answerVoters": self.voters[0]])
+        } else {
+            answer1Button.setTitle("+", for: .normal)
+            let index = self.voters[0].index(of: "\(self.loginUserID)")
+            self.voters[0].remove(at: index!)
+            DBProvider.instance.answerRef.child(self.answersID[0]).updateChildValues(["votes": (self.votes[0] - 1)])
+            DBProvider.instance.answerRef.child(self.answersID[0]).updateChildValues(["answerVoters": self.voters[0]])
+        }
     }
     
     @IBAction func answer2Button(_ sender: AnyObject) {
@@ -171,4 +244,5 @@ class DetailsVC: UIViewController {
 
     
 }
+
 

@@ -364,7 +364,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="114"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="64f-xv-0xb" id="ANp-fb-RQz">
-                                            <frame key="frameInset" width="375" height="113"/>
+                                            <frame key="frameInset" width="375" height="113.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Answer1" textAlignment="natural" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="noT-9C-gAE">
@@ -550,6 +550,7 @@
                                 <state key="normal" title="Add Answer"/>
                                 <connections>
                                     <action selector="addAnswerButton:" destination="Ur6-4d-IXM" eventType="touchUpInside" id="MGE-NS-wKc"/>
+                                    <segue destination="SZ7-mW-chq" kind="show" id="0KG-2b-a4g"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -572,7 +573,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xeb-Xx-jUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2661.5999999999999" y="-537.48125937031489"/>
+            <point key="canvasLocation" x="2620" y="-534"/>
+        </scene>
+        <!--SuccessVC-->
+        <scene sceneID="JRZ-Mk-dSU">
+            <objects>
+                <viewController id="SZ7-mW-chq" customClass="SuccessVC" customModule="aNSWR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d8R-NE-zFK"/>
+                        <viewControllerLayoutGuide type="bottom" id="qEX-Za-zHm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dw3-de-yGN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Answer Added " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXT-eE-6c0">
+                                <frame key="frameInset" minX="76" minY="237" width="223" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SxO-Gt-bzj">
+                                <frame key="frameInset" minX="95" minY="321" width="204" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Success"/>
+                                <connections>
+                                    <action selector="SuccessButton:" destination="SZ7-mW-chq" eventType="touchUpInside" id="cMI-dF-kkX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RjT-UO-X0e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3543.1999999999998" y="-492.50374812593708"/>
         </scene>
         <!--Title-->
         <scene sceneID="Q36-Rv-pmT">
