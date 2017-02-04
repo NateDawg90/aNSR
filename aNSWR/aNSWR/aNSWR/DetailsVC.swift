@@ -450,25 +450,30 @@ class DetailsVC: UIViewController {
     //bar chart
     @IBOutlet weak var barView: BarChartView!
     
-    func setChart(dataPoints: [String], values: [Double]) {
-        barView.noDataText = "You need to provide data for the chart."
-    }
-    
     func updateChartWithData() {
         var dataEntries: [BarChartDataEntry] = []
         for i in 0..<self.votes.count {
             let dataEntry = BarChartDataEntry(x: Double(i), y: Double(self.votes[i]))
             dataEntries.append(dataEntry)
         }
-        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Votes count")
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Answer Choices")
 //        let chartData = BarChartData(xVals: self.answers, dataSet: [chartDataSet])
         let chartData = BarChartData(dataSet: chartDataSet)
         barView.data = chartData
         barView.rightAxis.axisMinimum = 0.0
         barView.leftAxis.axisMinimum = 0.0
+        barView.legend.enabled = false
         let xAxis:XAxis = barView.xAxis
-        xAxis.drawAxisLineEnabled = false
+//        xAxis.drawAxisLineEnabled = false
         xAxis.drawGridLinesEnabled = false
+        barView.leftAxis.drawGridLinesEnabled = false
+        barView.rightAxis.drawGridLinesEnabled = false
+        xAxis.drawLabelsEnabled = false
+        barView.leftAxis.granularityEnabled = true
+        barView.leftAxis.granularity = 1.0
+        barView.rightAxis.granularityEnabled = true
+        barView.rightAxis.granularity = 1.0
+        barView.drawValueAboveBarEnabled = true;
         barView.descriptionText = ""
         chartDataSet.colors = ChartColorTemplates.colorful()
         barView.xAxis.labelPosition = .bottom
