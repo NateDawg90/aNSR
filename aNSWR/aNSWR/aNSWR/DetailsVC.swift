@@ -42,7 +42,6 @@ class DetailsVC: UIViewController {
                 }
 
             }
-            print("......................\(self.didVoteAns)")
             self.changeButtonSign()
         })
     }
@@ -70,7 +69,12 @@ class DetailsVC: UIViewController {
     @IBAction func addAnswerButton(_ sender: AnyObject) {
         if !(moreAnswerText.text?.isEmpty)! {
             DBProvider.instance.saveAnswer(answerText: (moreAnswerText.text)!, userID: (FIRAuth.auth()?.currentUser?.uid)!, questionID: self.questionID, votes: 0, answerVoters: [""])
+            self.answers.append(moreAnswerText.text!)
+            DBProvider.instance.questionRef.child(self.questionID).updateChildValues(["answers": self.answers])
+        } else {
+            showAlertMessage(title: "Answers Required", message: "Please fill in the answer text field");
         }
+        
     }
     
     func changeButtonSign() {
@@ -157,6 +161,14 @@ class DetailsVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    private func showAlertMessage(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert);
+        let ok = UIAlertAction(title: "Ok", style: .cancel, handler: nil);
+        alert.addAction(ok);
+        self.present(alert, animated: true, completion: nil);
+    }
+    
+
     
 }
 
