@@ -14,6 +14,8 @@ class DetailsVC: UIViewController {
     var answers = [String]()
     var questionID = String()
     var votes = [Int]()
+    var didVoteAns = [Bool]()
+    var loginUserID = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,13 @@ class DetailsVC: UIViewController {
                         if ((value?["answerText"] as? String == answer) &&
                             (value?["questionID"] as? String == self.questionID)) {
                             self.votes.append((value?["votes"] as? Int)!)
+                            let voters = value?["answerVoters"] as? Array<String>
+                            if (voters?.contains(self.loginUserID)) {
+                                self.didVoteAns.append(true)
+                            } else {
+                                self.didVoteAns.append(false)
+                            }
+
                         }
                     }
                     
@@ -61,6 +70,7 @@ class DetailsVC: UIViewController {
     @IBAction func addAnswerButton(_ sender: AnyObject) {
         
     }
+    
     func displayTextButton() {
         if (answers.count == 1) {
             answer1Text.text = answers[0]
@@ -114,10 +124,6 @@ class DetailsVC: UIViewController {
             moreAnswerText.isHidden = true
             AnswerTextButton.isHidden = true
         }
-    }
-    
-    func displayButton() {
-        
     }
     
     @IBAction func answer1Button(_ sender: AnyObject) {
