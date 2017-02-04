@@ -13,39 +13,63 @@ import Firebase
 class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var TableView: UITableView!
-    var answers = [[String]]()
+    var answers = [[AnyObject]]()
 
     var questions = [NSDictionary]()
     var questionsText = [String]()
+    var questionsID = [String]()
     var selectedQuestionText = String()
     var selectedAnswers = [String]()
+    var selectedQuestionID = String()
+    
+    override func viewDidAppear(_ animated: Bool) {
+        createData()
+    }
+    
+    func createData(){
+        self.questions.removeAll()
+        self.questionsText.removeAll()
+        self.questionsID.removeAll()
+        self.answers.removeAll()
+        
+        var ref: FIRDatabaseReference!
+        ref = FIRDatabase.database().reference()
+        ref.child("questions").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            //get all question IDs
+            for singleSnap in snapshot.children.allObjects {
+                let question = singleSnap as! FIRDataSnapshot
+                self.questionsID.append(question.key)
+            }
+            
+            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                //snapshots == all questions
+                
+                for snap in snapshots {
+                    //value == individual question-able to access values
+                    let value = snap.value as? NSDictionary
+                    self.questions.append(value!)
+                    self.questionsText.append(value?["questionText"] as? String ?? "")
+                    //                    let answers = value?["answers"]
+                    self.answers.append(value?["answers"] as? Array<AnyObject> ?? ["" as AnyObject])
+                    //                    print(value?["questionText"] as? String ?? "")
+                }
+            }
+            self.TableView.reloadData()
+        })
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 //        TableView.dataSource = self
 //        TableView.delegate = self
 //        self.questionsText = ["hey, you", "pepsi or coke", "ssssssssssssssshjkhlhliugivuiviuviuviuviuviuvugvgjcycyjcuycuchgv"]
-        self.answers = [["ans1", "ans2"], ["ans3", "ans4", "ans5"]]
+//        self.answers = [["ans1" as AnyObject, "ans2" as AnyObject], ["ans3" as AnyObject, "ans4" as AnyObject, "ans5" as AnyObject]]
 
-        var ref: FIRDatabaseReference!
-        ref = FIRDatabase.database().reference()
-        ref.child("questions").observeSingleEvent(of: .value, with: { (snapshot) in
-            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
-                
-                
-                for snap in snapshots {
-                    let value = snap.value as? NSDictionary
-//                    print(value ?? "")
-                    self.questions.append(value!)
-                    self.questionsText.append(value?["questionText"] as? String ?? "")
-//                    let answers = value?["answers"]
-//                    self.answers.append((answers as? [String])!)
-//                    print(value?["questionText"] as? String ?? "")
-                }
-                self.TableView.reloadData()
-            }
-        })
+        
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -60,8 +84,8 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 //        cell.textLabel?.text = self.questionsText[indexPath.row]
         let questionText = self.questionsText[indexPath.row]
         cell.QuestionText.text = questionText
-        cell.Answer1Text.text = self.answers[0][0] /*as! String?*/
-        cell.Answer2Text.text = self.answers[0][1] /*as! String?*/
+        cell.Answer1Text.text = (self.answers[indexPath.row][0] as AnyObject) as? String /*as! String?*/
+        cell.Answer2Text.text = (self.answers[indexPath.row][1] as AnyObject) as? String /*as! String?*/
         //        let tap = UITapGestureRecognizer(target: self, action: #selector(NewsFeedVC.expandCell(sender:)))
         //        cell.questionText.addGestureRecognizer(tap)
         //        cell.questionText.isUserInteractionEnabled = true
@@ -82,7 +106,8 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedQuestionText = questionsText[indexPath.row]
-        self.selectedAnswers = answers[indexPath.row]
+        self.selectedAnswers = answers[indexPath.row] as! [String]
+        self.selectedQuestionID = questionsID[indexPath.row]
         performSegue(withIdentifier: "ShowDetails", sender: self)
     }
     
@@ -91,6 +116,8 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             let detailsVC = segue.destination as! DetailsVC
             detailsVC.questionText = self.selectedQuestionText
             detailsVC.answers = self.selectedAnswers
+            detailsVC.questionID = self.selectedQuestionID
+            detailsVC.loginUserID = (FIRAuth.auth()?.currentUser?.uid)!
         }
 
     }
