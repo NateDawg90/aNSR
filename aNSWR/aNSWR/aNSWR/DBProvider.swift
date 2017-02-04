@@ -41,11 +41,11 @@ class DBProvider {
     }
     
     var questionRef: FIRDatabaseReference {
-        return dbRef.child(QUESTIONS).childByAutoId()
+        return dbRef.child(QUESTIONS)
     }
     
     var answerRef: FIRDatabaseReference {
-        return dbRef.child(ANSWERS).childByAutoId()
+        return dbRef.child(ANSWERS)
     }
   
     func saveUser(withID: String, email: String, username: String, password: String) {
@@ -55,12 +55,12 @@ class DBProvider {
     
     func saveQuestion(questionText: String, answers: Array<String>, userID: String, questionVoters: Array<String>) {
         let data: Dictionary<String, AnyObject> = [QUESTIONTEXT: questionText as AnyObject, USERID: userID as AnyObject, ANSWERS: answers as AnyObject, QUESTIONVOTERS: questionVoters as AnyObject]
-        questionRef.setValue(data)
+        questionRef.childByAutoId().setValue(data)
     }
     
     func saveAnswer(answerText: String, userID: String, questionID: String, votes: Int, answerVoters: [String]) {
         let data: Dictionary<String, AnyObject> = [ANSWERTEXT: answerText as AnyObject, USERID: userID as AnyObject, QUESTIONID: questionID as AnyObject, VOTES: votes as AnyObject, ANSWERVOTERS: answerVoters as AnyObject]
-        answerRef.setValue(data)
+        answerRef.childByAutoId().setValue(data)
         
     }
 }
