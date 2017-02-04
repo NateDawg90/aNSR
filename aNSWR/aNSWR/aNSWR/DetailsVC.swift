@@ -24,6 +24,15 @@ class DetailsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.votes.removeAll()
+        self.voters.removeAll()
+        self.answersID.removeAll()
+        self.didVoteAns.removeAll()
+        self.answers.removeAll()
         var ref: FIRDatabaseReference!
         ref = FIRDatabase.database().reference()
         ref.child("answers").observeSingleEvent(of: .value, with: { (snapshot) in
@@ -37,6 +46,7 @@ class DetailsVC: UIViewController {
                 if (value?["questionID"] as? String == self.questionID) {
                     self.answersID.append(self.answerKey)
                     self.votes.append((value?["votes"] as? Int)!)
+                    self.answers.append((value?["answerText"] as! String))
                     self.voters.append((value?["answerVoters"] as! [String]))
                     let voters = value?["answerVoters"] as? Array<String>
                     if (voters?.contains(self.loginUserID))! {
@@ -50,9 +60,6 @@ class DetailsVC: UIViewController {
             self.changeButtonSign()
             self.updateChartWithData()
         })
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
 //        DispatchQueue.main.async(execute: {
 //            self.updateData(questionID: self.questionID)
 //        })
@@ -118,6 +125,7 @@ class DetailsVC: UIViewController {
                 let value = answerSnap?.value as? NSDictionary
                 if (value?["questionID"] as? String == self.questionID) {
                     self.answersID.append(self.answerKey)
+                    self.answers.append((value?["answerText"] as! String))
                     self.votes.append((value?["votes"] as? Int)!)
                     self.voters.append((value?["answerVoters"] as! [String]))
                     let voters = value?["answerVoters"] as? Array<String>
@@ -235,6 +243,8 @@ class DetailsVC: UIViewController {
         } else if (answers.count == 2) {
             answer1Text.text = answers[0]
             answer2Text.text = answers[1]
+            answer2Text.isHidden = false
+            answer2Button.isHidden = false
             answer3Text.isHidden = true
             answer4Text.isHidden = true
             answer5Text.isHidden = true
@@ -248,6 +258,8 @@ class DetailsVC: UIViewController {
             answer1Text.text = answers[0]
             answer2Text.text = answers[1]
             answer3Text.text = answers[2]
+            answer3Text.isHidden = false
+            answer3Button.isHidden = false
             answer4Text.isHidden = true
             answer5Text.isHidden = true
             answer4Button.isHidden = true
@@ -260,17 +272,22 @@ class DetailsVC: UIViewController {
             answer2Text.text = answers[1]
             answer3Text.text = answers[2]
             answer4Text.text = answers[3]
+            answer4Text.isHidden = false
+            answer4Button.isHidden = false
             answer5Text.isHidden = true
             answer5Button.isHidden = true
             addAnswer.isHidden = false
             moreAnswerText.isHidden = true
             AnswerTextButton.isHidden = true
         } else {
+            print(answers)
             answer1Text.text = answers[0]
             answer2Text.text = answers[1]
             answer3Text.text = answers[2]
             answer4Text.text = answers[3]
             answer5Text.text = answers[4]
+            answer5Text.isHidden = false
+            answer5Button.isHidden = false
             addAnswer.isHidden = true
             moreAnswerText.isHidden = true
             AnswerTextButton.isHidden = true

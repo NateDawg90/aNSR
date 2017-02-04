@@ -47,8 +47,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
             endingLineNumber = "49"
-            landmarkName = "CreateQuestionVC"
-            landmarkType = "3">
+            landmarkName = "AddAnswer2(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -79,7 +79,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "126"
             endingLineNumber = "126"
-            landmarkName = "CancelQuestionButton(_:)"
+            landmarkName = "CreateQuestionButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
