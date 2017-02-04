@@ -11,10 +11,12 @@ import Firebase
 
 class DetailsVC: UIViewController {
     var questionText = String()
+
     var answers = [String]()
     var questionID = String()
     var votes = [Int]()
     var didVoteAns = [Bool]()
+
     var loginUserID = String()
     
     override func viewDidLoad() {

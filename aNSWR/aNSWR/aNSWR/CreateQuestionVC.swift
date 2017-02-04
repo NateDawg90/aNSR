@@ -12,13 +12,13 @@ import FirebaseDatabase
 
 class CreateQuestionVC: UIViewController {
     
-
+    var amountOfLinesToBeShown:CGFloat = 6
+    var maxHeight:CGFloat = 17*6
     var ansArr = [String]()
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -27,10 +27,8 @@ class CreateQuestionVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
 
-    @IBOutlet weak var QuestionText: UITextField!
+    @IBOutlet weak var QuestionText2: UITextView!
     
     @IBOutlet weak var AnswerText1: UITextField!
     @IBOutlet weak var AnswerText2: UITextField!
@@ -141,9 +139,8 @@ class CreateQuestionVC: UIViewController {
 
         let answers = [AnswerText1, AnswerText2, AnswerText3, AnswerText4, AnswerText5]
        
-        if QuestionText.text != "" && AnswerText1.text != "" && AnswerText2.text != "" {
-            DBProvider.instance.saveQuestion(questionText: QuestionText.text!, answers: ansArr, userID: (FIRAuth.auth()?.currentUser?.uid)!, questionVoters: [""])
-            dismiss(animated: true, completion: nil)
+        if QuestionText2.text != "" && AnswerText1.text != "" && AnswerText2.text != "" {
+            DBProvider.instance.saveQuestion(questionText: QuestionText2.text!, answers: ansArr, userID: (FIRAuth.auth()?.currentUser?.uid)!, questionVoters: [""])
         
             var ref: FIRDatabaseReference!
             ref = FIRDatabase.database().reference()
@@ -157,13 +154,10 @@ class CreateQuestionVC: UIViewController {
                             DBProvider.instance.saveAnswer(answerText: (answer?.text)!, userID: (FIRAuth.auth()?.currentUser?.uid)!, questionID: question.key, votes: 0, answerVoters: [""])
                         }
                     }
-
-                
                 }
-                
+                self.dismiss(animated: true, completion: nil)
             })
-        
-           
+            
             
         } else {
             showAlertMessage(title: "Answers Required", message: "Please fill out at least 2 answers");
