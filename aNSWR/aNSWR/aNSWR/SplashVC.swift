@@ -15,6 +15,21 @@ class SplashVC: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        if sender.title(for: .normal) == "X" {
+            sender.setTitle("A very long title for this button", for: .normal)
+        } else {
+            sender.setTitle("X", for: .normal)
+        }
+    }
+    
+    @IBAction func buttonTapped(sender: UIButton) {
+        if sender.title(for: .normal) == "X" {
+            sender.setTitle("A very long title for this button", for: .normal)
+        } else {
+            sender.setTitle("X", for: .normal)
+        }
+    }
 //    override func viewDidAppear(_ animated: Bool) {
 //        if AuthProvider.instance.isLoggedIn() {
 //            performSegue(withIdentifier: NEWS_FEED_SEGUE_ID, sender: nil);
