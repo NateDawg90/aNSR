@@ -19,9 +19,6 @@ class CreateQuestionVC: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        let totalLines:CGFloat = 5
-        let maxHeight:CGFloat = (QuestionText.font!.lineHeight * totalLines)
-        QuestionText.sizeThatFits(CGSize(width: QuestionText.frame.size.width, height: maxHeight))
         // Do any additional setup after loading the view.
     }
 
@@ -30,10 +27,8 @@ class CreateQuestionVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
 
-    @IBOutlet weak var QuestionText: UITextField!
+    @IBOutlet weak var QuestionText2: UITextView!
     
     @IBOutlet weak var AnswerText1: UITextField!
     @IBOutlet weak var AnswerText2: UITextField!
@@ -144,8 +139,8 @@ class CreateQuestionVC: UIViewController {
 
         let answers = [AnswerText1, AnswerText2, AnswerText3, AnswerText4, AnswerText5]
        
-        if QuestionText.text != "" && AnswerText1.text != "" && AnswerText2.text != "" {
-            DBProvider.instance.saveQuestion(questionText: QuestionText.text!, answers: ansArr, userID: (FIRAuth.auth()?.currentUser?.uid)!, questionVoters: [""])
+        if QuestionText2.text != "" && AnswerText1.text != "" && AnswerText2.text != "" {
+            DBProvider.instance.saveQuestion(questionText: QuestionText2.text!, answers: ansArr, userID: (FIRAuth.auth()?.currentUser?.uid)!, questionVoters: [""])
         
             var ref: FIRDatabaseReference!
             ref = FIRDatabase.database().reference()
