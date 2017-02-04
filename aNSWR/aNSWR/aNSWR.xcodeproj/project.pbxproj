@@ -12,6 +12,7 @@
 		63BBAE4D87737ACA668A6E70 /* Pods_aNSWR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1289E96C57B648EE8ED67C6 /* Pods_aNSWR.framework */; };
 		7A40FBDD1E44888400A30BCA /* QuestionCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A40FBDC1E44888400A30BCA /* QuestionCustomCell.swift */; };
 		7A40FBDF1E448B2E00A30BCA /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A40FBDE1E448B2E00A30BCA /* DetailsVC.swift */; };
+		7A848C2C1E458D7C003C69DF /* SuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A848C2B1E458D7C003C69DF /* SuccessVC.swift */; };
 		7ADE20121E40897B00047956 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE20111E40897B00047956 /* AppDelegate.swift */; };
 		7ADE20141E40897B00047956 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE20131E40897B00047956 /* SplashVC.swift */; };
 		7ADE20171E40897B00047956 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ADE20151E40897B00047956 /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		45D46D5DDD7024D9B037DC72 /* Pods-aNSWR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWR/Pods-aNSWR.debug.xcconfig"; sourceTree = "<group>"; };
 		7A40FBDC1E44888400A30BCA /* QuestionCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCustomCell.swift; sourceTree = "<group>"; };
 		7A40FBDE1E448B2E00A30BCA /* DetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
+		7A848C2B1E458D7C003C69DF /* SuccessVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessVC.swift; sourceTree = "<group>"; };
 		7ADE200E1E40897B00047956 /* aNSWR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aNSWR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ADE20111E40897B00047956 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7ADE20131E40897B00047956 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				7ADE204C1E40A52400047956 /* NewsFeedVC.swift */,
 				843AA03C1E418765002B6EBE /* CreateQuestionVC.swift */,
 				7A40FBDC1E44888400A30BCA /* QuestionCustomCell.swift */,
+				7A848C2B1E458D7C003C69DF /* SuccessVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				7A40FBDD1E44888400A30BCA /* QuestionCustomCell.swift in Sources */,
 				7ADE20121E40897B00047956 /* AppDelegate.swift in Sources */,
 				7AF117751E40AFF100C1845F /* AuthProvider.swift in Sources */,
+				7A848C2C1E458D7C003C69DF /* SuccessVC.swift in Sources */,
 				7ADE20491E409ADD00047956 /* SignUpVC.swift in Sources */,
 				843AA03D1E418765002B6EBE /* CreateQuestionVC.swift in Sources */,
 				7ADE20431E408F5E00047956 /* CustomTextField.swift in Sources */,
