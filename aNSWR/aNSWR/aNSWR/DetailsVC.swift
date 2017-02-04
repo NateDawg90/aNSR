@@ -31,15 +31,13 @@ class DetailsVC: UIViewController {
                             (value?["questionID"] as? String == self.questionID)) {
                             self.votes.append((value?["votes"] as? Int)!)
                             let voters = value?["answerVoters"] as? Array<String>
-                            if (voters?.contains(self.loginUserID)) {
+                            if (voters?.contains(self.loginUserID))! {
                                 self.didVoteAns.append(true)
                             } else {
                                 self.didVoteAns.append(false)
                             }
-
                         }
                     }
-                    
                 }
 
             }
