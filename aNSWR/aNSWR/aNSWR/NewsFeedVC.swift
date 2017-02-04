@@ -117,6 +117,7 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             detailsVC.questionText = self.selectedQuestionText
             detailsVC.answers = self.selectedAnswers
             detailsVC.questionID = self.selectedQuestionID
+            detailsVC.loginUserID = (FIRAuth.auth()?.currentUser?.uid)!
         }
 
     }

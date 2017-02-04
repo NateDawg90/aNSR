@@ -12,6 +12,7 @@ class DetailsVC: UIViewController {
     var questionText = String()
     var answers = [String()]
     var questionID = String()
+    var loginUserID = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
