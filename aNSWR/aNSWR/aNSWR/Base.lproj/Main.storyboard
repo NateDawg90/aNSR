@@ -550,6 +550,7 @@
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addAnswerButton:" destination="Ur6-4d-IXM" eventType="touchUpInside" id="DY9-bF-ddM"/>
+                                    <segue destination="SZ7-mW-chq" kind="presentation" id="mEd-Ik-noy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbG-s6-25T">
@@ -560,6 +561,11 @@
                                     <action selector="addAnswerB:" destination="Ur6-4d-IXM" eventType="touchUpInside" id="8QZ-V0-MF7"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ADt-Ra-WgG" customClass="BarChartView" customModule="Charts">
+                                <frame key="frameInset" minY="302" width="375" height="365"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -576,6 +582,7 @@
                         <outlet property="answer4Text" destination="RmR-GD-Ofy" id="qnX-YV-HF8"/>
                         <outlet property="answer5Button" destination="rNw-UT-PkH" id="eVU-UL-47W"/>
                         <outlet property="answer5Text" destination="WVi-cx-vOU" id="7KO-nh-nyV"/>
+                        <outlet property="barView" destination="ADt-Ra-WgG" id="reL-As-EpZ"/>
                         <outlet property="moreAnswerText" destination="w31-zc-WLc" id="PUg-sm-nA8"/>
                     </connections>
                 </viewController>
