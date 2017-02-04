@@ -16,12 +16,10 @@ class DetailsVC: UIViewController {
     var questionID = String()
     var votes = [Int]()
     var didVoteAns = [Bool]()
-
     var loginUserID = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        displayTextButton()
         var ref: FIRDatabaseReference!
         ref = FIRDatabase.database().reference()
         ref.child("answers").observeSingleEvent(of: .value, with: { (snapshot) in
@@ -43,7 +41,7 @@ class DetailsVC: UIViewController {
                 }
 
             }
-
+            self.displayTextButton()
         })
     }
 
@@ -78,6 +76,11 @@ class DetailsVC: UIViewController {
             answer3Text.isHidden = true
             answer4Text.isHidden = true
             answer5Text.isHidden = true
+            if (didVoteAns[0] == true) {
+                answer1Button.setTitle("-", for: .normal)
+            } else {
+                answer1Button.setTitle("+", for: .normal)
+            }
             answer2Button.isHidden = true
             answer3Button.isHidden = true
             answer4Button.isHidden = true
@@ -90,6 +93,16 @@ class DetailsVC: UIViewController {
             answer3Text.isHidden = true
             answer4Text.isHidden = true
             answer5Text.isHidden = true
+            if (self.didVoteAns[0] == true) {
+                answer1Button.setTitle("-", for: .normal)
+            } else {
+                answer1Button.setTitle("+", for: .normal)
+            }
+            if (didVoteAns[1] == true) {
+                answer2Button.setTitle("-", for: .normal)
+            } else {
+                answer2Button.setTitle("+", for: .normal)
+            }
             answer3Button.isHidden = true
             answer4Button.isHidden = true
             answer5Button.isHidden = true
@@ -101,6 +114,21 @@ class DetailsVC: UIViewController {
             answer3Text.text = answers[2]
             answer4Text.isHidden = true
             answer5Text.isHidden = true
+            if (didVoteAns[0] == true) {
+                answer1Button.setTitle("-", for: .normal)
+            } else {
+                answer1Button.setTitle("+", for: .normal)
+            }
+            if (didVoteAns[1] == true) {
+                answer2Button.setTitle("-", for: .normal)
+            } else {
+                answer2Button.setTitle("+", for: .normal)
+            }
+            if (didVoteAns[2] == true) {
+                answer3Button.setTitle("-", for: .normal)
+            } else {
+                answer3Button.setTitle("+", for: .normal)
+            }
             answer4Button.isHidden = true
             answer5Button.isHidden = true
             moreAnswerText.isHidden = false
@@ -111,6 +139,26 @@ class DetailsVC: UIViewController {
             answer3Text.text = answers[2]
             answer4Text.text = answers[3]
             answer5Text.isHidden = true
+            if (didVoteAns[0] == true) {
+                answer1Button.setTitle("-", for: .normal)
+            } else {
+                answer1Button.setTitle("+", for: .normal)
+            }
+            if (didVoteAns[1] == true) {
+                answer2Button.setTitle("-", for: .normal)
+            } else {
+                answer2Button.setTitle("+", for: .normal)
+            }
+            if (didVoteAns[2] == true) {
+                answer3Button.setTitle("-", for: .normal)
+            } else {
+                answer3Button.setTitle("+", for: .normal)
+            }
+            if (didVoteAns[3] == true) {
+                answer4Button.setTitle("-", for: .normal)
+            } else {
+                answer4Button.setTitle("+", for: .normal)
+            }
             answer5Button.isHidden = true
             moreAnswerText.isHidden = false
             AnswerTextButton.isHidden = false
@@ -121,6 +169,31 @@ class DetailsVC: UIViewController {
             answer3Text.text = answers[2]
             answer4Text.text = answers[3]
             answer5Text.text = answers[4]
+            if (didVoteAns[0] == true) {
+                answer1Button.setTitle("-", for: .normal)
+            } else {
+                answer1Button.setTitle("+", for: .normal)
+            }
+            if (didVoteAns[1] == true) {
+                answer2Button.setTitle("-", for: .normal)
+            } else {
+                answer2Button.setTitle("+", for: .normal)
+            }
+            if (didVoteAns[2] == true) {
+                answer3Button.setTitle("-", for: .normal)
+            } else {
+                answer3Button.setTitle("+", for: .normal)
+            }
+            if (didVoteAns[3] == true) {
+                answer4Button.setTitle("-", for: .normal)
+            } else {
+                answer4Button.setTitle("+", for: .normal)
+            }
+            if (didVoteAns[4] == true) {
+                answer5Button.setTitle("-", for: .normal)
+            } else {
+                answer5Button.setTitle("+", for: .normal)
+            }
             moreAnswerText.isHidden = true
             AnswerTextButton.isHidden = true
         }

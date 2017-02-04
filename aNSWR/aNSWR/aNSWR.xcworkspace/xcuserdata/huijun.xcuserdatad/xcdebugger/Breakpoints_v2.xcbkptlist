@@ -79,7 +79,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
             endingLineNumber = "60"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkName = "createData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -95,7 +95,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
             endingLineNumber = "43"
-            landmarkName = "viewDidLoad()"
+            landmarkName = "createData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -111,8 +111,56 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "90"
             endingLineNumber = "90"
-            landmarkName = "prepare(for:sender:)"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "aNSWR/DetailsVC.swift"
+            timestampString = "507869378.887261"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "aNSWR.DetailsVC.viewDidLoad () -&gt; ()"
+                  moduleName = "aNSWR"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huijun/Desktop/bootcamp/aNSWR/aNSWR/aNSWR/aNSWR/DetailsVC.swift"
+                  timestampString = "507868290.412935"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "584">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "aNSWR.DetailsVC.(viewDidLoad () -&gt; ()).(closure #1)"
+                  moduleName = "aNSWR"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huijun/Desktop/bootcamp/aNSWR/aNSWR/aNSWR/aNSWR/DetailsVC.swift"
+                  timestampString = "507868290.418832"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "6539">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
