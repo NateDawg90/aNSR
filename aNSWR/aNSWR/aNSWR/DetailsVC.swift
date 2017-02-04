@@ -77,6 +77,14 @@ class DetailsVC: UIViewController {
     @IBOutlet weak var answer4Button: UIButton!
     @IBOutlet weak var answer5Button: UIButton!
     
+    @IBOutlet weak var addAnswer: UIButton!
+    
+    @IBAction func addAnswerB(_ sender: AnyObject) {
+        addAnswer.isHidden = true
+        AnswerTextButton.isHidden = false
+        moreAnswerText.isHidden = false
+    }
+    
     @IBOutlet weak var AnswerTextButton: UIButton!
     @IBOutlet weak var moreAnswerText: UITextField!
     
@@ -221,8 +229,9 @@ class DetailsVC: UIViewController {
             answer3Button.isHidden = true
             answer4Button.isHidden = true
             answer5Button.isHidden = true
-            moreAnswerText.isHidden = false
-            AnswerTextButton.isHidden = false
+            addAnswer.isHidden = false
+            moreAnswerText.isHidden = true
+            AnswerTextButton.isHidden = true
         } else if (answers.count == 2) {
             answer1Text.text = answers[0]
             answer2Text.text = answers[1]
@@ -232,8 +241,9 @@ class DetailsVC: UIViewController {
             answer3Button.isHidden = true
             answer4Button.isHidden = true
             answer5Button.isHidden = true
-            moreAnswerText.isHidden = false
-            AnswerTextButton.isHidden = false
+            addAnswer.isHidden = false
+            moreAnswerText.isHidden = true
+            AnswerTextButton.isHidden = true
         }else if (answers.count == 3) {
             answer1Text.text = answers[0]
             answer2Text.text = answers[1]
@@ -242,8 +252,9 @@ class DetailsVC: UIViewController {
             answer5Text.isHidden = true
             answer4Button.isHidden = true
             answer5Button.isHidden = true
-            moreAnswerText.isHidden = false
-            AnswerTextButton.isHidden = false
+            addAnswer.isHidden = false
+            moreAnswerText.isHidden = true
+            AnswerTextButton.isHidden = true
         }else if (answers.count == 4) {
             answer1Text.text = answers[0]
             answer2Text.text = answers[1]
@@ -251,15 +262,16 @@ class DetailsVC: UIViewController {
             answer4Text.text = answers[3]
             answer5Text.isHidden = true
             answer5Button.isHidden = true
-            moreAnswerText.isHidden = false
-            AnswerTextButton.isHidden = false
-
+            addAnswer.isHidden = false
+            moreAnswerText.isHidden = true
+            AnswerTextButton.isHidden = true
         } else {
             answer1Text.text = answers[0]
             answer2Text.text = answers[1]
             answer3Text.text = answers[2]
             answer4Text.text = answers[3]
             answer5Text.text = answers[4]
+            addAnswer.isHidden = true
             moreAnswerText.isHidden = true
             AnswerTextButton.isHidden = true
         }

@@ -538,26 +538,34 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w31-zc-WLc">
-                                <frame key="frameInset" minX="16" minY="265" width="242" height="30"/>
+                                <frame key="frameInset" minX="14" minY="265" width="309" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03H-ny-4i7">
-                                <frame key="frameInset" minX="266" minY="260" width="83" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Met-6C-b1o">
+                                <frame key="frameInset" minX="331" minY="264" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addAnswerButton:" destination="Ur6-4d-IXM" eventType="touchUpInside" id="DY9-bF-ddM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbG-s6-25T">
+                                <frame key="frameInset" minX="14" minY="264" width="96" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Answer"/>
                                 <connections>
-                                    <action selector="addAnswerButton:" destination="Ur6-4d-IXM" eventType="touchUpInside" id="MGE-NS-wKc"/>
-                                    <segue destination="SZ7-mW-chq" kind="show" id="0KG-2b-a4g"/>
+                                    <action selector="addAnswerB:" destination="Ur6-4d-IXM" eventType="touchUpInside" id="8QZ-V0-MF7"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="AnswerTextButton" destination="03H-ny-4i7" id="BbU-X4-8vP"/>
+                        <outlet property="AnswerTextButton" destination="Met-6C-b1o" id="FqD-zB-RV1"/>
+                        <outlet property="addAnswer" destination="mbG-s6-25T" id="nqp-pe-X4X"/>
                         <outlet property="answer1Button" destination="Evn-xy-bFH" id="91S-pa-Glu"/>
                         <outlet property="answer1Text" destination="wMG-hk-GSL" id="820-Yv-Hbk"/>
                         <outlet property="answer2Button" destination="T5x-OT-pZ3" id="5wC-ep-9Hb"/>
@@ -573,7 +581,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xeb-Xx-jUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2620" y="-534"/>
+            <point key="canvasLocation" x="2620" y="-534.78260869565224"/>
         </scene>
         <!--SuccessVC-->
         <scene sceneID="JRZ-Mk-dSU">
