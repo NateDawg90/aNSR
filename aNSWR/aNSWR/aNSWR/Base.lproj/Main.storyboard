@@ -681,18 +681,28 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADt-Ra-WgG">
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xk7-fj-vsq" customClass="PieChartView" customModule="Charts">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xk7-fj-vsq" customClass="PieChartView" customModule="Charts">
                                         <frame key="frameInset" minY="155" width="375" height="188"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OWO-oX-KdQ" customClass="HorizontalBarChartView" customModule="Charts">
-                                        <frame key="frameInset" minY="-10" width="375" height="167"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OWO-oX-KdQ" customClass="HorizontalBarChartView" customModule="Charts">
+                                        <frame key="frameInset" minY="-10" width="414" height="195"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="OWO-oX-KdQ" secondAttribute="height" multiplier="375:167" id="5px-sr-uqC"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="xk7-fj-vsq" secondAttribute="bottom" id="3ec-pw-zxf"/>
+                                    <constraint firstItem="xk7-fj-vsq" firstAttribute="leading" secondItem="ADt-Ra-WgG" secondAttribute="leading" id="CPZ-IR-WtD"/>
+                                    <constraint firstAttribute="trailing" secondItem="xk7-fj-vsq" secondAttribute="trailing" id="Otw-C6-oKW"/>
+                                    <constraint firstAttribute="trailing" secondItem="OWO-oX-KdQ" secondAttribute="trailing" id="hod-HJ-tHj"/>
+                                    <constraint firstItem="OWO-oX-KdQ" firstAttribute="leading" secondItem="ADt-Ra-WgG" secondAttribute="leading" id="tHf-RP-Rk0"/>
+                                    <constraint firstItem="OWO-oX-KdQ" firstAttribute="top" secondItem="ADt-Ra-WgG" secondAttribute="top" id="urm-Rm-zqt"/>
+                                    <constraint firstItem="xk7-fj-vsq" firstAttribute="top" secondItem="OWO-oX-KdQ" secondAttribute="bottom" constant="-2" id="wSH-2g-IwT"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -759,7 +769,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xeb-Xx-jUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2618.4000000000001" y="-534.78260869565224"/>
+            <point key="canvasLocation" x="2617.3913043478265" y="-534.78260869565224"/>
         </scene>
         <!--SuccessVC-->
         <scene sceneID="JRZ-Mk-dSU">
