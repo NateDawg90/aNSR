@@ -60,6 +60,8 @@
 		432A854E1E425BDC00A0BA49 /* Answers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answers.swift; sourceTree = "<group>"; };
 		432A85541E46A09600A0BA49 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		45D46D5DDD7024D9B037DC72 /* Pods-aNSWR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWR/Pods-aNSWR.debug.xcconfig"; sourceTree = "<group>"; };
+		7A1589E71E47A72C00F2EBCC /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A1589EB1E47A90800F2EBCC /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A40FBDC1E44888400A30BCA /* QuestionCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCustomCell.swift; sourceTree = "<group>"; };
 		7A40FBDE1E448B2E00A30BCA /* DetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		7A848C2B1E458D7C003C69DF /* SuccessVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessVC.swift; sourceTree = "<group>"; };
@@ -134,6 +136,8 @@
 		7ADE20051E40897B00047956 = {
 			isa = PBXGroup;
 			children = (
+				7A1589EB1E47A90800F2EBCC /* Charts.framework */,
+				7A1589E71E47A72C00F2EBCC /* Charts.framework */,
 				7ADE20101E40897B00047956 /* aNSWR */,
 				7ADE20251E40897C00047956 /* aNSWRTests */,
 				7ADE20301E40897C00047956 /* aNSWRUITests */,
