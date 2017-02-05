@@ -21,6 +21,7 @@ class DetailsVC: UIViewController {
     var answersID = [String]()
     var voters = [[String]]()
     var answerKey = String()
+    var numOfVotes = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,20 +61,10 @@ class DetailsVC: UIViewController {
             self.displayTextButton()
             self.changeButtonSign()
             self.updateChartWithData()
+            self.updatePieChartWithData()
         })
-//        DispatchQueue.main.async(execute: {
-//            self.updateData(questionID: self.questionID)
-//        })
-//        self.DetailsVC.setNeedsDisplay()
     }
 
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    
     @IBOutlet weak var questionTextLabel: UILabel!
     @IBOutlet weak var answer1Text: UILabel!
     @IBOutlet weak var answer2Text: UILabel!
@@ -88,9 +79,6 @@ class DetailsVC: UIViewController {
     @IBOutlet weak var answer5Button: UIButton!
     
     @IBOutlet weak var addAnswer: UIButton!
-    
-    
-    
     @IBOutlet weak var AnswerTextButton: UIButton!
     @IBOutlet weak var moreAnswerText: UITextField!
     
@@ -294,6 +282,7 @@ class DetailsVC: UIViewController {
                 DBProvider.instance.answerRef.child(self.answersID[0]).updateChildValues(["answerVoters": self.voters[0]])
                 updateData(questionID: self.questionID)
                 updateChartWithData()
+                updatePieChartWithData()
             } else {
                 let userIdx = self.voters[prevVote!].index(of: "\(self.loginUserID)")
                 self.voters[prevVote!].remove(at: userIdx!)
@@ -305,6 +294,7 @@ class DetailsVC: UIViewController {
                 DBProvider.instance.answerRef.child(self.answersID[0]).updateChildValues(["answerVoters": self.voters[0]])
                 updateData(questionID: self.questionID)
                 updateChartWithData()
+                updatePieChartWithData()
             }
             
         } else {
@@ -315,6 +305,7 @@ class DetailsVC: UIViewController {
             DBProvider.instance.answerRef.child(self.answersID[0]).updateChildValues(["answerVoters": self.voters[0]])
             updateData(questionID: self.questionID)
             updateChartWithData()
+            updatePieChartWithData()
         }
     }
     
@@ -328,6 +319,7 @@ class DetailsVC: UIViewController {
                 DBProvider.instance.answerRef.child(self.answersID[1]).updateChildValues(["answerVoters": self.voters[1]])
                 updateData(questionID: self.questionID)
                 updateChartWithData()
+                updatePieChartWithData()
             } else {
                 let userIdx = self.voters[prevVote!].index(of: "\(self.loginUserID)")
                 self.voters[prevVote!].remove(at: userIdx!)
@@ -339,6 +331,7 @@ class DetailsVC: UIViewController {
                 DBProvider.instance.answerRef.child(self.answersID[1]).updateChildValues(["answerVoters": self.voters[1]])
                 updateData(questionID: self.questionID)
                 updateChartWithData()
+                updatePieChartWithData()
             }
         } else {
             answer2Button.setTitle("+", for: .normal)
@@ -348,6 +341,7 @@ class DetailsVC: UIViewController {
             DBProvider.instance.answerRef.child(self.answersID[1]).updateChildValues(["answerVoters": self.voters[1]])
             updateData(questionID: self.questionID)
             updateChartWithData()
+            updatePieChartWithData()
         }
 
     }
@@ -362,6 +356,7 @@ class DetailsVC: UIViewController {
                 DBProvider.instance.answerRef.child(self.answersID[2]).updateChildValues(["answerVoters": self.voters[2]])
                 updateData(questionID: self.questionID)
                 updateChartWithData()
+                updatePieChartWithData()
             } else {
                 let userIdx = self.voters[prevVote!].index(of: "\(self.loginUserID)")
                 self.voters[prevVote!].remove(at: userIdx!)
@@ -373,6 +368,7 @@ class DetailsVC: UIViewController {
                 DBProvider.instance.answerRef.child(self.answersID[2]).updateChildValues(["answerVoters": self.voters[2]])
                 updateData(questionID: self.questionID)
                 updateChartWithData()
+                updatePieChartWithData()
             }
         } else {
             answer3Button.setTitle("+", for: .normal)
@@ -382,6 +378,7 @@ class DetailsVC: UIViewController {
             DBProvider.instance.answerRef.child(self.answersID[2]).updateChildValues(["answerVoters": self.voters[2]])
             updateData(questionID: self.questionID)
             updateChartWithData()
+            updatePieChartWithData()
         }
     }
     
@@ -395,6 +392,7 @@ class DetailsVC: UIViewController {
                 DBProvider.instance.answerRef.child(self.answersID[3]).updateChildValues(["answerVoters": self.voters[3]])
                 updateData(questionID: self.questionID)
                 updateChartWithData()
+                updatePieChartWithData()
             } else {
                 let userIdx = self.voters[prevVote!].index(of: "\(self.loginUserID)")
                 self.voters[prevVote!].remove(at: userIdx!)
@@ -406,6 +404,7 @@ class DetailsVC: UIViewController {
                 DBProvider.instance.answerRef.child(self.answersID[3]).updateChildValues(["answerVoters": self.voters[3]])
                 updateData(questionID: self.questionID)
                 updateChartWithData()
+                updatePieChartWithData()
             }
         } else {
             answer4Button.setTitle("+", for: .normal)
@@ -415,6 +414,7 @@ class DetailsVC: UIViewController {
             DBProvider.instance.answerRef.child(self.answersID[3]).updateChildValues(["answerVoters": self.voters[3]])
             updateData(questionID: self.questionID)
             updateChartWithData()
+            updatePieChartWithData()
         }
 
     }
@@ -429,6 +429,7 @@ class DetailsVC: UIViewController {
                 DBProvider.instance.answerRef.child(self.answersID[4]).updateChildValues(["answerVoters": self.voters[4]])
                 updateData(questionID: self.questionID)
                 updateChartWithData()
+                updatePieChartWithData()
 
             } else {
                 let userIdx = self.voters[prevVote!].index(of: "\(self.loginUserID)")
@@ -441,6 +442,7 @@ class DetailsVC: UIViewController {
                 DBProvider.instance.answerRef.child(self.answersID[4]).updateChildValues(["answerVoters": self.voters[4]])
                 updateData(questionID: self.questionID)
                 updateChartWithData()
+                updatePieChartWithData()
             }
         } else {
             answer1Button.setTitle("+", for: .normal)
@@ -450,13 +452,42 @@ class DetailsVC: UIViewController {
             DBProvider.instance.answerRef.child(self.answersID[4]).updateChildValues(["answerVoters": self.voters[4]])
             updateData(questionID: self.questionID)
             updateChartWithData()
+            updatePieChartWithData()
         }
 
     }
     
     //bar chart
-    @IBOutlet weak var barView: BarChartView!
+    @IBOutlet weak var pieView: PieChartView!
+    @IBOutlet weak var barView: HorizontalBarChartView!
     
+    func sumOfVote() {
+        var result = 0
+        for i in 0..<self.votes.count {
+            result += self.votes[i]
+        }
+        self.numOfVotes = result
+    }
+    
+    func updatePieChartWithData() {
+        var dataEntries: [ChartDataEntry] = []
+        sumOfVote()
+        for i in 0..<self.votes.count {
+            let percentVote = 100.0 * Double(self.votes[i]) / Double(self.numOfVotes)
+            let dataEntry = ChartDataEntry(x: Double(i), y: percentVote)
+            dataEntries.append(dataEntry)
+        }
+        let pieChartDataSet = PieChartDataSet(values: dataEntries, label: "Answer Choices")
+        let pieChartData = PieChartData(dataSet: pieChartDataSet)
+        pieView.data = pieChartData
+        pieView.descriptionText = ""
+        pieChartDataSet.colors = ChartColorTemplates.colorful()
+        pieView.legend.enabled = false
+        pieView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+        pieView.centerText = "Votes (%)"
+        pieView.usePercentValuesEnabled = true
+    }
+
     func updateChartWithData() {
         var dataEntries: [BarChartDataEntry] = []
         for i in 0..<self.votes.count {
@@ -484,9 +515,8 @@ class DetailsVC: UIViewController {
         barView.descriptionText = ""
         chartDataSet.colors = ChartColorTemplates.colorful()
         barView.xAxis.labelPosition = .bottom
-//        barView.backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
         barView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
-//        barView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0, easingOption: .easeInBounce)
+        barView.y
     }
     
     @IBAction func backButton(_ sender: AnyObject) {
