@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "aNSWR/LogInVC.swift"
-            timestampString = "507558958.662529"
+            timestampString = "508025990.573014"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "SignInButton(_:)"
             landmarkType = "7">
          </BreakpointContent>

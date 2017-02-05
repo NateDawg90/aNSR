@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1BCBAE5B79CD64E56347546B /* Pods_aNSWRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25858D29F4F88C829BA52FD1 /* Pods_aNSWRTests.framework */; };
 		432A854F1E425BDC00A0BA49 /* Answers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A854E1E425BDC00A0BA49 /* Answers.swift */; };
 		432A85551E46A09600A0BA49 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A85541E46A09600A0BA49 /* MainVC.swift */; };
-		63BBAE4D87737ACA668A6E70 /* Pods_aNSWR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1289E96C57B648EE8ED67C6 /* Pods_aNSWR.framework */; };
 		7A40FBDD1E44888400A30BCA /* QuestionCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A40FBDC1E44888400A30BCA /* QuestionCustomCell.swift */; };
 		7A40FBDF1E448B2E00A30BCA /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A40FBDE1E448B2E00A30BCA /* DetailsVC.swift */; };
 		7A848C2C1E458D7C003C69DF /* SuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A848C2B1E458D7C003C69DF /* SuccessVC.swift */; };
@@ -30,7 +28,6 @@
 		7AF117721E40AB1800C1845F /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF117711E40AB1800C1845F /* Users.swift */; };
 		7AF117751E40AFF100C1845F /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF117741E40AFF100C1845F /* AuthProvider.swift */; };
 		7AF117771E40B37100C1845F /* DBProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF117761E40B37100C1845F /* DBProvider.swift */; };
-		82558C6304ED2BDF48880FC4 /* Pods_aNSWRUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09DA156FA56BD726157BF7B7 /* Pods_aNSWRUITests.framework */; };
 		843AA03B1E411DC0002B6EBE /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843AA03A1E411DC0002B6EBE /* Questions.swift */; };
 		843AA03D1E418765002B6EBE /* CreateQuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843AA03C1E418765002B6EBE /* CreateQuestionVC.swift */; };
 /* End PBXBuildFile section */
@@ -53,15 +50,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09DA156FA56BD726157BF7B7 /* Pods_aNSWRUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aNSWRUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		25858D29F4F88C829BA52FD1 /* Pods_aNSWRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aNSWRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		287DC3DD8569160F1FD4EA79 /* Pods-aNSWRTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWRTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWRTests/Pods-aNSWRTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2EC07C1DB0052B872288E466 /* Pods-aNSWRUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWRUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWRUITests/Pods-aNSWRUITests.release.xcconfig"; sourceTree = "<group>"; };
 		432A854E1E425BDC00A0BA49 /* Answers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answers.swift; sourceTree = "<group>"; };
 		432A85541E46A09600A0BA49 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		45D46D5DDD7024D9B037DC72 /* Pods-aNSWR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWR/Pods-aNSWR.debug.xcconfig"; sourceTree = "<group>"; };
-		7A1589E71E47A72C00F2EBCC /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A1589EB1E47A90800F2EBCC /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A40FBDC1E44888400A30BCA /* QuestionCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCustomCell.swift; sourceTree = "<group>"; };
 		7A40FBDE1E448B2E00A30BCA /* DetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		7A848C2B1E458D7C003C69DF /* SuccessVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessVC.swift; sourceTree = "<group>"; };
@@ -90,7 +83,6 @@
 		800F8B8791912C5B502492D9 /* Pods-aNSWRUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWRUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWRUITests/Pods-aNSWRUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		843AA03A1E411DC0002B6EBE /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		843AA03C1E418765002B6EBE /* CreateQuestionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateQuestionVC.swift; sourceTree = "<group>"; };
-		A1289E96C57B648EE8ED67C6 /* Pods_aNSWR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aNSWR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D164EEF377C6B3570076BE /* Pods-aNSWRTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWRTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWRTests/Pods-aNSWRTests.release.xcconfig"; sourceTree = "<group>"; };
 		EB2DF6BAA061314E7B667A61 /* Pods-aNSWR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWR.release.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWR/Pods-aNSWR.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,7 +92,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63BBAE4D87737ACA668A6E70 /* Pods_aNSWR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +99,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BCBAE5B79CD64E56347546B /* Pods_aNSWRTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,7 +106,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82558C6304ED2BDF48880FC4 /* Pods_aNSWRUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,9 +115,6 @@
 		0E70B5317144A5C2054D7EDD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A1289E96C57B648EE8ED67C6 /* Pods_aNSWR.framework */,
-				25858D29F4F88C829BA52FD1 /* Pods_aNSWRTests.framework */,
-				09DA156FA56BD726157BF7B7 /* Pods_aNSWRUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -136,8 +122,6 @@
 		7ADE20051E40897B00047956 = {
 			isa = PBXGroup;
 			children = (
-				7A1589EB1E47A90800F2EBCC /* Charts.framework */,
-				7A1589E71E47A72C00F2EBCC /* Charts.framework */,
 				7ADE20101E40897B00047956 /* aNSWR */,
 				7ADE20251E40897C00047956 /* aNSWRTests */,
 				7ADE20301E40897C00047956 /* aNSWRUITests */,
