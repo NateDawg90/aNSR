@@ -516,7 +516,6 @@ class DetailsVC: UIViewController {
         chartDataSet.colors = ChartColorTemplates.colorful()
         barView.xAxis.labelPosition = .bottom
         barView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
-        barView.y
     }
     
     @IBAction func backButton(_ sender: AnyObject) {
