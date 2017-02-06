@@ -43,23 +43,28 @@ The user data will be saved to the firebase database once it passed the authenti
 ### Creating questions
 
 ![create_question](docs/screenshots/create-question.png)
+
 User's will be able to create their own questions with at least 2 answers for others vote on. Questions are
 then saved to the database upon creation and appear on the questions feed.
 
 ### Question news feed
 
 ![question_news_feed](docs/screenshots/question-feed.png)
-All of the questions will be rendered into the
+
+All of the questions will be rendered into the a UITableView for display
 Questions along with the first two answers are rendered on the 'news feed' home page.
 It is here users may browse all the questions in our database or add a question of their own and
 may click on each question for further detail.
 
 ###Question Detail
+
+![question_detail_view](docs/screenshots/detail-view.png)
+
 #### Votes
 2 or more answer choices on the question will be rendered to the question detail page.
 User able to vote for the answer by clicking on the the answer button. The bar chart and pie chart will
 be updated after the user votes.
-![question_detail_view](docs/screenshots/detail-view.png)
+
 
 #### Bar graph and Pie charts
 Votes are rendered onto the question detail view page in two forms. A bar graph showing
