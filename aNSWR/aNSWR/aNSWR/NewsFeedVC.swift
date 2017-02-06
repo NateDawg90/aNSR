@@ -99,7 +99,6 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
         for question in questions {
             let questionText = question["questionText"] as! String
             let answersArr = question["answers"]
-//            let questionID = question.key
             if (questionText.lowercased().contains(text.lowercased())) {
                 filteredQuestionText.append(questionText)
                 filteredAnswers.append(answersArr as! [AnyObject])
@@ -120,7 +119,7 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
 //    func numberOfSections(in tableView: UITableView) -> Int {
 //        return 1
 //    }
-    //[["ans1", "ans2"], []]
+ 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellID") as! QuestionCustomCell
 //        cell.textLabel?.text = self.questionsText[indexPath.row]
