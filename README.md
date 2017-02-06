@@ -59,7 +59,7 @@ may click on each question for further detail.
 2 or more answer choices on the question will be rendered to the question detail page.
 User able to vote for the answer by clicking on the the answer button. The bar chart and pie chart will
 be updated after the user votes.
-![question_detail_view](docs/scrrenshots/detail-view.png)
+![question_detail_view](docs/screenshots/detail-view.png)
 
 #### Bar graph and Pie charts
 Votes are rendered onto the question detail view page in two forms. A bar graph showing
