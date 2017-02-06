@@ -10,7 +10,7 @@ import UIKit
 import Charts
 import Firebase
 
-class DetailsVC: UIViewController {
+class DetailsVC: UIViewController, UITextFieldDelegate {
     var questionText = String()
 
     var answers = [String]()
@@ -25,11 +25,18 @@ class DetailsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        moreAnswerText.delegate = self
         questionTextLabel.text = questionText
         
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        moreAnswerText.resignFirstResponder()
+        return true;
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
+        moreAnswerText.text = ""
         self.votes.removeAll()
         self.voters.removeAll()
         self.answersID.removeAll()
@@ -259,7 +266,6 @@ class DetailsVC: UIViewController {
             answer5Button.isHidden = true
  
         } else {
-            print(answers)
             answer1Text.text = answers[0]
             answer2Text.text = answers[1]
             answer3Text.text = answers[2]

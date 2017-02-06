@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class CreateQuestionVC: UIViewController {
+class CreateQuestionVC: UIViewController, UITextFieldDelegate {
     
     var amountOfLinesToBeShown:CGFloat = 6
     var maxHeight:CGFloat = 17*6
@@ -19,9 +19,23 @@ class CreateQuestionVC: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        AnswerText1.delegate = self
+        AnswerText2.delegate = self
+        AnswerText3.delegate = self
+        AnswerText4.delegate = self
+        AnswerText5.delegate = self
         // Do any additional setup after loading the view.
     }
 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        AnswerText1.resignFirstResponder()
+        AnswerText2.resignFirstResponder()
+        AnswerText3.resignFirstResponder()
+        AnswerText4.resignFirstResponder()
+        AnswerText5.resignFirstResponder()
+        return true;
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

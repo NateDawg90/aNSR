@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class LogInVC: UIViewController {
+class LogInVC: UIViewController, UITextFieldDelegate {
 
     private let NEWS_FEED_SEGUE_ID = "NewsFeedVC"
 
@@ -19,7 +19,15 @@ class LogInVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        EmailText.delegate = self
+        PasswordText.delegate = self
         // Do any additional setup after loading the view.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        PasswordText.resignFirstResponder()
+        EmailText.resignFirstResponder()
+        return true;
     }
 
     override func viewDidAppear(_ animated: Bool) {
