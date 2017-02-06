@@ -29,6 +29,7 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
     
     override func viewDidAppear(_ animated: Bool) {
         createData()
+        self.searchBarSetup()
     }
     
     func createData(){
@@ -80,6 +81,7 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
         let searchBar = UISearchBar(frame: CGRect(x:0,y:0,width:(UIScreen.main.bounds.width),height:70))
         searchBar.delegate = self
         self.TableView.tableHeaderView = searchBar
+        searchBar.text = ""
     }
 
     //search bar delegate 
@@ -92,6 +94,8 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
     }
     
     func filterTableView(text:String) {
+        self.filteredQuestionText.removeAll()
+        self.filteredAnswers.removeAll()
         for question in questions {
             let questionText = question["questionText"] as! String
             let answersArr = question["answers"]
@@ -101,20 +105,10 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
                 filteredAnswers.append(answersArr as! [AnyObject])
             }
         }
-        print("...........................................")
-        print(filteredQuestionText)
-        print(filteredAnswers)
         self.questionsText.removeAll()
         self.answers.removeAll()
         self.questionsText = filteredQuestionText
         self.answers = filteredAnswers
-        print(self.questionsText)
-        print(self.answers)
-//        questionsText = questions.filter({ (question) -> Bool in
-//            let questionText = question["questionText"] as String
-//            return questionText.lowercased().contains(text.lowercased())
-//        })
-//        
         self.TableView.reloadData()
     }
 
