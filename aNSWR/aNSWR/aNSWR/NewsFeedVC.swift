@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 import Firebase
 
-class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate  {
     
     @IBOutlet weak var TableView: UITableView!
     var answers = [[AnyObject]]()
@@ -22,8 +22,14 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var selectedAnswers = [String]()
     var selectedQuestionID = String()
     
+    var searchResult = [String]()
+    var filteredQuestionText = [String]()
+    var filteredAnswers = [[AnyObject]]()
+    var filteredQuestionID = [String]()
+    
     override func viewDidAppear(_ animated: Bool) {
         createData()
+        self.searchBarSetup()
     }
     
     func createData(){
@@ -62,6 +68,7 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.searchBarSetup()
 //        TableView.dataSource = self
 //        TableView.delegate = self
 //        self.questionsText = ["hey, you", "pepsi or coke", "ssssssssssssssshjkhlhliugivuiviuviuviuviuviuvugvgjcycyjcuycuchgv"]
@@ -70,7 +77,41 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
     }
     
+    func searchBarSetup() {
+        let searchBar = UISearchBar(frame: CGRect(x:0,y:0,width:(UIScreen.main.bounds.width),height:70))
+        searchBar.delegate = self
+        self.TableView.tableHeaderView = searchBar
+        searchBar.text = ""
+    }
 
+    //search bar delegate 
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            createData()
+        }else {
+            filterTableView(text: searchText)
+        }
+    }
+    
+    func filterTableView(text:String) {
+        self.filteredQuestionText.removeAll()
+        self.filteredAnswers.removeAll()
+        for question in questions {
+            let questionText = question["questionText"] as! String
+            let answersArr = question["answers"]
+            if (questionText.lowercased().contains(text.lowercased())) {
+                filteredQuestionText.append(questionText)
+                filteredAnswers.append(answersArr as! [AnyObject])
+            }
+        }
+        self.questionsText.removeAll()
+        self.answers.removeAll()
+        self.questionsText = filteredQuestionText
+        self.answers = filteredAnswers
+        self.TableView.reloadData()
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -78,7 +119,7 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 //    func numberOfSections(in tableView: UITableView) -> Int {
 //        return 1
 //    }
-    //[["ans1", "ans2"], []]
+ 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellID") as! QuestionCustomCell
 //        cell.textLabel?.text = self.questionsText[indexPath.row]
@@ -121,8 +162,7 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
 
     }
-
-
+    
     @IBAction func LogOutButton(_ sender: AnyObject) {
         if AuthProvider.instance.logOut() {
             dismiss(animated: true, completion: nil);
