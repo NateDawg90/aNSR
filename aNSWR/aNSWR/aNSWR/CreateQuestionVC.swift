@@ -24,6 +24,10 @@ class CreateQuestionVC: UIViewController, UITextFieldDelegate {
         AnswerText3.delegate = self
         AnswerText4.delegate = self
         AnswerText5.delegate = self
+        QuestionText2.layer.cornerRadius = 5
+        QuestionText2.layer.borderColor = UIColor.gray.withAlphaComponent(0.5).cgColor
+        QuestionText2.layer.borderWidth = 0.5
+        QuestionText2.clipsToBounds = true
         // Do any additional setup after loading the view.
     }
 
