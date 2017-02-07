@@ -74,7 +74,7 @@ class AuthProvider {
                 if user?.uid != nil {
                     
                     // save to database
-                    DBProvider.instance.saveUser(withID: user!.uid, email: withEmail, username: username, password: password);
+                    DBProvider.instance.saveUser(withID: user!.uid, email: withEmail, username: username);
                     
                     // sign in the user
                     FIRAuth.auth()?.signIn(withEmail: withEmail, password: password, completion: { (user, error) in

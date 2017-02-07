@@ -48,8 +48,8 @@ class DBProvider {
         return dbRef.child(ANSWERS)
     }
   
-    func saveUser(withID: String, email: String, username: String, password: String) {
-        let data: Dictionary<String, String> = [EMAIL: email, USERNAME: username, PASSWORD: password]
+    func saveUser(withID: String, email: String, username: String) {
+        let data: Dictionary<String, String> = [EMAIL: email, USERNAME: username]
         usersRef.child(withID).setValue(data)
     }
     
