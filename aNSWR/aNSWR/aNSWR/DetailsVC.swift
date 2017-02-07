@@ -12,7 +12,6 @@ import Firebase
 
 class DetailsVC: UIViewController, UITextFieldDelegate {
     var questionText = String()
-
     var answers = [String]()
     var questionID = String()
     var votes = [Int]()
@@ -22,6 +21,37 @@ class DetailsVC: UIViewController, UITextFieldDelegate {
     var voters = [[String]]()
     var answerKey = String()
     var numOfVotes = Int()
+    
+    @IBOutlet weak var deleteQuestionButton: UIButton!
+    
+    @IBAction func deleteQuestion(_ sender: Any) {
+        var ref: FIRDatabaseReference!
+        ref = FIRDatabase.database().reference()
+        ref.child("questions").observeSingleEvent(of: .value, with: { (snapshot) in
+            //get answer key
+            for singleSnap in snapshot.children.allObjects {
+                let question = singleSnap as! FIRDataSnapshot
+                if self.questionID == question.key {
+                    DBProvider.instance.questionRef.child(self.questionID).removeValue()
+                }
+                
+            }
+        })
+        
+        ref.child("answers").observeSingleEvent(of: .value, with: { (snapshot) in
+            for singleSnap in snapshot.children.allObjects {
+                let answer = singleSnap as! FIRDataSnapshot
+                let id = answer.key
+                
+                let answerSnap = singleSnap as? FIRDataSnapshot
+                let value = answerSnap?.value as? NSDictionary
+                if (value?["questionID"] as? String == self.questionID) {
+                    DBProvider.instance.answerRef.child(id).removeValue()
+                }
+            }
+            self.dismiss(animated: true, completion: nil)
+        })
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +83,9 @@ class DetailsVC: UIViewController, UITextFieldDelegate {
                 let answerSnap = singleSnap as? FIRDataSnapshot
                 let value = answerSnap?.value as? NSDictionary
                 if (value?["questionID"] as? String == self.questionID) {
+                    if (self.loginUserID == value?["userID"] as! String){
+                        self.deleteQuestionButton.isHidden = false
+                    }
                     self.answersID.append(self.answerKey)
                     self.votes.append((value?["votes"] as? Int)!)
                     self.answers.append((value?["answerText"] as! String))
@@ -70,7 +103,9 @@ class DetailsVC: UIViewController, UITextFieldDelegate {
             self.updateChartWithData()
             self.updatePieChartWithData()
         })
+        
     }
+    
 
     @IBOutlet weak var questionTextLabel: UILabel!
     @IBOutlet weak var answer1Text: UILabel!
@@ -451,7 +486,7 @@ class DetailsVC: UIViewController, UITextFieldDelegate {
                 updatePieChartWithData()
             }
         } else {
-            answer1Button.setTitle("+", for: .normal)
+            answer5Button.setTitle("+", for: .normal)
             let index = self.voters[4].index(of: "\(self.loginUserID)")
             self.voters[4].remove(at: index!)
             DBProvider.instance.answerRef.child(self.answersID[4]).updateChildValues(["votes": (self.votes[4] - 1)])
@@ -527,6 +562,8 @@ class DetailsVC: UIViewController, UITextFieldDelegate {
     @IBAction func backButton(_ sender: AnyObject) {
         dismiss(animated: true, completion: nil)
     }
+    
+    
     
     private func showAlertMessage(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert);
