@@ -80,9 +80,17 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
     func searchBarSetup() {
         let searchBar = UISearchBar(frame: CGRect(x:0,y:0,width:(UIScreen.main.bounds.width),height:50))
         searchBar.delegate = self
-        searchBar.placeholder = "Search"
-        searchBar.backgroundColor = UIColor(red: 230/255, green: 67/255, blue: 67/255, alpha: 1)
+        searchBar.placeholder = "Search here"
+        searchBar.sizeToFit()
+        searchBar.searchBarStyle = UISearchBarStyle.prominent
+        //change here 
+        let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField
+        textFieldInsideSearchBar?.textColor = UIColor(red: 0/255, green: 74/255, blue: 103/255, alpha: 1)
+        textFieldInsideSearchBar?.backgroundColor = UIColor(red: 230/255, green: 67/255, blue: 67/255, alpha: 1)
+        searchBar.barTintColor = UIColor(red: 0/255, green: 74/255, blue: 103/255, alpha: 1)
+//        searchBar.backgroundColor = UIColor(red: 230/255, green: 67/255, blue: 67/255, alpha: 1)
         self.TableView.tableHeaderView = searchBar
+        searchBar.resignFirstResponder()
         searchBar.text = ""
     }
 
