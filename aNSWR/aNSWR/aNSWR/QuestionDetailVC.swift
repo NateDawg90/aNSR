@@ -1,8 +1,8 @@
 //
-//  DetailsVC.swift
+//  QuestionDetailVC.swift
 //  aNSWR
 //
-//  Created by Hui Jun on 2/1/17.
+//  Created by Hui Jun on 2/6/17.
 //  Copyright © 2017 aNSWR. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 import Charts
 import Firebase
 
-class DetailsVC: UIViewController, UITextFieldDelegate {
+class QuestionDetailVC: UIViewController, UITextFieldDelegate {
     var questionText = String()
     var answers = [String]()
     var questionID = String()
@@ -21,10 +21,9 @@ class DetailsVC: UIViewController, UITextFieldDelegate {
     var voters = [[String]]()
     var answerKey = String()
     var numOfVotes = Int()
-    
+
     @IBOutlet weak var deleteQuestionButton: UIButton!
-    
-    @IBAction func deleteQuestion(_ sender: Any) {
+    @IBAction func deleteQuestion(_ sender: AnyObject) {
         var ref: FIRDatabaseReference!
         ref = FIRDatabase.database().reference()
         ref.child("questions").observeSingleEvent(of: .value, with: { (snapshot) in
@@ -51,18 +50,25 @@ class DetailsVC: UIViewController, UITextFieldDelegate {
             }
             self.dismiss(animated: true, completion: nil)
         })
+
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        super.viewDidLoad()
         moreAnswerText.delegate = self
         questionTextLabel.text = questionText
-        
+        // Do any additional setup after loading the view.
     }
-    
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         moreAnswerText.resignFirstResponder()
         return true;
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -103,9 +109,7 @@ class DetailsVC: UIViewController, UITextFieldDelegate {
             self.updateChartWithData()
             self.updatePieChartWithData()
         })
-        
     }
-    
 
     @IBOutlet weak var questionTextLabel: UILabel!
     @IBOutlet weak var answer1Text: UILabel!
@@ -113,14 +117,11 @@ class DetailsVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var answer3Text: UILabel!
     @IBOutlet weak var answer4Text: UILabel!
     @IBOutlet weak var answer5Text: UILabel!
-
     @IBOutlet weak var answer1Button: UIButton!
     @IBOutlet weak var answer2Button: UIButton!
     @IBOutlet weak var answer3Button: UIButton!
     @IBOutlet weak var answer4Button: UIButton!
     @IBOutlet weak var answer5Button: UIButton!
-    
-    @IBOutlet weak var addAnswer: UIButton!
     @IBOutlet weak var AnswerTextButton: UIButton!
     @IBOutlet weak var moreAnswerText: UITextField!
     
@@ -168,9 +169,8 @@ class DetailsVC: UIViewController, UITextFieldDelegate {
             
             self.changeButtonSign()
         })
+    }
 
-   }
-    
     func changeButtonSign() {
         if (didVoteAns.count == 1) {
             if (didVoteAns[0] == true) {
@@ -254,7 +254,7 @@ class DetailsVC: UIViewController, UITextFieldDelegate {
             }
         }
     }
-    
+
     func displayTextButton() {
         if (answers.count == 1) {
             answer1Text.text = answers[0]
@@ -278,7 +278,7 @@ class DetailsVC: UIViewController, UITextFieldDelegate {
             answer3Button.isHidden = true
             answer4Button.isHidden = true
             answer5Button.isHidden = true
-          
+            
         }else if (answers.count == 3) {
             answer1Text.text = answers[0]
             answer2Text.text = answers[1]
@@ -289,7 +289,7 @@ class DetailsVC: UIViewController, UITextFieldDelegate {
             answer5Text.isHidden = true
             answer4Button.isHidden = true
             answer5Button.isHidden = true
-           
+            
         }else if (answers.count == 4) {
             answer1Text.text = answers[0]
             answer2Text.text = answers[1]
@@ -299,7 +299,7 @@ class DetailsVC: UIViewController, UITextFieldDelegate {
             answer4Button.isHidden = false
             answer5Text.isHidden = true
             answer5Button.isHidden = true
- 
+            
         } else {
             answer1Text.text = answers[0]
             answer2Text.text = answers[1]
@@ -312,7 +312,7 @@ class DetailsVC: UIViewController, UITextFieldDelegate {
             AnswerTextButton.isHidden = true
         }
     }
-    
+
     @IBAction func answer1Button(_ sender: AnyObject) {
         if (answer1Button.titleLabel?.text == "+") {
             let prevVote = self.didVoteAns.index(of: true)
@@ -384,7 +384,6 @@ class DetailsVC: UIViewController, UITextFieldDelegate {
             updateChartWithData()
             updatePieChartWithData()
         }
-
     }
     
     @IBAction func answer3Button(_ sender: AnyObject) {
@@ -457,7 +456,6 @@ class DetailsVC: UIViewController, UITextFieldDelegate {
             updateChartWithData()
             updatePieChartWithData()
         }
-
     }
     
     @IBAction func answer5Button(_ sender: AnyObject) {
@@ -471,7 +469,7 @@ class DetailsVC: UIViewController, UITextFieldDelegate {
                 updateData(questionID: self.questionID)
                 updateChartWithData()
                 updatePieChartWithData()
-
+                
             } else {
                 let userIdx = self.voters[prevVote!].index(of: "\(self.loginUserID)")
                 self.voters[prevVote!].remove(at: userIdx!)
@@ -495,12 +493,10 @@ class DetailsVC: UIViewController, UITextFieldDelegate {
             updateChartWithData()
             updatePieChartWithData()
         }
-
     }
     
-    //bar chart
-    @IBOutlet weak var pieView: PieChartView!
     @IBOutlet weak var barView: HorizontalBarChartView!
+    @IBOutlet weak var pieView: PieChartView!
     
     func sumOfVote() {
         var result = 0
@@ -528,7 +524,7 @@ class DetailsVC: UIViewController, UITextFieldDelegate {
         pieView.centerText = "Votes (%)"
         pieView.usePercentValuesEnabled = true
     }
-
+    
     func updateChartWithData() {
         var dataEntries: [BarChartDataEntry] = []
         for i in 0..<self.votes.count {
@@ -536,14 +532,14 @@ class DetailsVC: UIViewController, UITextFieldDelegate {
             dataEntries.append(dataEntry)
         }
         let chartDataSet = BarChartDataSet(values: dataEntries, label: "Answer Choices")
-//        let chartData = BarChartData(xVals: self.answers, dataSet: [chartDataSet])
+        //        let chartData = BarChartData(xVals: self.answers, dataSet: [chartDataSet])
         let chartData = BarChartData(dataSet: chartDataSet)
         barView.data = chartData
         barView.rightAxis.axisMinimum = 0.0
         barView.leftAxis.axisMinimum = 0.0
         barView.legend.enabled = false
         let xAxis:XAxis = barView.xAxis
-//        xAxis.drawAxisLineEnabled = false
+        //        xAxis.drawAxisLineEnabled = false
         xAxis.drawGridLinesEnabled = false
         barView.leftAxis.drawGridLinesEnabled = false
         barView.rightAxis.drawGridLinesEnabled = false
@@ -558,12 +554,10 @@ class DetailsVC: UIViewController, UITextFieldDelegate {
         barView.xAxis.labelPosition = .bottom
         barView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
     }
-    
+
     @IBAction func backButton(_ sender: AnyObject) {
         dismiss(animated: true, completion: nil)
     }
-    
-    
     
     private func showAlertMessage(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert);
@@ -572,8 +566,4 @@ class DetailsVC: UIViewController, UITextFieldDelegate {
         self.present(alert, animated: true, completion: nil);
     }
     
-
-    
 }
-
-
