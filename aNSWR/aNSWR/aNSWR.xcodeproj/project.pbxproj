@@ -11,7 +11,6 @@
 		432A854F1E425BDC00A0BA49 /* Answers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A854E1E425BDC00A0BA49 /* Answers.swift */; };
 		432A85551E46A09600A0BA49 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A85541E46A09600A0BA49 /* MainVC.swift */; };
 		7A40FBDD1E44888400A30BCA /* QuestionCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A40FBDC1E44888400A30BCA /* QuestionCustomCell.swift */; };
-		7A40FBDF1E448B2E00A30BCA /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A40FBDE1E448B2E00A30BCA /* DetailsVC.swift */; };
 		7A848C2C1E458D7C003C69DF /* SuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A848C2B1E458D7C003C69DF /* SuccessVC.swift */; };
 		7ADE20121E40897B00047956 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE20111E40897B00047956 /* AppDelegate.swift */; };
 		7ADE20141E40897B00047956 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE20131E40897B00047956 /* SplashVC.swift */; };
@@ -26,11 +25,12 @@
 		7ADE204B1E409B1A00047956 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE204A1E409B1A00047956 /* LogInVC.swift */; };
 		7ADE204D1E40A52400047956 /* NewsFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE204C1E40A52400047956 /* NewsFeedVC.swift */; };
 		7AEA3A0E1E410EC200480627 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AEA3A0D1E410EC200480627 /* GoogleService-Info.plist */; };
+		7AEA83481E498E6200F305D3 /* CreateQuestionFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEA83471E498E6200F305D3 /* CreateQuestionFormVC.swift */; };
 		7AF117721E40AB1800C1845F /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF117711E40AB1800C1845F /* Users.swift */; };
 		7AF117751E40AFF100C1845F /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF117741E40AFF100C1845F /* AuthProvider.swift */; };
 		7AF117771E40B37100C1845F /* DBProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF117761E40B37100C1845F /* DBProvider.swift */; };
+		7AF9F93F1E499A3600DA5BE1 /* QuestionDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9F93E1E499A3600DA5BE1 /* QuestionDetailVC.swift */; };
 		843AA03B1E411DC0002B6EBE /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843AA03A1E411DC0002B6EBE /* Questions.swift */; };
-		843AA03D1E418765002B6EBE /* CreateQuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843AA03C1E418765002B6EBE /* CreateQuestionVC.swift */; };
 		9D4DA6088D8F4FC132B09AE1 /* Pods_aNSWRUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD1721647C97EEE01832FA5 /* Pods_aNSWRUITests.framework */; };
 		E64CE5097A6889DA68F5FFFE /* Pods_aNSWRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D0737E76ACA6071E0462C3B /* Pods_aNSWRTests.framework */; };
 /* End PBXBuildFile section */
@@ -59,7 +59,6 @@
 		432A85541E46A09600A0BA49 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		45D46D5DDD7024D9B037DC72 /* Pods-aNSWR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWR/Pods-aNSWR.debug.xcconfig"; sourceTree = "<group>"; };
 		7A40FBDC1E44888400A30BCA /* QuestionCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCustomCell.swift; sourceTree = "<group>"; };
-		7A40FBDE1E448B2E00A30BCA /* DetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		7A848C2B1E458D7C003C69DF /* SuccessVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessVC.swift; sourceTree = "<group>"; };
 		7ADE200E1E40897B00047956 /* aNSWR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aNSWR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ADE20111E40897B00047956 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,12 +79,13 @@
 		7ADE204A1E409B1A00047956 /* LogInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		7ADE204C1E40A52400047956 /* NewsFeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedVC.swift; sourceTree = "<group>"; };
 		7AEA3A0D1E410EC200480627 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7AEA83471E498E6200F305D3 /* CreateQuestionFormVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateQuestionFormVC.swift; sourceTree = "<group>"; };
 		7AF117711E40AB1800C1845F /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		7AF117741E40AFF100C1845F /* AuthProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
 		7AF117761E40B37100C1845F /* DBProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBProvider.swift; sourceTree = "<group>"; };
+		7AF9F93E1E499A3600DA5BE1 /* QuestionDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDetailVC.swift; sourceTree = "<group>"; };
 		800F8B8791912C5B502492D9 /* Pods-aNSWRUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWRUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWRUITests/Pods-aNSWRUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		843AA03A1E411DC0002B6EBE /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
-		843AA03C1E418765002B6EBE /* CreateQuestionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateQuestionVC.swift; sourceTree = "<group>"; };
 		9D0737E76ACA6071E0462C3B /* Pods_aNSWRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aNSWRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD1721647C97EEE01832FA5 /* Pods_aNSWRUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aNSWRUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D164EEF377C6B3570076BE /* Pods-aNSWRTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWRTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWRTests/Pods-aNSWRTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -204,12 +204,12 @@
 				7ADE20131E40897B00047956 /* SplashVC.swift */,
 				7ADE20481E409ADD00047956 /* SignUpVC.swift */,
 				7ADE204A1E409B1A00047956 /* LogInVC.swift */,
-				7A40FBDE1E448B2E00A30BCA /* DetailsVC.swift */,
 				7ADE204C1E40A52400047956 /* NewsFeedVC.swift */,
-				843AA03C1E418765002B6EBE /* CreateQuestionVC.swift */,
 				7A40FBDC1E44888400A30BCA /* QuestionCustomCell.swift */,
 				7A848C2B1E458D7C003C69DF /* SuccessVC.swift */,
 				432A85541E46A09600A0BA49 /* MainVC.swift */,
+				7AEA83471E498E6200F305D3 /* CreateQuestionFormVC.swift */,
+				7AF9F93E1E499A3600DA5BE1 /* QuestionDetailVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -527,12 +527,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AEA83481E498E6200F305D3 /* CreateQuestionFormVC.swift in Sources */,
 				7AF117721E40AB1800C1845F /* Users.swift in Sources */,
 				432A85551E46A09600A0BA49 /* MainVC.swift in Sources */,
 				432A854F1E425BDC00A0BA49 /* Answers.swift in Sources */,
 				7ADE20451E40915B00047956 /* CustomButton.swift in Sources */,
 				7AF117771E40B37100C1845F /* DBProvider.swift in Sources */,
-				7A40FBDF1E448B2E00A30BCA /* DetailsVC.swift in Sources */,
 				7ADE204D1E40A52400047956 /* NewsFeedVC.swift in Sources */,
 				7ADE20141E40897B00047956 /* SplashVC.swift in Sources */,
 				7ADE204B1E409B1A00047956 /* LogInVC.swift in Sources */,
@@ -541,8 +541,8 @@
 				7ADE20121E40897B00047956 /* AppDelegate.swift in Sources */,
 				7AF117751E40AFF100C1845F /* AuthProvider.swift in Sources */,
 				7A848C2C1E458D7C003C69DF /* SuccessVC.swift in Sources */,
+				7AF9F93F1E499A3600DA5BE1 /* QuestionDetailVC.swift in Sources */,
 				7ADE20491E409ADD00047956 /* SignUpVC.swift in Sources */,
-				843AA03D1E418765002B6EBE /* CreateQuestionVC.swift in Sources */,
 				7ADE20431E408F5E00047956 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
