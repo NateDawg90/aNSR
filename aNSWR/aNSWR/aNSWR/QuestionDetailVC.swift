@@ -89,9 +89,10 @@ class QuestionDetailVC: UIViewController, UITextFieldDelegate {
                 let answerSnap = singleSnap as? FIRDataSnapshot
                 let value = answerSnap?.value as? NSDictionary
                 if (value?["questionID"] as? String == self.questionID) {
-                    if (self.loginUserID == value?["userID"] as! String){
-                        self.deleteQuestionButton.isHidden = false
-                    }
+//       hui fix!             if (self.loginUserID == value?["userID"] as! String){
+//                        self.deleteQuestionButton.isHidden = false
+//                        
+//                    }
                     self.answersID.append(self.answerKey)
                     self.votes.append((value?["votes"] as? Int)!)
                     self.answers.append((value?["answerText"] as! String))
