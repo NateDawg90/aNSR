@@ -85,9 +85,9 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
         searchBar.searchBarStyle = UISearchBarStyle.prominent
         //change here 
         let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField
-        textFieldInsideSearchBar?.textColor = UIColor(red: 0/255, green: 74/255, blue: 103/255, alpha: 1)
-        textFieldInsideSearchBar?.backgroundColor = UIColor(red: 230/255, green: 67/255, blue: 67/255, alpha: 1)
-        searchBar.barTintColor = UIColor(red: 0/255, green: 74/255, blue: 103/255, alpha: 1)
+        textFieldInsideSearchBar?.textColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+        textFieldInsideSearchBar?.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+        searchBar.barTintColor = UIColor(red: 249/255, green: 201/255, blue: 203/255, alpha: 1)
 //        searchBar.backgroundColor = UIColor(red: 230/255, green: 67/255, blue: 67/255, alpha: 1)
         self.TableView.tableHeaderView = searchBar
         searchBar.resignFirstResponder()
