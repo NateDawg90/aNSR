@@ -437,7 +437,7 @@
                                                 <action selector="LogOutButton:" destination="w6d-pN-y5C" id="nrN-Cl-Op1"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" width="8" id="RS7-1L-1bR">
+                                        <barButtonItem key="rightBarButtonItem" title="+" width="8" id="RS7-1L-1bR">
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <segue destination="gmC-wm-Q1U" kind="show" id="MJU-yi-PNM"/>
