@@ -122,10 +122,9 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
         self.questionsText.removeAll()
         self.answers.removeAll()
         self.questionsID.removeAll()
-        self.questionsID = filteredQuestionID
-        self.questionsID = filteredQuestionID
-        self.questionsText = filteredQuestionText
-        self.answers = filteredAnswers
+        self.questionsID = filteredQuestionID.reversed()
+        self.questionsText = filteredQuestionText.reversed()
+        self.answers = filteredAnswers.reversed()
         self.TableView.reloadData()
     }
 
