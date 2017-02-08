@@ -80,6 +80,18 @@ class QuestionDetailVC: UIViewController, UITextFieldDelegate {
         self.answers.removeAll()
         var ref: FIRDatabaseReference!
         ref = FIRDatabase.database().reference()
+        ref.child("questions").observeSingleEvent(of: .value, with: { (snapshot) in
+            for singleSnap in snapshot.children.allObjects {
+//                let question = singleSnap as! FIRDataSnapshot
+                let questionSnap = singleSnap as? FIRDataSnapshot
+                let value = questionSnap?.value as? NSDictionary
+                if (value?["userID"] as? String == self.loginUserID && self.questionText == value?["questionText"] as? String) {
+                    self.deleteQuestionButton.isHidden = false
+                } else {
+                    self.deleteQuestionButton.isHidden = true
+                }
+            }
+        })
         ref.child("answers").observeSingleEvent(of: .value, with: { (snapshot) in
             //get answer key
             for singleSnap in snapshot.children.allObjects {
@@ -89,7 +101,7 @@ class QuestionDetailVC: UIViewController, UITextFieldDelegate {
                 let answerSnap = singleSnap as? FIRDataSnapshot
                 let value = answerSnap?.value as? NSDictionary
                 if (value?["questionID"] as? String == self.questionID) {
-//       hui fix!             if (self.loginUserID == value?["userID"] as! String){
+//                   if (self.loginUserID == value?["userID"] as! String){
 //                        self.deleteQuestionButton.isHidden = false
 //                        
 //                    }
