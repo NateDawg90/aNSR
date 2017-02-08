@@ -61,6 +61,9 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
                     //                    print(value?["questionText"] as? String ?? "")
                 }
             }
+            self.questionsText = self.questionsText.reversed()
+            self.answers = self.answers.reversed()
+            self.questionsID = self.questionsID.reversed()
             self.TableView.reloadData()
         })
     }
@@ -88,7 +91,6 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
         textFieldInsideSearchBar?.textColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
         textFieldInsideSearchBar?.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         searchBar.barTintColor = UIColor(red: 249/255, green: 201/255, blue: 203/255, alpha: 1)
-//        searchBar.backgroundColor = UIColor(red: 230/255, green: 67/255, blue: 67/255, alpha: 1)
         self.TableView.tableHeaderView = searchBar
         searchBar.resignFirstResponder()
         searchBar.text = ""
@@ -106,16 +108,22 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
     func filterTableView(text:String) {
         self.filteredQuestionText.removeAll()
         self.filteredAnswers.removeAll()
+        self.filteredQuestionID.removeAll()
         for question in questions {
             let questionText = question["questionText"] as! String
             let answersArr = question["answers"]
             if (questionText.lowercased().contains(text.lowercased())) {
+                let index = self.questionsText.index(of: questionText)
+                filteredQuestionID.append(self.questionsID[index!])
                 filteredQuestionText.append(questionText)
                 filteredAnswers.append(answersArr as! [AnyObject])
             }
         }
         self.questionsText.removeAll()
         self.answers.removeAll()
+        self.questionsID.removeAll()
+        self.questionsID = filteredQuestionID
+        self.questionsID = filteredQuestionID
         self.questionsText = filteredQuestionText
         self.answers = filteredAnswers
         self.TableView.reloadData()
@@ -132,7 +140,6 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
  
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellID") as! QuestionCustomCell
-//        cell.textLabel?.text = self.questionsText[indexPath.row]
         let questionText = self.questionsText[indexPath.row]
         cell.QuestionText.text = questionText
         cell.Answer1Text.text = (self.answers[indexPath.row][0] as AnyObject) as? String /*as! String?*/
