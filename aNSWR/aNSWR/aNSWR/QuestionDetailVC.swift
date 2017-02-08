@@ -85,10 +85,13 @@ class QuestionDetailVC: UIViewController, UITextFieldDelegate {
 //                let question = singleSnap as! FIRDataSnapshot
                 let questionSnap = singleSnap as? FIRDataSnapshot
                 let value = questionSnap?.value as? NSDictionary
-                if (value?["userID"] as? String == self.loginUserID && self.questionText == value?["questionText"] as? String) {
-                    self.deleteQuestionButton.isHidden = false
-                } else {
-                    self.deleteQuestionButton.isHidden = true
+                if (self.questionText == value?["questionText"] as? String) {
+                    if (value?["userID"] as? String == self.loginUserID) {
+                        print(self.loginUserID)
+                        self.deleteQuestionButton.isHidden = false
+                    } else {
+                        self.deleteQuestionButton.isHidden = true
+                    }
                 }
             }
         })
