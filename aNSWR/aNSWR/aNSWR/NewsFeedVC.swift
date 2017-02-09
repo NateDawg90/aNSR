@@ -179,13 +179,7 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
 
     }
     
-    @IBAction func LogOutButton(_ sender: AnyObject) {
-        if AuthProvider.instance.logOut() {
-            dismiss(animated: true, completion: nil);
-        } else {
-            showAlertMessage(title: "Could Not Log Out", message: "We Have A Problem With Connecting To Database To Log Out, Please Try Again");
-        }
-    }
+
     
     private func showAlertMessage(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert);
