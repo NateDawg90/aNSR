@@ -2,7 +2,7 @@
 
 [App Store]
 
-[demo](https://appetize.io/app/88418p3n3pvhd6qdeexmffn4mr?device=iphone6s&scale=75&orientation=portrait&osVersion=10.0)
+[demo](https://appetize.io/app/ju9njhn5dgang3pekrkwd4v4em?device=iphone7&scale=75&orientation=portrait&osVersion=10.0)
 
 
 ## Background
@@ -24,7 +24,7 @@ The user data will be saved to the firebase database once it passed the authenti
             } else {
                 if user?.uid != nil {
                     // save to database
-                    DBProvider.instance.saveUser(withID: user!.uid, email: withEmail, username: username, password: password);
+                    DBProvider.instance.saveUser(withID: user!.uid, email: withEmail, username: username);
 
                     // sign in the user
                     FIRAuth.auth()?.signIn(withEmail: withEmail, password: password, completion: { (user, error) in
