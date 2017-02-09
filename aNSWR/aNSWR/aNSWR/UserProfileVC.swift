@@ -11,6 +11,8 @@ import FirebaseAuth
 import Firebase
 
 class UserProfileVC: UIViewController, UITextFieldDelegate {
+    private let SUCCESS_SEGUE_ID = "SuccessVC"
+    
     @IBOutlet weak var usernameText: UILabel!
     
     @IBOutlet weak var changeEmailText: UITextField!
@@ -49,8 +51,14 @@ class UserProfileVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func updateUsernameButton(_ sender: Any) {
-        DBProvider.instance.usersRef.child((FIRAuth.auth()?.currentUser?.uid)!).updateChildValues(["username": self.changeUsernameText.text ?? ""])
-        self.changeUsernameText.text = ""
+        if self.changeUsernameText.text != "" {
+            DBProvider.instance.usersRef.child((FIRAuth.auth()?.currentUser?.uid)!).updateChildValues(["username": self.changeUsernameText.text ?? ""])
+            self.changeUsernameText.text = ""
+            performSegue(withIdentifier: SUCCESS_SEGUE_ID, sender: nil)
+        } else {
+            showAlertMessage(title: "Invalid Username", message: "Please enter a valid Username");
+        }
+        
     }
     
     @IBAction func updatePasswordButton(_ sender: Any) {
