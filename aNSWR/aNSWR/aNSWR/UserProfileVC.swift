@@ -34,23 +34,6 @@ class UserProfileVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var changePasswordText: UITextField!
     
-    @IBAction func updateEmailButton(_ sender: Any) {
-        if changeEmailText.text != "" && isValidEmail(testStr: changeEmailText.text!) {
-            FIRAuth.auth()?.currentUser?.updateEmail(self.changeEmailText.text!) { (error) in
-                if error == nil {
-                    DBProvider.instance.usersRef.child((FIRAuth.auth()?.currentUser?.uid)!).updateChildValues(["email": self.changeEmailText.text ?? ""])
-                    self.showAlertMessage(title: "Success", message: "Email successfully updated!")
-                    self.changeEmailText.text = ""
-                }
-                else{
-                    self.showAlertMessage(title: "Error", message: "This operation is sensitive and requires recent authentication. Log in again before retrying this request.")
-                }
-            }
-        } else {
-            showAlertMessage(title: "Invalid Email", message: "Please enter a valid Email");
-        }
-    }
-    
     @IBAction func updateUsernameButton(_ sender: Any) {
         if self.changeUsernameText.text != "" {
             DBProvider.instance.usersRef.child((FIRAuth.auth()?.currentUser?.uid)!).updateChildValues(["username": self.changeUsernameText.text ?? ""])
