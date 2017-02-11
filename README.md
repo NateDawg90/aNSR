@@ -2,7 +2,7 @@
 
 [App Store]
 
-[demo](https://appetize.io/app/ju9njhn5dgang3pekrkwd4v4em?device=iphone7&scale=75&orientation=portrait&osVersion=10.0)
+[demo](https://appetize.io/app/dukc8nv13vgxv4vxrxqaxaytk0?device=iphone6s&scale=75&orientation=portrait&osVersion=10.0)
 
 
 ## Background
