@@ -10,8 +10,8 @@
 		3A84DDCFB4B37E5A4D2BEAE5 /* Pods_aNSWR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F125FA920E9083940B9771AC /* Pods_aNSWR.framework */; };
 		432A854F1E425BDC00A0BA49 /* Answers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A854E1E425BDC00A0BA49 /* Answers.swift */; };
 		432A85551E46A09600A0BA49 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A85541E46A09600A0BA49 /* MainVC.swift */; };
-		43599E621E4CEB6C00B1C424 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43599E611E4CEB6C00B1C424 /* GoogleService-Info.plist */; };
 		7A40FBDD1E44888400A30BCA /* QuestionCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A40FBDC1E44888400A30BCA /* QuestionCustomCell.swift */; };
+		7A7B81791E4F768A00F8BAE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A7B81781E4F768A00F8BAE3 /* GoogleService-Info.plist */; };
 		7A848C2C1E458D7C003C69DF /* SuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A848C2B1E458D7C003C69DF /* SuccessVC.swift */; };
 		7ADE20121E40897B00047956 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE20111E40897B00047956 /* AppDelegate.swift */; };
 		7ADE20141E40897B00047956 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE20131E40897B00047956 /* SplashVC.swift */; };
@@ -58,9 +58,9 @@
 		2EC07C1DB0052B872288E466 /* Pods-aNSWRUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWRUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWRUITests/Pods-aNSWRUITests.release.xcconfig"; sourceTree = "<group>"; };
 		432A854E1E425BDC00A0BA49 /* Answers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answers.swift; sourceTree = "<group>"; };
 		432A85541E46A09600A0BA49 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		43599E611E4CEB6C00B1C424 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		45D46D5DDD7024D9B037DC72 /* Pods-aNSWR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aNSWR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aNSWR/Pods-aNSWR.debug.xcconfig"; sourceTree = "<group>"; };
 		7A40FBDC1E44888400A30BCA /* QuestionCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCustomCell.swift; sourceTree = "<group>"; };
+		7A7B81781E4F768A00F8BAE3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7A848C2B1E458D7C003C69DF /* SuccessVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessVC.swift; sourceTree = "<group>"; };
 		7ADE200E1E40897B00047956 /* aNSWR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aNSWR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ADE20111E40897B00047956 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 				7ADE20151E40897B00047956 /* Main.storyboard */,
 				7ADE20181E40897B00047956 /* Assets.xcassets */,
 				7ADE201A1E40897B00047956 /* LaunchScreen.storyboard */,
-				43599E611E4CEB6C00B1C424 /* GoogleService-Info.plist */,
+				7A7B81781E4F768A00F8BAE3 /* GoogleService-Info.plist */,
 				7ADE201D1E40897B00047956 /* Info.plist */,
 			);
 			path = aNSWR;
@@ -365,7 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ADE201C1E40897B00047956 /* LaunchScreen.storyboard in Resources */,
-				43599E621E4CEB6C00B1C424 /* GoogleService-Info.plist in Resources */,
+				7A7B81791E4F768A00F8BAE3 /* GoogleService-Info.plist in Resources */,
 				7ADE20191E40897B00047956 /* Assets.xcassets in Resources */,
 				7ADE20171E40897B00047956 /* Main.storyboard in Resources */,
 			);
