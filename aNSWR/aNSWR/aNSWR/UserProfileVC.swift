@@ -19,7 +19,8 @@ class UserProfileVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func LogOutButton(_ sender: Any) {
         if AuthProvider.instance.logOut() {
-            dismiss(animated: true, completion: nil);
+            performSegue(withIdentifier: "logout", sender: nil)
+//            dismiss(animated: true, completion: nil);
         } else {
             showAlertMessage(title: "Could Not Log Out", message: "We Have A Problem With Connecting To Database To Log Out, Please Try Again");
         }

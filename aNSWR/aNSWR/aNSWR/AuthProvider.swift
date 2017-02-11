@@ -50,50 +50,37 @@ class AuthProvider {
     
     func login(withEmail: String, password: String, loginHandler: LoginHandler?) {
             FIRAuth.auth()?.signIn(withEmail: withEmail, password: password, completion: { (user, error) in
-            
-            if error != nil {
-                // user not signed in we have a problem
-                self.handleErrors(err: error as! NSError, loginHandler: loginHandler);
+                if !(user?.isEmailVerified)! {
+                    loginHandler?("Your email address has not yet been verified. Please verify your email \(withEmail).")
+                }else if error != nil {
+                    // user not signed in we have a problem
+                    self.handleErrors(err: error as! NSError, loginHandler: loginHandler);
+                } else {
+                    // user is signed in
+                    loginHandler?(nil);
+                    print("success")
+                }
                 
-            } else {
-                // user is signed in
-                loginHandler?(nil);
-                print("success")
-            }
-            
-        });
+            });
     }
     
     func signUp(withEmail: String, username: String, password: String, loginHandler: LoginHandler?) {
-        
         FIRAuth.auth()?.createUser(withEmail: withEmail, password: password, completion: { (user, error) in
             if error != nil {
                 self.handleErrors(err: error as! NSError, loginHandler: loginHandler);
             } else {
-                
+                FIRAuth.auth()?.currentUser!.sendEmailVerification(completion: { (error) in
+                })
+                loginHandler?("Please verify the email address \(withEmail)")
                 if user?.uid != nil {
-                    
                     // save to database
                     DBProvider.instance.saveUser(withID: user!.uid, email: withEmail, username: username);
-                    
-                    // sign in the user
-                    FIRAuth.auth()?.signIn(withEmail: withEmail, password: password, completion: { (user, error) in
-                        
-                        if error != nil {
-                            self.handleErrors(err: error as! NSError, loginHandler: loginHandler);
-                        } else {
-                            loginHandler?(nil);
-                        }
-                        
-                    });
-                    
                 }
-                
             }
             
         });
-        
     }
+
     
     private func handleErrors(err: NSError, loginHandler: LoginHandler?) {
         
