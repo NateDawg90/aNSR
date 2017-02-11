@@ -556,8 +556,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPj-wV-pPe" customClass="CustomButton" customModule="aNSWR" customModuleProvider="target">
-                                <frame key="frameInset" minX="255" minY="243" width="105" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPj-wV-pPe" customClass="CustomButton" customModule="aNSWR" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="f90-YN-7Y1"/>
@@ -637,6 +636,7 @@
                             <constraint firstItem="alc-ea-mz3" firstAttribute="top" secondItem="9wQ-Kx-XrN" secondAttribute="bottom" constant="8" id="7mh-Cj-pb8"/>
                             <constraint firstAttribute="trailing" secondItem="aWc-Qx-Iyf" secondAttribute="trailing" id="9Hs-Wq-0TK"/>
                             <constraint firstItem="alc-ea-mz3" firstAttribute="width" secondItem="63I-WK-9dS" secondAttribute="width" multiplier="0.6" id="B5r-dn-obw"/>
+                            <constraint firstItem="oPj-wV-pPe" firstAttribute="top" secondItem="EGE-uo-zsS" secondAttribute="bottom" constant="8" id="BPc-7L-xgj"/>
                             <constraint firstItem="q5W-gS-Q7k" firstAttribute="width" secondItem="63I-WK-9dS" secondAttribute="width" multiplier="0.6" id="JTz-S2-8Pm"/>
                             <constraint firstItem="aWc-Qx-Iyf" firstAttribute="leading" secondItem="63I-WK-9dS" secondAttribute="leading" id="N41-xm-ekt"/>
                             <constraint firstItem="alc-ea-mz3" firstAttribute="leading" secondItem="63I-WK-9dS" secondAttribute="leading" constant="15" id="NRA-Br-17K"/>

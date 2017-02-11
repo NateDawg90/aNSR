@@ -15,8 +15,6 @@ class UserProfileVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var usernameText: UILabel!
     
-    @IBOutlet weak var changeEmailText: UITextField!
-    
     @IBAction func LogOutButton(_ sender: Any) {
         if AuthProvider.instance.logOut() {
             performSegue(withIdentifier: "logout", sender: nil)
@@ -68,14 +66,12 @@ class UserProfileVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         changePasswordText.delegate = self
         changeUsernameText.delegate = self
-        changeEmailText.delegate = self
         // Do any additional setup after loading the view.
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         changePasswordText.resignFirstResponder()
         changeUsernameText.resignFirstResponder()
-        changeEmailText.resignFirstResponder()
         return true;
     }
     
