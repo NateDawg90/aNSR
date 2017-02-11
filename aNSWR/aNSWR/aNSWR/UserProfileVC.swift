@@ -15,11 +15,10 @@ class UserProfileVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var usernameText: UILabel!
     
-    @IBOutlet weak var changeEmailText: UITextField!
-    
     @IBAction func LogOutButton(_ sender: Any) {
         if AuthProvider.instance.logOut() {
-            dismiss(animated: true, completion: nil);
+            performSegue(withIdentifier: "logout", sender: nil)
+//            dismiss(animated: true, completion: nil);
         } else {
             showAlertMessage(title: "Could Not Log Out", message: "We Have A Problem With Connecting To Database To Log Out, Please Try Again");
         }
@@ -32,23 +31,6 @@ class UserProfileVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var changeUsernameText: UITextField!
     
     @IBOutlet weak var changePasswordText: UITextField!
-    
-    @IBAction func updateEmailButton(_ sender: Any) {
-        if changeEmailText.text != "" && isValidEmail(testStr: changeEmailText.text!) {
-            FIRAuth.auth()?.currentUser?.updateEmail(self.changeEmailText.text!) { (error) in
-                if error == nil {
-                    DBProvider.instance.usersRef.child((FIRAuth.auth()?.currentUser?.uid)!).updateChildValues(["email": self.changeEmailText.text ?? ""])
-                    self.showAlertMessage(title: "Success", message: "Email successfully updated!")
-                    self.changeEmailText.text = ""
-                }
-                else{
-                    self.showAlertMessage(title: "Error", message: "This operation is sensitive and requires recent authentication. Log in again before retrying this request.")
-                }
-            }
-        } else {
-            showAlertMessage(title: "Invalid Email", message: "Please enter a valid Email");
-        }
-    }
     
     @IBAction func updateUsernameButton(_ sender: Any) {
         if self.changeUsernameText.text != "" {
@@ -84,14 +66,12 @@ class UserProfileVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         changePasswordText.delegate = self
         changeUsernameText.delegate = self
-        changeEmailText.delegate = self
         // Do any additional setup after loading the view.
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         changePasswordText.resignFirstResponder()
         changeUsernameText.resignFirstResponder()
-        changeEmailText.resignFirstResponder()
         return true;
     }
     
