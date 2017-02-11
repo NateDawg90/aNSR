@@ -12,7 +12,8 @@ import FirebaseAuth
 class SignUpVC: UIViewController, UITextFieldDelegate {
 
     private let NEWS_FEED_SEGUE_ID = "NewsFeedVC"
-
+    private let SIGN_IN_SEGUE_ID = "signIn"
+    
     @IBOutlet weak var EmailText: CustomTextField!
     
     @IBOutlet weak var UsernameText: CustomTextField!
@@ -48,21 +49,19 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
         if EmailText.text != "" && isValidEmail(testStr: EmailText.text!) && PasswordText.text != "" && UsernameText.text != "" {
             
             AuthProvider.instance.signUp(withEmail: EmailText.text!, username: UsernameText.text!, password: PasswordText.text!, loginHandler: { (message) in
-                if message != nil {
-                    self.showAlertMessage(title: "Problem With Signing Up", message: message!);
-                } else {
+                if ((message?.range(of: "verify")) != nil) {
                     self.EmailText.text = ""
                     self.UsernameText.text = ""
                     self.PasswordText.text = ""
-                    self.performSegue(withIdentifier: self.NEWS_FEED_SEGUE_ID, sender: nil)
+                    self.performSegue(withIdentifier: self.SIGN_IN_SEGUE_ID, sender: nil)
+                } else if message != nil {
+                    self.showAlertMessage(title: "Problem With Signing Up", message: message!);
                 }
-                
             });
             
         } else {
             showAlertMessage(title: "Email And Password Are Required", message: "Please enter email and password in the text fields");
         }
-
     }
     
     private func isValidEmail(testStr:String) -> Bool {
