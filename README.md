@@ -114,7 +114,7 @@ Users who create questions will be able to delete them as well
 
 ### User profile
 
-Users will be able to customize their profile and update their username or password
+Users are able to customize their profile and update their username, password or email address
 
 ## Future Implementations
 
