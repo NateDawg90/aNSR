@@ -8,8 +8,8 @@
 ## Background
 
 aNSR is an iOS app built using Swift and Google's Firebase backend. aNSR is intended to be
-a social media app created to settle heated debates between friends. User's may add questions
-with up to 5 answers. Every user may then vote once per question on the aNSWR they think is right!
+a social media app created to settle heated debates between friends. Users may add questions
+with up to 5 answers. Every user may then vote once per question on the aNSR they think is right!
 
 ## Features and Implementation
 
