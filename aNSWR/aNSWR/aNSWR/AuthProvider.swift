@@ -50,11 +50,11 @@ class AuthProvider {
     
     func login(withEmail: String, password: String, loginHandler: LoginHandler?) {
             FIRAuth.auth()?.signIn(withEmail: withEmail, password: password, completion: { (user, error) in
-                if !(user?.isEmailVerified)! {
-                    loginHandler?("Your email address has not yet been verified. Please verify your email \(withEmail).")
-                }else if error != nil {
+                if error != nil {
                     // user not signed in we have a problem
                     self.handleErrors(err: error as! NSError, loginHandler: loginHandler);
+                } else if !(user?.isEmailVerified)! {
+                    loginHandler?("Your email address has not yet been verified. Please verify your email \(withEmail).")
                 } else {
                     // user is signed in
                     loginHandler?(nil);
