@@ -32,6 +32,7 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
         self.searchBarSetup()
     }
     
+    
     func createData(){
         self.questions.removeAll()
         self.questionsText.removeAll()
