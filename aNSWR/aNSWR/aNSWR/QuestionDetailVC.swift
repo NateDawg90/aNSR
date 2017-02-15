@@ -55,7 +55,6 @@ class QuestionDetailVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        super.viewDidLoad()
         moreAnswerText.delegate = self
         questionTextLabel.text = questionText
         // Do any additional setup after loading the view.
@@ -284,6 +283,8 @@ class QuestionDetailVC: UIViewController, UITextFieldDelegate {
             answer5Button.isHidden = true
             
         } else if (answers.count == 2) {
+            answer1Text.isHidden = false
+            answer1Button.isHidden = false
             answer1Text.text = answers[0]
             answer2Text.text = answers[1]
             answer2Text.isHidden = false
