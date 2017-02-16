@@ -14,6 +14,8 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
     private let NEWS_FEED_SEGUE_ID = "NewsFeedVC"
     private let SIGN_IN_SEGUE_ID = "signIn"
     
+    var currentEmail = String()
+    
     @IBOutlet weak var EmailText: CustomTextField!
     
     @IBOutlet weak var UsernameText: CustomTextField!
@@ -35,25 +37,24 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
         return true;
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        if AuthProvider.instance.isLoggedIn() {
-            performSegue(withIdentifier: NEWS_FEED_SEGUE_ID, sender: nil)
-        }
-    }
     
     @IBAction func BackButton(_ sender: AnyObject) {
         dismiss(animated: true, completion: nil)
     }
 
     @IBAction func SignUpButton(_ sender: AnyObject) {
+        self.currentEmail = self.EmailText.text!
+        print(self.currentEmail)
         if EmailText.text != "" && isValidEmail(testStr: EmailText.text!) && PasswordText.text != "" && UsernameText.text != "" {
             
             AuthProvider.instance.signUp(withEmail: EmailText.text!, username: UsernameText.text!, password: PasswordText.text!, loginHandler: { (message) in
                 if ((message?.range(of: "verify")) != nil) {
+                    
                     self.EmailText.text = ""
                     self.UsernameText.text = ""
                     self.PasswordText.text = ""
-                    self.performSegue(withIdentifier: self.SIGN_IN_SEGUE_ID, sender: nil)
+                    self.showValidationMessage(title: "Verify Email Address", message: "Please check \(self.currentEmail) for the verification link");
+                    
                 } else if message != nil {
                     self.showAlertMessage(title: "Problem With Signing Up", message: message!);
                 }
@@ -63,6 +64,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
             showAlertMessage(title: "Email And Password Are Required", message: "Please enter email and password in the text fields");
         }
     }
+    
     
     private func isValidEmail(testStr:String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
@@ -77,6 +79,15 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
         alert.addAction(ok);
         self.present(alert, animated: true, completion: nil);
     }
-
+    
+    private func showValidationMessage(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Ok", style: .cancel, handler: { action in
+            self.performSegue(withIdentifier: "signIn", sender: self)
+        })
+        alert.addAction(ok)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 
 }
