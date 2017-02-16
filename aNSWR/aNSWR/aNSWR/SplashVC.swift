@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SplashVC: UIViewController {
     
@@ -18,7 +19,7 @@ class SplashVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if AuthProvider.instance.isLoggedIn() {
+        if AuthProvider.instance.isLoggedIn() && (FIRAuth.auth()?.currentUser?.isEmailVerified)! {
             performSegue(withIdentifier: NEWS_FEED_SEGUE_ID, sender: nil);
         }
     }
