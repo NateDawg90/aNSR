@@ -297,6 +297,12 @@ class QuestionDetailVC: UIViewController, UITextFieldDelegate {
             answer5Button.isHidden = true
             
         }else if (answers.count == 3) {
+            answer1Text.isHidden = false
+            answer1Button.isHidden = false
+            answer2Text.isHidden = false
+            answer2Button.isHidden = false
+            answer3Text.isHidden = false
+            answer3Button.isHidden = false
             answer1Text.text = answers[0]
             answer2Text.text = answers[1]
             answer3Text.text = answers[2]
@@ -308,6 +314,14 @@ class QuestionDetailVC: UIViewController, UITextFieldDelegate {
             answer5Button.isHidden = true
             
         }else if (answers.count == 4) {
+            answer1Text.isHidden = false
+            answer1Button.isHidden = false
+            answer2Text.isHidden = false
+            answer2Button.isHidden = false
+            answer3Text.isHidden = false
+            answer3Button.isHidden = false
+            answer4Text.isHidden = false
+            answer4Button.isHidden = false
             answer1Text.text = answers[0]
             answer2Text.text = answers[1]
             answer3Text.text = answers[2]
@@ -318,6 +332,14 @@ class QuestionDetailVC: UIViewController, UITextFieldDelegate {
             answer5Button.isHidden = true
             
         } else {
+            answer1Text.isHidden = false
+            answer1Button.isHidden = false
+            answer2Text.isHidden = false
+            answer2Button.isHidden = false
+            answer3Text.isHidden = false
+            answer3Button.isHidden = false
+            answer4Text.isHidden = false
+            answer4Button.isHidden = false
             answer1Text.text = answers[0]
             answer2Text.text = answers[1]
             answer3Text.text = answers[2]
