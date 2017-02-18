@@ -21,7 +21,39 @@ class QuestionDetailVC: UIViewController, UITextFieldDelegate {
     var voters = [[String]]()
     var answerKey = String()
     var numOfVotes = Int()
-
+    var checkAnswerText = ""
+    var badWord = ["f...","2g1c","2 girls 1 cup","acrotomophilia","alabama hot pocket","alaskan pipeline","anal","anilingus","anus","apeshit"
+        ,"arsehole","ass","asshole","assmunch","auto erotic","autoerotic","babeland","baby batter","baby juice","ball gag","ball gravy","ball kicking"
+        ,"ball licking","ball sack","ball sucking","bangbros","bareback","barely legal","barenaked","bastard","bastardo","bastinado"
+        ,"bbw","bdsm","beaner","beaners","beaver cleaver","beaver lips","bestiality","big black","big breasts","big knockers","big tits","bimbos"
+        ,"birdlock","bitch","bitches","black cock","blonde action","blonde on blonde action","blowjob","blow job","blow your load","blue waffle","blumpkin"
+        ,"bollocks","bondage","boner","boob","boobs","booty call","brown showers","brunette action","bukkake","bulldyke","bullet vibe","bullshit"
+        ,"bung hole","bunghole","busty","butt","buttcheeks","butthole","camel toe","camgirl","camslut","camwhore","carpet muncher","carpetmuncher"
+        ,"chocolate rosebuds","circlejerk","cleveland steamer","clit","clitoris","clover clamps","clusterfuck","cock","cocks"
+        ,"coprolagnia","coprophilia","cornhole","coon","coons","creampie","cum","cumming","cunnilingus","cunt","darkie","date rape","daterape"
+        ,"deep throat","deepthroat","dendrophilia","dick","dildo","dingleberry","dingleberries","dirty pillows","dirty sanchez","doggie style","doggiestyle"
+        ,"doggy style","doggystyle","dog style","dolcett","domination","dominatrix","dommes","donkey punch","double dong","double penetration"
+        ,"dp action","dry hump","dvda","eat my ass","ecchi","ejaculation","erotic","erotism","escort","eunuch","faggot","fecal"
+        ,"felch","fellatio","feltch","female squirting","femdom","figging","fingerbang","fingering","fisting","foot fetish","footjob","frotting"
+        ,"fuck","f*ck","f**k","fuck buttons","fuckin","fucking","fucktards","fudge packer","fudgepacker","futanari","gang bang","gay sex"
+        ,"genitals","giant cock","girl on","girl on top","girls gone wild","goatcx","goatse","god damn","gokkun","golden shower","goodpoop","goo girl"
+        ,"goregasm","grope","group sex","g-spot","guro","hand job","handjob","hard core","hardcore","hentai","homoerotic","honkey","hooker","hot carl","hot chick"
+        ,"how to kill","how to murder","huge fat","humping","incest","intercourse","jack off","jail bait","jailbait","jelly donut","jerk off"
+        ,"jigaboo","jiggaboo","jiggerboo","jizz","juggs","kike","kinbaku","kinkster","kinky","knobbing","leather restraint","leather straight jacket"
+        ,"lemon party","lolita","lovemaking","make me come","male squirting","masturbate","menage a trois","milf","missionary position","motherfucker"
+        ,"mound of venus","mr hands","muff diver","muffdiving","nambla","nawashi","negro","neonazi","nigga","nigger","nig nog","nimphomania"
+        ,"nipple","nipples","nsfw images","nude","nudity","nympho","nymphomania","octopussy","omorashi","one cup two girls","one guy one jar"
+        ,"orgasm","orgy","paedophile","paki","panties","panty","pedobear","pedophile","pegging","penis","phone sex","piece of shit","pissing","piss pig","pisspig"
+        ,"playboy","pleasure chest","pole smoker","ponyplay","poof","poon","poontang","punany","poop chute","poopchute","porn","porno","pornography"
+        ,"prince albert piercing","pthc","pubes","pussy","queaf","queef","quim","raghead","raging boner","rape","raping","rapist","rectum","reverse cowgirl"
+        ,"rimjob","rimming","rosy palm","rosy palm and her 5 sisters","rusty trombone","sadism","santorum","scat","schlong","scissoring","semen","sex","sexo"
+        ,"shaved beaver","shaved pussy","shemale","shibari","shit","shitblimp","shitty","shota","shrimping","skeet","slanteye","slut","s&m","smut","sodomize"
+        ,"sodomy","spic","splooge","splooge moose","spooge","spread legs","spunk","strapon","strappado","strip club","style doggy","suck","sucks"
+        ,"suicide girls","sultry women","swastika","swinger","tainted love","taste my","tea bagging","threesome","throating","tied up","tight white"
+        ,"tit","tits","titties","titty","tongue in a","topless","tosser","towelhead","tranny","tribadism","tub girl","tubgirl","tushy","twat","twink"
+        ,"two girls one cup","upskirt","urethra play","urophilia","vagina","venus mound","vibrator","violet wand","vorarephilia","voyeur","vulva"
+        ,"wank","wetback","wet dream","white power","wrapping men","wrinkled starfish","xx","xxx","yaoi","yellow showers","yiffy","zoophilia"]
+    
     @IBOutlet weak var deleteQuestionButton: UIButton!
     @IBAction func deleteQuestion(_ sender: AnyObject) {
         var ref: FIRDatabaseReference!
@@ -141,12 +173,23 @@ class QuestionDetailVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var moreAnswerText: UITextField!
     
     @IBAction func addAnswerButton(_ sender: AnyObject) {
-        if !(moreAnswerText.text?.isEmpty)! {
+        let answerArr = moreAnswerText.text?.components(separatedBy: " ")
+        for word in answerArr! {
+            if (badWord.contains(word.lowercased())){
+                checkAnswerText = word
+            }
+        }
+        if !(moreAnswerText.text?.isEmpty)! && checkAnswerText == "" {
             DBProvider.instance.saveAnswer(answerText: (moreAnswerText.text)!, userID: (FIRAuth.auth()?.currentUser?.uid)!, questionID: self.questionID, votes: 0, answerVoters: [""])
             self.answers.append(moreAnswerText.text!)
             DBProvider.instance.questionRef.child(self.questionID).updateChildValues(["answers": self.answers])
         } else {
-            showAlertMessage(title: "Answers Required", message: "Please fill in the answer text field");
+            if (checkAnswerText != "") {
+                showAlertMessage(title: "Error", message: "Your answer contains inappropriate word. Please replace \(checkAnswerText) with more appropriate word")
+                checkAnswerText = ""
+            } else {
+                showAlertMessage(title: "Answers Required", message: "Please fill in the answer text field");
+            }
         }
     }
     
