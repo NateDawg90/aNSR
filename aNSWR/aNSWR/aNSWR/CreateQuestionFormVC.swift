@@ -15,8 +15,8 @@ class CreateQuestionFormVC: UIViewController, UITextFieldDelegate {
     var amountOfLinesToBeShown:CGFloat = 6
     var maxHeight:CGFloat = 17*6
     var ansArr = [String]()
-    var checkValidityQuestionText = true
-    var checkValidityAnswerText = true
+    var checkValidityQuestionText = ""
+    var checkValidityAnswerText = ""
     var badWord = ["f...","2g1c","2 girls 1 cup","acrotomophilia","alabama hot pocket","alaskan pipeline","anal","anilingus","anus","apeshit"
         ,"arsehole","ass","asshole","assmunch","auto erotic","autoerotic","babeland","baby batter","baby juice","ball gag","ball gravy","ball kicking"
         ,"ball licking","ball sack","ball sucking","bangbros","bareback","barely legal","barenaked","bastard","bastardo","bastinado"
@@ -177,23 +177,22 @@ class CreateQuestionFormVC: UIViewController, UITextFieldDelegate {
         
         for word in questionArr {
             if (badWord.contains(word.lowercased())) {
-                checkValidityQuestionText = false
+                checkValidityQuestionText = word
                 break
             }
         }
         for answer in answers {
-            print("..............................")
             if answer?.text != "" {
                 let answerArr = answer?.text?.components(separatedBy: " ")
                 for word in answerArr! {
                     if (badWord.contains(word.lowercased())) {
-                        checkValidityAnswerText = false
+                        checkValidityAnswerText = word
                         break
                     }
                 }
             }
         }
-        if QuestionText2.text != "" && AnswerText1.text != "" && AnswerText2.text != "" && checkValidityAnswerText == true && checkValidityQuestionText == true {
+        if QuestionText2.text != "" && AnswerText1.text != "" && AnswerText2.text != "" && checkValidityAnswerText == "" && checkValidityQuestionText == "" {
             
             if !AnswerText1.text! .isEqual("") {
                 ansArr.append(AnswerText1.text!)
@@ -231,12 +230,12 @@ class CreateQuestionFormVC: UIViewController, UITextFieldDelegate {
             
             
         } else {
-            if checkValidityQuestionText == false {
-                showAlertMessage(title: "Error", message: "Your question contains inappropriate word")
-                checkValidityQuestionText = true
-            } else if checkValidityAnswerText == false {
-                showAlertMessage(title: "Error", message: "Your answer contains inappropriate word")
-                checkValidityAnswerText = true
+            if checkValidityQuestionText != "" {
+                showAlertMessage(title: "Error", message: "Your question contains inappropriate word. Please replace \(checkValidityQuestionText) with more appropriate word")
+                checkValidityQuestionText = ""
+            } else if checkValidityAnswerText != "" {
+                showAlertMessage(title: "Error", message: "Your answer contains inappropriate word. Please replace \(checkValidityAnswerText) with more appropriate word")
+                checkValidityAnswerText = ""
             } else {
                 showAlertMessage(title: "Answers Required", message: "Please fill out at least 2 answers");
             }
