@@ -32,6 +32,41 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
         self.searchBarSetup()
     }
     
+    func createTableData() {
+        self.questions.removeAll()
+        self.questionsText.removeAll()
+        self.questionsID.removeAll()
+        self.answers.removeAll()
+        
+        var ref: FIRDatabaseReference!
+        ref = FIRDatabase.database().reference()
+        ref.child("questions").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            //get all question IDs
+            for singleSnap in snapshot.children.allObjects {
+                let question = singleSnap as! FIRDataSnapshot
+                self.questionsID.append(question.key)
+            }
+            
+            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                //snapshots == all questions
+                
+                for snap in snapshots {
+                    //value == individual question-able to access values
+                    let value = snap.value as? NSDictionary
+                    self.questions.append(value!)
+                    self.questionsText.append(value?["questionText"] as? String ?? "")
+                    //                    let answers = value?["answers"]
+                    self.answers.append(value?["answers"] as? Array<AnyObject> ?? ["" as AnyObject])
+                    //                    print(value?["questionText"] as? String ?? "")
+                }
+            }
+            self.questionsText = self.questionsText.reversed()
+            self.answers = self.answers.reversed()
+            self.questionsID = self.questionsID.reversed()
+        })
+
+    }
     
     func createData(){
         self.questions.removeAll()
@@ -107,26 +142,59 @@ class NewsFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
     }
     
     func filterTableView(text:String) {
-        self.filteredQuestionText.removeAll()
-        self.filteredAnswers.removeAll()
-        self.filteredQuestionID.removeAll()
-        for question in questions {
-            let questionText = question["questionText"] as! String
-            let answersArr = question["answers"]
-            if (questionText.lowercased().contains(text.lowercased())) {
-                let index = self.questionsText.index(of: questionText)
-                filteredQuestionID.append(self.questionsID[index!])
-                filteredQuestionText.append(questionText)
-                filteredAnswers.append(answersArr as! [AnyObject])
-            }
-        }
+        self.questions.removeAll()
         self.questionsText.removeAll()
-        self.answers.removeAll()
         self.questionsID.removeAll()
-        self.questionsID = filteredQuestionID.reversed()
-        self.questionsText = filteredQuestionText.reversed()
-        self.answers = filteredAnswers.reversed()
-        self.TableView.reloadData()
+        self.answers.removeAll()
+        
+        var ref: FIRDatabaseReference!
+        ref = FIRDatabase.database().reference()
+        ref.child("questions").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            //get all question IDs
+            for singleSnap in snapshot.children.allObjects {
+                let question = singleSnap as! FIRDataSnapshot
+                self.questionsID.append(question.key)
+            }
+            
+            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                //snapshots == all questions
+                
+                for snap in snapshots {
+                    //value == individual question-able to access values
+                    let value = snap.value as? NSDictionary
+                    self.questions.append(value!)
+                    self.questionsText.append(value?["questionText"] as? String ?? "")
+                    //                    let answers = value?["answers"]
+                    self.answers.append(value?["answers"] as? Array<AnyObject> ?? ["" as AnyObject])
+                    //                    print(value?["questionText"] as? String ?? "")
+                }
+            }
+            self.questionsText = self.questionsText.reversed()
+            self.answers = self.answers.reversed()
+            self.questionsID = self.questionsID.reversed()
+            self.filteredQuestionText.removeAll()
+            self.filteredAnswers.removeAll()
+            self.filteredQuestionID.removeAll()
+            for question in self.questions {
+                let questionText = question["questionText"] as! String
+                let answersArr = question["answers"]
+                if (questionText.lowercased().contains(text.lowercased())) {
+                    let index = self.questionsText.index(of: questionText)
+                    self.filteredQuestionID.append(self.questionsID[index!])
+                    self.filteredQuestionText.append(questionText)
+                    self.filteredAnswers.append(answersArr as! [AnyObject])
+                }
+            }
+            self.questionsText.removeAll()
+            self.answers.removeAll()
+            self.questionsID.removeAll()
+            self.questionsID = self.filteredQuestionID.reversed()
+            self.questionsText = self.filteredQuestionText.reversed()
+            self.answers = self.filteredAnswers.reversed()
+            self.TableView.reloadData()
+
+        })
     }
 
     
